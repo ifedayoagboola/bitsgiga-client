@@ -2,7 +2,16 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        qblack: "#222222",
+        qyellow: "#FFBB38",
+        qred: "#EF262C",
+        qgray: "#797979",
+        "qgray-border": "#EFEFEF",
+        "qblue-white": "#CBECFF",
+      },
+    },
   },
   plugins: [],
 };
