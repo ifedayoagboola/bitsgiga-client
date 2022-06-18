@@ -1,3 +1,60 @@
+@font-face {
+    font-family: "Inter";
+    src: url("/public/assets/fonts/Inter-Black.ttf");
+}
+@font-face {
+    font-family: "Inter";
+    src: url("/public/assets/fonts/Inter-Bold.ttf");
+}
+@font-face {
+    font-family: "Inter";
+    src: url("/public/assets/fonts/Inter-ExtraBold.ttf");
+}
+@font-face {
+    font-family: "Inter";
+    src: url("/public/assets/fonts/Inter-ExtraLight.ttf");
+}
+@font-face {
+    font-family: "Inter";
+    src: url("/public/assets/fonts/Inter-Light.ttf");
+}
+@font-face {
+    font-family: "Inter";
+    src: url("/public/assets/fonts/Inter-Medium.ttf");
+}
+@font-face {
+    font-family: "Inter";
+    src: url("/public/assets/fonts/Inter-Regular.ttf");
+}
+@font-face {
+    font-family: "Inter";
+    src: url("/public/assets/fonts/Inter-SemiBold.ttf");
+}
+@font-face {
+    font-family: "Inter";
+    src: url("/public/assets/fonts/Inter-Thin.ttf");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*TODO:  ========= default ========= */
+* {
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+    min-width: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: "Inter", sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-x {
+    padding: 0 23.5rem;
+}
