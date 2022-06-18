@@ -5,7 +5,7 @@ export default function TopBar({ className }) {
   return (
     <>
       <div
-        className={`w-full h-10 border-b border-qgray-border ${
+        className={`w-full bg-white h-10 border-b border-qgray-border ${
           className || ""
         }`}
       >
