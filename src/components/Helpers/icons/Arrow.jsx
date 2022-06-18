@@ -1,4 +1,8 @@
-export default function arrow({ className }) {
+export default function Arrow({
+  className,
+  width = "5.78538",
+  height = "1.28564",
+}) {
   return (
     <svg
       width="10"
@@ -11,15 +15,15 @@ export default function arrow({ className }) {
       <rect
         x="9.18359"
         y="0.90918"
-        width="5.78538"
-        height="1.28564"
+        width={width}
+        height={height}
         transform="rotate(135 9.18359 0.90918)"
       />
       <rect
         x="5.08984"
         y="5"
-        width="5.78538"
-        height="1.28564"
+        width={width}
+        height={height}
         transform="rotate(-135 5.08984 5)"
       />
     </svg>
