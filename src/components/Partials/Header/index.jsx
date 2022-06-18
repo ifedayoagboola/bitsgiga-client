@@ -4,10 +4,10 @@ import TopBar from "./TopBar";
 
 export default function Header() {
   return (
-    <div className="mb-8">
+    <header className="header-section-wrapper mb-8">
       <TopBar className="quomodo-shop-top-bar" />
       <Middlebar className="quomodo-shop-middle-bar" />
       <Navbar className="quomodo-shop-nav-bar" />
-    </div>
+    </header>
   );
 }

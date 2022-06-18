@@ -1,4 +1,5 @@
 import DiscountBanner from "../DiscountBanner";
+import Footer from "../Partials/Footer";
 import Header from "../Partials/Header";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Header />
       <DiscountBanner />
+      <Footer />
     </>
   );
 }

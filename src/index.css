@@ -93,7 +93,8 @@ body {
     font-weight: 900;
 }
 .container-x {
-    padding: 0 23.5rem;
+    padding-left: 23.5rem;
+    padding-right: 23.5rem;
 }
 /*TODO:  =========tailwind components ========= */
 .search-input {

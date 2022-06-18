@@ -6,7 +6,7 @@ import SearchBox from "../../Helpers/SearchBox";
 
 export default function Middlebar({ className }) {
   return (
-    <div className={`w-full h-[86px] ${className}`}>
+    <div className={`w-full h-[86px] bg-white ${className}`}>
       <div className="container-x mx-auto h-full">
         <div className="flex justify-between items-center h-full">
           <div>
