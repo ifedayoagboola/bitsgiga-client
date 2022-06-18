@@ -1,13 +1,11 @@
-import DiscountBanner from "../DiscountBanner";
-import Footer from "../Partials/Footer";
-import Header from "../Partials/Header";
+import Layout from "../Partials/Layout";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <DiscountBanner />
-      <Footer />
+      <Layout>
+        <div>suvo</div>
+      </Layout>
     </>
   );
 }
