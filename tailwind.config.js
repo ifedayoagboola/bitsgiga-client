@@ -15,5 +15,10 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      textColor: ["focus-within"],
+    },
+  },
   plugins: [],
 };
