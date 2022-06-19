@@ -1,7 +1,7 @@
 export default function DiscountBanner({ className }) {
   return (
     <div
-      className={`w-full h-[307px] bg-cover flex justify-center items-center ${
+      className={`w-full h-[307px] bg-cover flex justify-center items-center mt-[60px] ${
         className || ""
       }`}
       style={{

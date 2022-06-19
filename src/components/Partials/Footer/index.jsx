@@ -161,15 +161,15 @@ export default function Footer() {
         <div className="bottom-bar border-t border-qgray-border h-[82px] flex justify-between items-center">
           <div className="flex space-x-5 items-center">
             <a href="#">
-              <Instagram className="fill-current text-[#ABABAB] hover:text-qblack" />
+              <Instagram className="fill-current text-qgray hover:text-qblack" />
             </a>
             <a href="#">
-              <Facebook className="fill-current text-[#ABABAB] hover:text-qblack" />
+              <Facebook className="fill-current text-qgray hover:text-qblack" />
             </a>
             <a href="#">
-              <Youtube className="fill-current text-[#ABABAB] hover:text-qblack" />
+              <Youtube className="fill-current text-qgray hover:text-qblack" />
             </a>
-            <span className="text-base text-[#ABABAB] font-300">
+            <span className="text-base text-qgray font-300">
               ©2022
               <a
                 href="https://quomodosoft.com/"
