@@ -96,6 +96,20 @@ body {
     padding-left: 23.5rem;
     padding-right: 23.5rem;
 }
+.animate-right-dir {
+    animation: rightDir 1s infinite;
+}
+@keyframes rightDir {
+    0%,
+    100% {
+        transform: translatex(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
 /*TODO:  =========tailwind components ========= */
 .search-input {
     @apply w-full h-full focus:outline-none focus:ring-0 pl-5 text-xs font-500 placeholder:text-qgraytwo;
