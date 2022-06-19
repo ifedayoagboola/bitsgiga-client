@@ -1,10 +1,11 @@
 import Layout from "../Partials/Layout";
+import Banner from "./Banner";
 
 export default function Home() {
   return (
     <>
       <Layout>
-        <div>suvo</div>
+        <Banner className="banner-wrapper" />
       </Layout>
     </>
   );
