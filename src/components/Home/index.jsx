@@ -3,6 +3,7 @@ import SectionStyleOne from "../Helpers/SectionStyleOne";
 import Layout from "../Partials/Layout";
 import Banner from "./Banner";
 import BrandSection from "./BrandSection";
+import CampaignCountDown from "./CampaignCountDown";
 
 export default function Home() {
   const { products } = datas;
@@ -24,8 +25,9 @@ export default function Home() {
         />
         <BrandSection
           sectionTitle="Shop by Brand"
-          className="brand-section-wrapper mb-[160px]"
+          className="brand-section-wrapper mb-[60px]"
         />
+        <CampaignCountDown lastDate="2023-03-04 4:00:00" />
       </Layout>
     </>
   );

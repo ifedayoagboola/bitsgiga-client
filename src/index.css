@@ -93,8 +93,8 @@ body {
     font-weight: 900;
 }
 .container-x {
-    padding-left: 23.5rem;
-    padding-right: 23.5rem;
+    padding-left: 367px;
+    padding-right: 367px;
 }
 .animate-right-dir {
     animation: rightDir 1s infinite;
