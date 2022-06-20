@@ -27,17 +27,17 @@
       "product_type": null
     },
     {
-      "id": "62aefe9a7ae3fa6c907deb14",
+      "id": "62aefe9af9a0e865ee49c99e",
       "image": "product-img-3.jpg",
-      "brand": "samsung",
+      "brand": "apple",
       "review": 5,
-      "title": "Daycore proident velit esse veniam repreh id cillum",
-      "offer_price": "$22.94",
-      "price": "$24.29",
-      "campaingn_product": true,
-      "cam_product_available": 38,
-      "cam_product_sale": 11,
-      "product_type": null
+      "title": "Conjurica ea magna eiusmod esse cupt anim aliquip",
+      "offer_price": "$18.03",
+      "price": "$32.63",
+      "campaingn_product": false,
+      "cam_product_available": null,
+      "cam_product_sale": null,
+      "product_type": "popular"
     },
     {
       "id": "62aefe9a6e662e77accd4cc4",

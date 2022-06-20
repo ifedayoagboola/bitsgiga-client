@@ -1,12 +1,13 @@
 export default function CategoryCard({ background, title, brands = [] }) {
   return (
     <div
-      className="category-card-wrappwer w-full min-h-[445px] p-[30px]"
+      className="category-card-wrappwer w-full h-full p-[30px]"
       style={{
         background: `url(${
           background ||
           `${process.env.PUBLIC_URL}/assets/images/section-category-1.jpg`
-        })`,
+        }) no-repeat`,
+        backgroundSize: "cover",
       }}
     >
       <div>
