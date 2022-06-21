@@ -7,6 +7,7 @@ import Banner from "./Banner";
 import BestSellers from "./BestSellers";
 import BrandSection from "./BrandSection";
 import CampaignCountDown from "./CampaignCountDown";
+import ProductsAds from "./ProductsAds";
 
 export default function Home() {
   const { products } = datas;
@@ -48,6 +49,7 @@ export default function Home() {
         >
           <BestSellers />
         </ViewMoreTitle>
+        <ProductsAds />
       </Layout>
     </>
   );
