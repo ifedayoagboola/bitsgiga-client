@@ -4,6 +4,7 @@ import SectionStyleTwo from "../Helpers/SectionStyleTwo";
 import ViewMoreTitle from "../Helpers/ViewMoreTitle";
 import Layout from "../Partials/Layout";
 import Banner from "./Banner";
+import BestSellers from "./BestSellers";
 import BrandSection from "./BrandSection";
 import CampaignCountDown from "./CampaignCountDown";
 
@@ -39,6 +40,13 @@ export default function Home() {
           categoryTitle="Top Selling Products"
         >
           <SectionStyleTwo products={products.slice(3, products.length)} />
+        </ViewMoreTitle>
+        <ViewMoreTitle
+          className="best-sallers-section mb-[60px]"
+          seeMoreUrl="#"
+          categoryTitle="Top Selling Products"
+        >
+          <BestSellers />
         </ViewMoreTitle>
       </Layout>
     </>
