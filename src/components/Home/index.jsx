@@ -1,4 +1,5 @@
 import datas from "../../data/products.json";
+import SectionStyleFour from "../Helpers/SectionStyleFour";
 import SectionStyleOne from "../Helpers/SectionStyleOne";
 import SectionStyleThree from "../Helpers/SectionStyleThree";
 import SectionStyleTwo from "../Helpers/SectionStyleTwo";
@@ -80,6 +81,12 @@ export default function Home() {
           sectionHeight="164"
           ads={[`${process.env.PUBLIC_URL}/assets/images/ads-4.png`]}
           className="products-ads-section mb-[60px]"
+        />
+        <SectionStyleFour
+          products={products}
+          sectionTitle="New Arrivals"
+          seeMoreUrl="/"
+          className="category-products mb-[60px]"
         />
       </Layout>
     </>

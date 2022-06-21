@@ -1,4 +1,4 @@
-import ProductCardRowStyleTwo from "./Cards/ProductCardRowStyleTwo";
+import ProductCardRowStyleOne from "./Cards/ProductCardRowStyleOne";
 import DataIteration from "./DataIteration";
 
 export default function SectionStyleTwo({ className, products }) {
@@ -11,7 +11,7 @@ export default function SectionStyleTwo({ className, products }) {
       <DataIteration datas={products} startLength={0} endLength={4}>
         {({ datas }) => (
           <div key={datas.id} className="item w-full">
-            <ProductCardRowStyleTwo datas={datas} />
+            <ProductCardRowStyleOne datas={datas} />
           </div>
         )}
       </DataIteration>
