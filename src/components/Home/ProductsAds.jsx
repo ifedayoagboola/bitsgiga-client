@@ -1,26 +1,33 @@
-export default function ProductsAds() {
+export default function ProductsAds({
+  className,
+  ads = ["", ""],
+  sectionHeight = "295px",
+}) {
   return (
-    <div className="w-full products-ads">
+    <div className={`w-full ${className || ""}`}>
       <div className="container-x mx-auto">
-        <div className="flex space-x-[30px] items-center w-full h-[295px] overflow-hidden">
-          <div className="w-1/2 h-full">
+        <div
+          style={{ height: sectionHeight }}
+          className={`${
+            ads.length > 1 && ads.length <= 2 ? "flex space-x-[30px]" : ""
+          } items-center w-full overflow-hidden`}
+        >
+          <div
+            className={`h-full ${
+              ads.length > 1 && ads.length <= 2 ? "w-1/2 " : "w-full"
+            }  `}
+          >
             <a href="#">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/images/ads-1.png`}
-                alt=""
-                className="w-full h-full"
-              />
+              <img src={ads[0]} alt="" className="w-full h-full" />
             </a>
           </div>
-          <div className="flex-1 h-full">
-            <a href="#">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/images/ads-2.png`}
-                alt=""
-                className="w-full h-full"
-              />
-            </a>
-          </div>
+          {ads.length > 1 && ads.length <= 2 && (
+            <div className="flex-1 h-full">
+              <a href="#">
+                <img src={ads[1]} alt="" className="w-full h-full" />
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </div>

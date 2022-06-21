@@ -49,7 +49,26 @@ export default function Home() {
         >
           <BestSellers />
         </ViewMoreTitle>
-        <ProductsAds />
+        <ProductsAds
+          ads={[
+            `${process.env.PUBLIC_URL}/assets/images/ads-1.png`,
+            `${process.env.PUBLIC_URL}/assets/images/ads-2.png`,
+          ]}
+          className="products-ads-section mb-[60px]"
+        />
+        <SectionStyleOne
+          categoryBackground={`${process.env.PUBLIC_URL}/assets/images/section-category-2.jpg`}
+          products={products.slice(4, products.length)}
+          brands={brands}
+          categoryTitle="Electronics"
+          sectionTitle="Popular Sales"
+          seeMoreUrl="/"
+          className="category-products mb-[60px]"
+        />
+        <ProductsAds
+          ads={[`${process.env.PUBLIC_URL}/assets/images/ads-3.png`]}
+          className="products-ads-section mb-[60px]"
+        />
       </Layout>
     </>
   );

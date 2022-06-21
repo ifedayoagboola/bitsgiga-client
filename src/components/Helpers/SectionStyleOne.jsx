@@ -10,6 +10,7 @@ export default function SectionStyleOne({
   seeMoreUrl,
   brands = [],
   products = [],
+  categoryBackground,
 }) {
   const filterBrands = brands.filter(
     (value, index, array) => array.indexOf(value) === index
@@ -20,7 +21,11 @@ export default function SectionStyleOne({
         <div className="products-section w-full">
           <div className="grid grid-cols-4 gap-[30px]">
             <div className="category-card w-full">
-              <CategoryCard title={categoryTitle} brands={filterBrands} />
+              <CategoryCard
+                background={categoryBackground}
+                title={categoryTitle}
+                brands={filterBrands}
+              />
             </div>
             <DataIteration datas={products} startLength={0} endLength={3}>
               {({ datas }) => (
