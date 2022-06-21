@@ -7,7 +7,7 @@ export default function Header() {
     <header className="header-section-wrapper mb-[30px]">
       <TopBar className="quomodo-shop-top-bar" />
       <Middlebar className="quomodo-shop-middle-bar" />
-      <Navbar className="quomodo-shop-nav-bar" />
+      <Navbar className="quomodo-shop-nav-bar " />
     </header>
   );
 }

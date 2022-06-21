@@ -121,3 +121,10 @@ body {
 .black-btn {
     @apply bg-qblack text-white;
 }
+/*TODO:  =========header ========= */
+.category-dropdown {
+    transition: all 0.5s ease-in-out;
+}
+.category .category-dropdown .categories-list .category-item {
+    border-top: 1px solid #f8f8f8;
+}
