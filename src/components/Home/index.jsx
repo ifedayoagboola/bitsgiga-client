@@ -1,5 +1,6 @@
 import datas from "../../data/products.json";
 import SectionStyleOne from "../Helpers/SectionStyleOne";
+import SectionStyleThree from "../Helpers/SectionStyleThree";
 import SectionStyleTwo from "../Helpers/SectionStyleTwo";
 import ViewMoreTitle from "../Helpers/ViewMoreTitle";
 import Layout from "../Partials/Layout";
@@ -67,6 +68,17 @@ export default function Home() {
         />
         <ProductsAds
           ads={[`${process.env.PUBLIC_URL}/assets/images/ads-3.png`]}
+          className="products-ads-section mb-[60px]"
+        />
+        <SectionStyleThree
+          products={products}
+          sectionTitle="New Arrivals"
+          seeMoreUrl="/"
+          className="category-products mb-[60px]"
+        />
+        <ProductsAds
+          sectionHeight="164"
+          ads={[`${process.env.PUBLIC_URL}/assets/images/ads-4.png`]}
           className="products-ads-section mb-[60px]"
         />
       </Layout>

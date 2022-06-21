@@ -86,10 +86,10 @@
       "title": "Kenegy consectetur id ex nulla in adipisicing deserunt",
       "offer_price": "$11.92",
       "price": "$26.62",
-      "campaingn_product": true,
-      "cam_product_available": 23,
-      "cam_product_sale": 9,
-      "product_type": null
+      "campaingn_product": false,
+      "cam_product_available": null,
+      "cam_product_sale": null,
+      "product_type": "new"
     },
     {
       "id": "62aefe9aa117932437d0da93",
@@ -112,9 +112,9 @@
       "title": "Anarco consectetur magna nostrud commodo tempor aliqua laborum",
       "offer_price": "$22.13",
       "price": "$32.61",
-      "campaingn_product": true,
-      "cam_product_available": 47,
-      "cam_product_sale": 12,
+      "campaingn_product": false,
+      "cam_product_available": null,
+      "cam_product_sale": null,
       "product_type": null
     },
     {
@@ -132,7 +132,7 @@
     },
     {
       "id": "62aefe9af9a0e865ee49c99e",
-      "image": "product-img-11.jpg",
+      "image": "product-img-1.jpg",
       "brand": "apple",
       "review": 5,
       "title": "Conjurica ea magna eiusmod esse cupt anim aliquip",
@@ -145,7 +145,7 @@
     },
     {
       "id": "62aefe9a9a52d2ee3301918a",
-      "image": "product-img-12.jpg",
+      "image": "product-img-2.jpg",
       "brand": "google",
       "review": 5,
       "title": "Empirica deserunt laborum ad quis labore labore eu",

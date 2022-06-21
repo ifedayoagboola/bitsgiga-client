@@ -27,8 +27,8 @@ export default function Middlebar({ className }) {
                   <Compair />
                 </span>
               </button>
-              <span className="w-[14px] h-[14px] rounded-full bg-qyellow absolute -top-1 -right-2 flex justify-center items-center text-[9px]">
-                1
+              <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
+                2
               </span>
             </div>
             <div className="favorite relative">
@@ -37,7 +37,7 @@ export default function Middlebar({ className }) {
                   <ThinLove />
                 </span>
               </button>
-              <span className="w-[14px] h-[14px] rounded-full bg-qyellow absolute -top-1 -right-2 flex justify-center items-center text-[9px]">
+              <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
                 1
               </span>
             </div>
@@ -47,8 +47,8 @@ export default function Middlebar({ className }) {
                   <ThinBag />
                 </span>
               </button>
-              <span className="w-[14px] h-[14px] rounded-full bg-qyellow absolute -top-1 -right-2 flex justify-center items-center text-[9px]">
-                1
+              <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
+                15
               </span>
             </div>
             <div>
