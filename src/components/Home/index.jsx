@@ -1,5 +1,6 @@
 import datas from "../../data/products.json";
 import SectionStyleOne from "../Helpers/SectionStyleOne";
+import SectionStyleTwo from "../Helpers/SectionStyleTwo";
 import ViewMoreTitle from "../Helpers/ViewMoreTitle";
 import Layout from "../Partials/Layout";
 import Banner from "./Banner";
@@ -37,9 +38,7 @@ export default function Home() {
           seeMoreUrl="#"
           categoryTitle="Top Selling Products"
         >
-          <div>
-            <p>suvo</p>
-          </div>
+          <SectionStyleTwo products={products.slice(3, products.length)} />
         </ViewMoreTitle>
       </Layout>
     </>
