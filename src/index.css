@@ -114,6 +114,10 @@ body {
     @apply w-full text-[13px] text-qblacktext font-semibold bg-qyellow flex justify-center items-center h-full;
     line-height: 0;
 }
+.gray-btn {
+    @apply flex justify-center items-center text-sm font-600;
+    background: #f0f1f3;
+}
 /*TODO:  =========tailwind components ========= */
 .search-input {
     @apply w-full h-full focus:outline-none focus:ring-0 pl-5 text-xs font-500 placeholder:text-qgraytwo;
@@ -127,4 +131,27 @@ body {
 }
 .category .category-dropdown .categories-list .category-item {
     border-top: 1px solid #f8f8f8;
+}
+/* width */
+.quomodo-shop-middle-bar .product-items::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+.quomodo-shop-middle-bar .product-items::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.quomodo-shop-middle-bar .product-items::-webkit-scrollbar-thumb {
+    background: #8e8e8e;
+}
+
+/* Handle on hover */
+.quomodo-shop-middle-bar .product-items::-webkit-scrollbar-thumb:hover {
+    background: #8e8e8e;
+}
+
+.quomodo-shop-middle-bar .product-items ul li:first-child {
+    margin-top: 14px;
 }
