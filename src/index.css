@@ -155,3 +155,19 @@ body {
 .quomodo-shop-middle-bar .product-items ul li:first-child {
     margin-top: 14px;
 }
+
+/* ======mega menu====== */
+.nav-widget-wrapper .nav ul.nav-wrapper > li {
+    padding: 20px 0;
+}
+.nav-widget-wrapper .nav ul li .sub-menu {
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: auto;
+}
+.nav-widget-wrapper .nav ul li:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
