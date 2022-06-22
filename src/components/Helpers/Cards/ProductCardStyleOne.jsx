@@ -4,6 +4,10 @@ import Star from "../icons/Star";
 import ThinLove from "../icons/ThinLove";
 
 export default function ProductCardStyleOne({ datas }) {
+  const available =
+    (datas.cam_product_sale /
+      (datas.cam_product_available + datas.cam_product_sale)) *
+    100;
   return (
     <div className="product-card-one w-full h-full bg-white relative group overflow-hidden">
       <div
@@ -27,14 +31,7 @@ export default function ProductCardStyleOne({ datas }) {
               <div className="progress w-full h-[5px] rounded-[22px] bg-primarygray relative overflow-hidden">
                 <div
                   style={{
-                    width: `${
-                      datas.campaingn_product
-                        ? 100 -
-                          (datas.cam_product_sale /
-                            datas.cam_product_available) *
-                            100
-                        : 0
-                    }%`,
+                    width: `${datas.campaingn_product ? 100 - available : 0}%`,
                   }}
                   className="h-full absolute left-0 top-0 bg-qyellow"
                 ></div>
