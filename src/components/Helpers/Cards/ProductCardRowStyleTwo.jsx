@@ -1,5 +1,4 @@
 export default function ProductCardRowStyleTwo({ className, datas }) {
-  console.log(datas.id);
   return (
     <div className={`product-card-row-two w-full  ${className || ""}`}>
       <a href="#">
