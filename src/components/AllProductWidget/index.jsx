@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "react-input-range/lib/css/index.css";
+import productDatas from "../../data/products.json";
 import BreadcrumbCom from "../BreadcrumbCom";
+import ProductCardStyleOne from "../Helpers/Cards/ProductCardStyleOne";
+import DataIteration from "../Helpers/DataIteration";
 import Layout from "../Partials/Layout";
 import ProductsFilter from "./ProductsFilter";
 
@@ -46,6 +49,9 @@ export default function AllProductPage() {
   const filterStorage = (value) => {
     setStorage(value);
   };
+
+  const { products } = productDatas;
+
   return (
     <>
       <Layout>
@@ -73,7 +79,7 @@ export default function AllProductPage() {
               </div>
 
               <div className="flex-1">
-                <div className="products-sorting w-full bg-white h-[70px] flex justify-between items-center p-[30px]">
+                <div className="products-sorting w-full bg-white h-[70px] flex justify-between items-center p-[30px] mb-[40px]">
                   <div>
                     <p className="font-400 text-[13px]">
                       <span className="text-qgray"> Showing</span> 1–16 of 66
@@ -99,6 +105,32 @@ export default function AllProductPage() {
                       </span>
                     </div>
                   </div>
+                </div>
+                <div className="grid grid-cols-3 gap-[30px] mb-[40px]">
+                  <DataIteration datas={products} startLength={0} endLength={6}>
+                    {({ datas }) => (
+                      <ProductCardStyleOne key={datas.id} datas={datas} />
+                    )}
+                  </DataIteration>
+                </div>
+
+                <div className="w-full h-[164px] overflow-hidden mb-[40px]">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/ads-6.png`}
+                    alt=""
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="grid grid-cols-3 gap-[30px] mb-[40px]">
+                  <DataIteration
+                    datas={products}
+                    startLength={6}
+                    endLength={15}
+                  >
+                    {({ datas }) => (
+                      <ProductCardStyleOne key={datas.id} datas={datas} />
+                    )}
+                  </DataIteration>
                 </div>
               </div>
             </div>
