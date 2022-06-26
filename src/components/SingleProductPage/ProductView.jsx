@@ -48,7 +48,7 @@ export default function ProductView({ className }) {
     <div
       className={`product-view w-full flex justify-between ${className || ""}`}
     >
-      <div className="w-1/2 mr-[70px]">
+      <div data-aos="fade-right" className="w-1/2 mr-[70px]">
         <div className="w-full">
           <div className="w-full h-[600px] border border-qgray-border flex justify-center items-center overflow-hidden relative mb-3">
             <img
@@ -83,14 +83,23 @@ export default function ProductView({ className }) {
       </div>
       <div className="flex-1">
         <div className="product-details w-full">
-          <span className="text-qgray text-xs font-normal uppercase tracking-wider mb-2 inline-block">
+          <span
+            data-aos="fade-up"
+            className="text-qgray text-xs font-normal uppercase tracking-wider mb-2 inline-block"
+          >
             Mobile Phones
           </span>
-          <p className="text-xl font-medium text-qblack mb-4">
+          <p
+            data-aos="fade-up"
+            className="text-xl font-medium text-qblack mb-4"
+          >
             Samsung Galaxy Z Fold3 5G 3 colors in 512GB
           </p>
 
-          <div className="flex space-x-[10px] items-center mb-6">
+          <div
+            data-aos="fade-up"
+            className="flex space-x-[10px] items-center mb-6"
+          >
             <div className="flex">
               <Star />
               <Star />
@@ -103,19 +112,22 @@ export default function ProductView({ className }) {
             </span>
           </div>
 
-          <div className="flex space-x-2 items-center mb-7">
+          <div data-aos="fade-up" className="flex space-x-2 items-center mb-7">
             <span className="text-sm font-500 text-qgray line-through mt-2">
               $9.99
             </span>
             <span className="text-2xl font-500 text-qred">$6.99</span>
           </div>
 
-          <p className="text-qgray text-sm text-normal mb-[30px] leading-7">
+          <p
+            data-aos="fade-up"
+            className="text-qgray text-sm text-normal mb-[30px] leading-7"
+          >
             It is a long established fact that a reader will be distracted by
             the readable there content of a page when looking at its layout.
           </p>
 
-          <div className="colors mb-[30px]">
+          <div data-aos="fade-up" className="colors mb-[30px]">
             <span className="text-sm font-normal uppercase text-qgray mb-[14px] inline-block">
               COLOR
             </span>
@@ -143,7 +155,7 @@ export default function ProductView({ className }) {
             </div>
           </div>
 
-          <div className="size mb-[30px]">
+          <div data-aos="fade-up" className="size mb-[30px]">
             <span className="text-sm font-normal uppercase text-qgray mb-[14px] inline-block">
               SIZE
             </span>
@@ -175,7 +187,10 @@ export default function ProductView({ className }) {
             </div>
           </div>
 
-          <div className="quantity-card-wrapper w-full flex items-center h-[50px] space-x-[10px] mb-[30px]">
+          <div
+            data-aos="fade-up"
+            className="quantity-card-wrapper w-full flex items-center h-[50px] space-x-[10px] mb-[30px]"
+          >
             <div className="w-[120px] h-full px-[26px] flex items-center border border-qgray-border">
               <div className="flex justify-between items-center w-full">
                 <button
@@ -226,7 +241,7 @@ export default function ProductView({ className }) {
             </div>
           </div>
 
-          <div className="mb-[20px]">
+          <div data-aos="fade-up" className="mb-[20px]">
             <p className="text-[13px] text-qgray leading-7">
               <span className="text-qblack">Category :</span> Kitchen
             </p>
@@ -238,7 +253,10 @@ export default function ProductView({ className }) {
             </p>
           </div>
 
-          <div className="flex space-x-2 items-center mb-[20px]">
+          <div
+            data-aos="fade-up"
+            className="flex space-x-2 items-center mb-[20px]"
+          >
             <span>
               <svg
                 width="12"
@@ -259,7 +277,10 @@ export default function ProductView({ className }) {
             </span>
           </div>
 
-          <div className="social-share flex  items-center w-full">
+          <div
+            data-aos="fade-up"
+            className="social-share flex  items-center w-full"
+          >
             <span className="text-qblack text-[13px] mr-[17px] inline-block">
               Share This
             </span>
