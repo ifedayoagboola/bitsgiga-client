@@ -17,12 +17,14 @@ export default function Middlebar({ className }) {
         <div className="relative h-full">
           <div className="flex justify-between items-center h-full">
             <div>
-              <img
-                width="152"
-                height="36"
-                src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
-                alt="logo"
-              />
+              <a href="/">
+                <img
+                  width="152"
+                  height="36"
+                  src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                  alt="logo"
+                />
+              </a>
             </div>
             <div className="w-[517px] h-[44px]">
               <SearchBox className="search-com" />
