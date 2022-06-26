@@ -14,6 +14,7 @@ export default function Reviews({
   phoneHandler,
   message,
   messageHandler,
+  reviewAction,
 }) {
   return (
     <div className="review-wrapper w-full">
@@ -47,11 +48,11 @@ export default function Reviews({
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="flex">
-                      <Star />
-                      <Star />
-                      <Star />
-                      <Star />
-                      <Star />
+                      {Array.from(Array(comment.review), () => (
+                        <span key={comment.review + Math.random()}>
+                          <Star />
+                        </span>
+                      ))}
                     </div>
                     <span className="text-[13px] font-normal text-qblack mt-1 inline-block">
                       (5.0)
@@ -174,6 +175,7 @@ export default function Reviews({
 
           <div className="flex justify-end">
             <button
+              onClick={reviewAction}
               type="button"
               className="black-btn w-[300px] h-[50px] text-sm font-semibold"
             >

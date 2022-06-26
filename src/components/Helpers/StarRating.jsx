@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const StarRating = ({ rating, ratingHandler }) => {
   const [hover, setHover] = useState(0);
+  useEffect(() => {
+    setHover(0);
+  }, [hover]);
+
   return (
     <div className="star-rating flex">
       {[...Array(5)].map((star, index) => {
