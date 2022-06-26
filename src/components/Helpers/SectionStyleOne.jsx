@@ -16,7 +16,7 @@ export default function SectionStyleOne({
     (value, index, array) => array.indexOf(value) === index
   );
   return (
-    <div className={`section-style-one ${className || ""}`}>
+    <div data-aos="fade-up" className={`section-style-one ${className || ""}`}>
       <ViewMoreTitle categoryTitle={sectionTitle} seeMoreUrl={seeMoreUrl}>
         <div className="products-section w-full">
           <div className="grid grid-cols-4 gap-[30px]">

@@ -13,6 +13,7 @@ export default function ProductsAds({
           } items-center w-full overflow-hidden`}
         >
           <div
+            data-aos="fade-right"
             className={`h-full ${
               ads.length > 1 && ads.length <= 2 ? "w-1/2 " : "w-full"
             }  `}
@@ -22,7 +23,7 @@ export default function ProductsAds({
             </a>
           </div>
           {ads.length > 1 && ads.length <= 2 && (
-            <div className="flex-1 h-full">
+            <div data-aos="fade-left" className="flex-1 h-full">
               <a href="#">
                 <img src={ads[1]} alt="" className="w-full h-full" />
               </a>

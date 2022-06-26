@@ -15,7 +15,7 @@ export default function SectionStyleThree({
           <div className="grid grid-cols-4 gap-[30px]">
             <DataIteration datas={products} startLength={0} endLength={12}>
               {({ datas }) => (
-                <div key={datas.id} className="item">
+                <div data-aos="fade-up" key={datas.id} className="item">
                   <ProductCardStyleOne datas={datas} />
                 </div>
               )}

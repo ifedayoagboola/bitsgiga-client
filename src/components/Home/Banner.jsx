@@ -5,7 +5,7 @@ export default function Banner({ className }) {
         <div className="container-x mx-auto">
           <div className="main-wrapper w-full">
             <div className="banner-card flex space-x-[30px] h-[600px] overflow-hidden mb-[30px]">
-              <div className="w-[740px] h-full">
+              <div data-aos="fade-right" className="w-[740px] h-full">
                 <a href="#">
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/images/banner-1.png`}
@@ -14,7 +14,10 @@ export default function Banner({ className }) {
                   />
                 </a>
               </div>
-              <div className="flex-1 flex flex-col space-y-[30px] h-full">
+              <div
+                data-aos="fade-left"
+                className="flex-1 flex flex-col space-y-[30px] h-full"
+              >
                 <div className="w-full h-1/2">
                   <a href="#">
                     <img
@@ -35,7 +38,10 @@ export default function Banner({ className }) {
                 </div>
               </div>
             </div>
-            <div className="best-services w-full bg-white flex justify-between items-center h-[110px] px-10">
+            <div
+              data-aos="fade-down"
+              className="best-services w-full bg-white flex justify-between items-center h-[110px] px-10"
+            >
               <div className="item">
                 <div className="flex space-x-5 items-center">
                   <div>

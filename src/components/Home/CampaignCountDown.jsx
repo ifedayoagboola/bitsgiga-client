@@ -13,6 +13,7 @@ export default function CampaignCountDown({
       <div className="container-x mx-auto h-full">
         <div className="flex space-x-[30px] items-center h-full">
           <div
+            data-aos="fade-right"
             className="campaign-countdown w-1/2 h-full"
             style={{
               background: `url(${process.env.PUBLIC_URL}/assets/images/campaign-cover-countdown.jpg) no-repeat`,
@@ -103,6 +104,7 @@ export default function CampaignCountDown({
             </a>
           </div>
           <div
+            data-aos="fade-left"
             className="download-app flex-1 h-full px-12 py-12"
             style={{
               background: `url(${

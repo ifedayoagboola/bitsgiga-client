@@ -6,6 +6,7 @@ import ThinLove from "../icons/ThinLove";
 export default function ProductCardRowStyleTwo({ className, datas }) {
   return (
     <div
+      data-aos="fade-left"
       className={`product-row-card-style-one w-full h-[250px] bg-white group relative overflow-hidden ${
         className || ""
       }`}

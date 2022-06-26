@@ -9,7 +9,7 @@ export default function DiscountBanner({ className }) {
       }}
     >
       <div>
-        <div>
+        <div data-aos="fade-up">
           <h1 className="text-3xl font-700 text-qblack mb-2 text-center">
             Get <span className="mx-1 text-qyellow">20%</span> Off Discount
             Coupon
@@ -18,7 +18,7 @@ export default function DiscountBanner({ className }) {
             by Subscribe our Newsletter
           </p>
         </div>
-        <div className="w-[543px] h-[54px] flex mt-8">
+        <div data-aos="fade-right" className="w-[543px] h-[54px] flex mt-8">
           <div className="flex-1 bg-white pl-4 flex space-x-2 items-center h-full focus-within:text-qyellow text-qblack">
             <span>
               <svg

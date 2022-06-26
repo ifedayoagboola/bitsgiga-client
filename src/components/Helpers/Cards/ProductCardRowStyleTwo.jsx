@@ -1,6 +1,9 @@
 export default function ProductCardRowStyleTwo({ className, datas }) {
   return (
-    <div className={`product-card-row-two w-full  ${className || ""}`}>
+    <div
+      data-aos="fade-up"
+      className={`product-card-row-two w-full  ${className || ""}`}
+    >
       <a href="#">
         <div className="w-full h-[105px] bg-white border border-primarygray px-5 ">
           <div className="w-full h-full flex space-x-5 justify-center items-center">

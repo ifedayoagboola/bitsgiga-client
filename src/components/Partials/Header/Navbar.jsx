@@ -805,7 +805,7 @@ export default function Navbar({ className }) {
               <div className="nav">
                 <ul className="nav-wrapper flex space-x-10">
                   <li>
-                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer">
+                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
                       <span>Homepage</span>
                       <span className="ml-1.5 ">
                         <Arrow className="fill-current" />
@@ -960,7 +960,7 @@ export default function Navbar({ className }) {
                     </div>
                   </li>
                   <li>
-                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer">
+                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
                       <span>Shop</span>
                       <span className="ml-1.5 ">
                         <Arrow className="fill-current" />
@@ -968,7 +968,7 @@ export default function Navbar({ className }) {
                     </span>
                   </li>
                   <li>
-                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer">
+                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
                       <span>Pages</span>
                       <span className="ml-1.5 ">
                         <Arrow className="fill-current" />
@@ -976,12 +976,12 @@ export default function Navbar({ className }) {
                     </span>
                   </li>
                   <li>
-                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer">
+                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
                       <span>About</span>
                     </span>
                   </li>
                   <li>
-                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer">
+                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
                       <span>Contact</span>
                     </span>
                   </li>
