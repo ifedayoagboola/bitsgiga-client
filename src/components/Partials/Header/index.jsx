@@ -4,7 +4,7 @@ import TopBar from "./TopBar";
 
 export default function Header() {
   return (
-    <header className="header-section-wrapper mb-[30px] relative">
+    <header className="header-section-wrapper relative">
       <TopBar className="quomodo-shop-top-bar" />
       <Middlebar className="quomodo-shop-middle-bar" />
       <Navbar className="quomodo-shop-nav-bar " />
