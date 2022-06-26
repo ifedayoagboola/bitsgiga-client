@@ -2,9 +2,16 @@ import { useState } from "react";
 import BreadcrumbCom from "../BreadcrumbCom";
 import Layout from "../Partials/Layout";
 import ProductView from "./ProductView";
+import Reviews from "./Reviews";
 
 export default function SingleProductPage() {
   const [tab, setTab] = useState("review");
+  const [rating, setRating] = useState(0);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
     <>
       <Layout childrenClasses="pt-0">
@@ -121,7 +128,20 @@ export default function SingleProductPage() {
                       Reviews
                     </h6>
                     {/* review-comments */}
-                    <div className="w-full "></div>
+                    <div className="w-full">
+                      <Reviews
+                        name={name}
+                        nameHandler={(e) => setName(e.target.value)}
+                        email={email}
+                        emailHandler={(e) => setEmail(e.target.value)}
+                        phone={phone}
+                        phoneHandler={(e) => setPhone(e.target.value)}
+                        message={message}
+                        messageHandler={(e) => setMessage(e.target.value)}
+                        rating={rating}
+                        ratingHandler={setRating}
+                      />
+                    </div>
                   </div>
                 )}
                 {tab === "info" && (
