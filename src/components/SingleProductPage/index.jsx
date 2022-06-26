@@ -12,6 +12,39 @@ export default function SingleProductPage() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
+  const commnets = [
+    {
+      id: Math.random(),
+      author: "Ridoy Rock",
+      comments: `Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the redi 1500s, when an unknown printer took a
+                galley of type and scrambled it to make a type specimen book. It
+                has survived not only five centuries but also the on leap into
+                electronic typesetting, remaining`,
+      review: 5,
+      replys: [
+        {
+          id: Math.random(),
+          name: "Willium Kingson",
+          comments: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+          review: 5,
+        },
+      ],
+    },
+    {
+      id: Math.random(),
+      author: "Ridoy Rock",
+      comments: `Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the redi 1500s, when an unknown printer took a
+                galley of type and scrambled it to make a type specimen book. It
+                has survived not only five centuries but also the on leap into
+                electronic typesetting, remaining`,
+      review: 5,
+    },
+  ];
+
   return (
     <>
       <Layout childrenClasses="pt-0">
@@ -130,6 +163,7 @@ export default function SingleProductPage() {
                     {/* review-comments */}
                     <div className="w-full">
                       <Reviews
+                        comments={commnets}
                         name={name}
                         nameHandler={(e) => setName(e.target.value)}
                         email={email}
