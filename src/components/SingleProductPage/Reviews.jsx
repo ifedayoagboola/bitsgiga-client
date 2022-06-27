@@ -15,6 +15,8 @@ export default function Reviews({
   message,
   messageHandler,
   reviewAction,
+  hoverRating,
+  hoverHandler,
 }) {
   return (
     <div className="review-wrapper w-full">
@@ -116,7 +118,12 @@ export default function Reviews({
         </h1>
 
         <div className="flex space-x-1 items-center mb-[30px]">
-          <StarRating rating={rating} ratingHandler={ratingHandler} />
+          <StarRating
+            hoverRating={hoverRating}
+            hoverHandler={hoverHandler}
+            rating={rating}
+            ratingHandler={ratingHandler}
+          />
           <span className="text-qblack text-[15px] font-normal mt-1">
             (0.0)
           </span>

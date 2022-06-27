@@ -7,6 +7,7 @@ import Reviews from "./Reviews";
 export default function SingleProductPage() {
   const [tab, setTab] = useState("review");
   const [rating, setRating] = useState(0);
+  const [hover, setHover] = useState(0);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -52,6 +53,7 @@ export default function SingleProductPage() {
     setPhone("");
     setMessage("");
     setRating(0);
+    setHover(0);
   };
 
   return (
@@ -184,6 +186,8 @@ export default function SingleProductPage() {
                         messageHandler={(e) => setMessage(e.target.value)}
                         rating={rating}
                         ratingHandler={setRating}
+                        hoverRating={hover}
+                        hoverHandler={setHover}
                       />
                     </div>
                   </div>
