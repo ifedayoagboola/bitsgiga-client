@@ -109,7 +109,9 @@ export default function AllProductPage() {
                 <div className="grid grid-cols-3 gap-[30px] mb-[40px]">
                   <DataIteration datas={products} startLength={0} endLength={6}>
                     {({ datas }) => (
-                      <ProductCardStyleOne key={datas.id} datas={datas} />
+                      <div data-aos="fade-up" key={datas.id}>
+                        <ProductCardStyleOne datas={datas} />
+                      </div>
                     )}
                   </DataIteration>
                 </div>
@@ -128,7 +130,9 @@ export default function AllProductPage() {
                     endLength={15}
                   >
                     {({ datas }) => (
-                      <ProductCardStyleOne key={datas.id} datas={datas} />
+                      <div data-aos="fade-up" key={datas.id}>
+                        <ProductCardStyleOne datas={datas} />
+                      </div>
                     )}
                   </DataIteration>
                 </div>
