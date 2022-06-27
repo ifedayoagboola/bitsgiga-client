@@ -654,7 +654,7 @@ export default function ProductsFilter({
       </div>
       <div className="filter-subject-item pb-10 border-b border-qgray-border mt-10">
         <div className="subject-title mb-[30px]">
-          <h1 className="text-black text-base font-500">Sizes</h1>
+          <h1 className="text-black text-base font-500">Storage</h1>
         </div>
         <div className="filter-items">
           <div className="flex space-x-[5px] flex-wrap">
@@ -711,7 +711,7 @@ export default function ProductsFilter({
           </div>
         </div>
       </div>
-      <div className="filter-subject-item pb-10">
+      <div className="filter-subject-item pb-10 mt-10">
         <div className="subject-title mb-[30px]">
           <h1 className="text-black text-base font-500">Sizes</h1>
         </div>
