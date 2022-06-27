@@ -4,6 +4,7 @@ import CardPage from "./components/CartPage";
 import FlashSale from "./components/FlashSale";
 import FourZeroFour from "./components/FourZeroFour";
 import Home from "./components/Home";
+import SallerPage from "./components/SallerPage";
 import SingleProductPage from "./components/SingleProductPage";
 import Wishlist from "./components/Wishlist";
 
@@ -16,6 +17,7 @@ export default function Routers() {
       <Route exact path="/cart" element={<CardPage />} />
       <Route exact path="/wishlist" element={<Wishlist />} />
       <Route exact path="/flash-sale" element={<FlashSale />} />
+      <Route exact path="/saller-page" element={<SallerPage />} />
       <Route exact path="*" element={<FourZeroFour />} />
     </Routes>
   );
