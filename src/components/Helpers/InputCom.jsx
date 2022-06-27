@@ -7,12 +7,13 @@ export default function InputCom({
   inputHandler,
   value,
   inputClasses,
+  labelClasses = "text-qgray text-[13px] font-normal",
 }) {
   return (
     <div className="input-com">
       {label && (
         <label
-          className="input-label text-qgray capitalize text-[13px] font-normal block mb-2 "
+          className={`input-label capitalize block mb-2 ${labelClasses || ""}`}
           htmlFor={name}
         >
           {label}
@@ -23,7 +24,7 @@ export default function InputCom({
           placeholder={placeholder}
           value={value}
           onChange={inputHandler}
-          className={`input-field placeholder:text-base text-bese px-6 text-dark-gray w-full h-full bg-[#FAFAFA] focus:ring-0 focus:outline-none ${
+          className={`input-field placeholder:text-sm text-sm px-6 text-dark-gray w-full h-full font-normal bg-white focus:ring-0 focus:outline-none ${
             inputClasses || ""
           }`}
           type={type}

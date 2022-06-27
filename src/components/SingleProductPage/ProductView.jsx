@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Star from "../Helpers/icons/Star";
 
-export default function ProductView({ className }) {
+export default function ProductView({ className, reportHandler }) {
   const productsImg = [
     {
       id: 1,
@@ -272,9 +272,13 @@ export default function ProductView({ className }) {
               </svg>
             </span>
 
-            <span className="text-qred font-semibold text-[13px]">
+            <button
+              type="button"
+              onClick={reportHandler}
+              className="text-qred font-semibold text-[13px]"
+            >
               Report This Item
-            </span>
+            </button>
           </div>
 
           <div
