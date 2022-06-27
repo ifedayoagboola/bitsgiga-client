@@ -21,7 +21,7 @@ export default function FlashSale() {
               className="flash-ad w-full h-[400px] flex justify-end items-center mb-10"
             >
               <div className="mr-[75px]">
-                <div className="countdown-wrapper w-full flex space-x-6 justify-between mb-10">
+                <div className="countdown-wrapper w-full flex space-x-6 justify-between">
                   <div className="countdown-item">
                     <div className="countdown-number w-[100px] h-[100px] rounded-full bg-white flex justify-center items-center">
                       <span className="font-700 text-[30px] text-[#EB5757]">
@@ -67,9 +67,9 @@ export default function FlashSale() {
             </div>
             <div className="products grid grid-cols-4 gap-[30px]">
               <DataIteration
-                datas={products.products.slice(0, 12)}
+                datas={products.products.slice(0, 16)}
                 startLength={0}
-                endLength={12}
+                endLength={16}
               >
                 {({ datas }) => (
                   <div data-aos="fade-up" key={datas.id} className="item">
