@@ -1,8 +1,10 @@
 import { useRef, useState } from "react";
+import data from "../../data/products.json";
 import BreadcrumbCom from "../BreadcrumbCom";
 import Layout from "../Partials/Layout";
 import ProductView from "./ProductView";
 import Reviews from "./Reviews";
+import SallerInfo from "./SallerInfo";
 
 export default function SingleProductPage() {
   const [tab, setTab] = useState("review");
@@ -219,7 +221,7 @@ export default function SingleProductPage() {
                 )}
                 {tab === "info" && (
                   <div data-aos="fade-up" className="w-full tab-content-item">
-                    info
+                    <SallerInfo products={data.products.slice(0, 8)} />
                   </div>
                 )}
               </div>
