@@ -1,5 +1,6 @@
 import Star from "../Helpers/icons/Star";
 import InputCom from "../Helpers/InputCom";
+import LoaderStyleOne from "../Helpers/Loaders/LoaderStyleOne";
 import StarRating from "../Helpers/StarRating";
 
 export default function Reviews({
@@ -17,6 +18,7 @@ export default function Reviews({
   reviewAction,
   hoverRating,
   hoverHandler,
+  reviewLoading,
 }) {
   return (
     <div className="review-wrapper w-full">
@@ -57,7 +59,7 @@ export default function Reviews({
                       ))}
                     </div>
                     <span className="text-[13px] font-normal text-qblack mt-1 inline-block">
-                      (5.0)
+                      ({comment.review}.0)
                     </span>
                   </div>
                 </div>
@@ -125,7 +127,7 @@ export default function Reviews({
             ratingHandler={ratingHandler}
           />
           <span className="text-qblack text-[15px] font-normal mt-1">
-            (0.0)
+            ({rating}.0)
           </span>
         </div>
 
@@ -184,9 +186,16 @@ export default function Reviews({
             <button
               onClick={reviewAction}
               type="button"
-              className="black-btn w-[300px] h-[50px] text-sm font-semibold"
+              className="black-btn w-[300px] h-[50px]  flex justify-center"
             >
-              Submit Review
+              <span className="flex space-x-1 items-center h-full">
+                <span className="text-sm font-semibold">Submit Review</span>
+                {reviewLoading && (
+                  <span className="w-5 " style={{ transform: "scale(0.3)" }}>
+                    <LoaderStyleOne />
+                  </span>
+                )}
+              </span>
             </button>
           </div>
         </div>

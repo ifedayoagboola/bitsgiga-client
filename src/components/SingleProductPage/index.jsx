@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import BreadcrumbCom from "../BreadcrumbCom";
 import Layout from "../Partials/Layout";
 import ProductView from "./ProductView";
@@ -12,10 +12,17 @@ export default function SingleProductPage() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [reviewLoading, setLoading] = useState(false);
+  const reviewElement = useRef(null);
+  // useEffect(() => {
+  //   console.log(reviewElement.current.getBoundingClientRect().top);
+  // });
+  // const rect = element.getBoundingClientRect();
+  // console.log(rect.top, rect.right, rect.bottom, rect.left);
   const [commnets, setComments] = useState([
     {
       id: Math.random(),
-      author: "Ridoy Rock",
+      author: "Rafiqul Islam",
       comments: `Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the redi 1500s, when an unknown printer took a
@@ -33,7 +40,7 @@ export default function SingleProductPage() {
     },
     {
       id: Math.random(),
-      author: "Ridoy Rock",
+      author: "Abdullah Mamun",
       comments: `Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the redi 1500s, when an unknown printer took a
@@ -44,16 +51,33 @@ export default function SingleProductPage() {
     },
   ]);
   const reviewAction = () => {
-    setComments((prev) => [
-      ...prev,
-      { id: Math.random(), author: name, comments: message, review: rating },
-    ]);
-    setName("");
-    setEmail("");
-    setPhone("");
-    setMessage("");
-    setRating(0);
-    setHover(0);
+    setLoading(true);
+    setTimeout(() => {
+      if ((name, message, rating)) {
+        setComments((prev) => [
+          {
+            id: Math.random(),
+            author: name,
+            comments: message,
+            review: rating,
+          },
+          ...prev,
+        ]);
+        setLoading(false);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+        setRating(0);
+        setHover(0);
+        window.scrollTo({
+          top: -reviewElement.current.getBoundingClientRect().top,
+          left: 0,
+          behavior: "smooth",
+        });
+      }
+      return false;
+    }, 2000);
   };
 
   return (
@@ -78,7 +102,7 @@ export default function SingleProductPage() {
             </div>
           </div>
 
-          <div className="w-full relative pb-[60px]">
+          <div className="w-full relative pb-[60px]" ref={reviewElement}>
             <div className="tab-buttons w-full mb-10">
               <div className="container-x mx-auto">
                 <ul className="flex space-x-12 ">
@@ -174,8 +198,9 @@ export default function SingleProductPage() {
                     {/* review-comments */}
                     <div className="w-full">
                       <Reviews
+                        reviewLoading={reviewLoading}
                         reviewAction={reviewAction}
-                        comments={commnets}
+                        comments={commnets.slice(0, 2)}
                         name={name}
                         nameHandler={(e) => setName(e.target.value)}
                         email={email}
