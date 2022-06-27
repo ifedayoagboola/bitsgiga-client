@@ -8,7 +8,7 @@ export default function EmptyCardError() {
           <div className="mb-10">
             <Empty />
           </div>
-          <div className="empty-content w-full">
+          <div data-aos="fade-up" className="empty-content w-full">
             <h1 className="text-xl font-semibold text-center mb-5">
               Empty! You don’t Cart any Products
             </h1>
