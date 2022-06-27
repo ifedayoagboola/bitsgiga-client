@@ -77,6 +77,7 @@ export default function SingleProductPage() {
           behavior: "smooth",
         });
       }
+      setLoading(false);
       return false;
     }, 2000);
   };
@@ -230,13 +231,13 @@ export default function SingleProductPage() {
             </div>
           </div>
 
-          <div data-aos="fade-up" className="related-product w-full bg-white">
+          <div className="related-product w-full bg-white">
             <div className="container-x mx-auto">
               <div className="w-full py-[60px]">
                 <h1 className="text-3xl font-600 text-qblacktext leading-none mb-[30px]">
                   Related Product
                 </h1>
-                <div className="grid grid-cols-4 gap-[30px]">
+                <div data-aos="fade-up" className="grid grid-cols-4 gap-[30px]">
                   <DataIteration
                     datas={data.products}
                     startLength={5}
