@@ -9,7 +9,10 @@ export default function ProductCardStyleOne({ datas }) {
       (datas.cam_product_available + datas.cam_product_sale)) *
     100;
   return (
-    <div className="product-card-one w-full h-full bg-white relative group overflow-hidden">
+    <div
+      className="product-card-one w-full h-full bg-white relative group overflow-hidden"
+      style={{ boxShadow: "0px 15px 64px 0px rgba(0, 0, 0, 0.05)" }}
+    >
       <div
         className="product-card-img w-full h-[300px]"
         style={{
