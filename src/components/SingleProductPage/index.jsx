@@ -1,13 +1,15 @@
 import { useRef, useState } from "react";
 import data from "../../data/products.json";
 import BreadcrumbCom from "../BreadcrumbCom";
+import ProductCardStyleOne from "../Helpers/Cards/ProductCardStyleOne";
+import DataIteration from "../Helpers/DataIteration";
 import Layout from "../Partials/Layout";
 import ProductView from "./ProductView";
 import Reviews from "./Reviews";
 import SallerInfo from "./SallerInfo";
 
 export default function SingleProductPage() {
-  const [tab, setTab] = useState("review");
+  const [tab, setTab] = useState("des");
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   const [name, setName] = useState("");
@@ -16,11 +18,6 @@ export default function SingleProductPage() {
   const [message, setMessage] = useState("");
   const [reviewLoading, setLoading] = useState(false);
   const reviewElement = useRef(null);
-  // useEffect(() => {
-  //   console.log(reviewElement.current.getBoundingClientRect().top);
-  // });
-  // const rect = element.getBoundingClientRect();
-  // console.log(rect.top, rect.right, rect.bottom, rect.left);
   const [commnets, setComments] = useState([
     {
       id: Math.random(),
@@ -84,9 +81,9 @@ export default function SingleProductPage() {
 
   return (
     <>
-      <Layout childrenClasses="pt-0">
+      <Layout childrenClasses="pt-0 pb-0">
         <div className="single-product-wrapper w-full ">
-          <div className="bg-white pt-[30px] w-full">
+          <div className="product-view-main-wrapper bg-white pt-[30px] w-full">
             <div className="breadcrumb-wrapper w-full ">
               <div className="container-x mx-auto">
                 <BreadcrumbCom
@@ -104,7 +101,10 @@ export default function SingleProductPage() {
             </div>
           </div>
 
-          <div className="w-full relative pb-[60px]" ref={reviewElement}>
+          <div
+            className="product-des-wrapper w-full relative pb-[60px]"
+            ref={reviewElement}
+          >
             <div className="tab-buttons w-full mb-10">
               <div className="container-x mx-auto">
                 <ul className="flex space-x-12 ">
@@ -224,6 +224,29 @@ export default function SingleProductPage() {
                     <SallerInfo products={data.products.slice(0, 8)} />
                   </div>
                 )}
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" className="related-product w-full bg-white">
+            <div className="container-x mx-auto">
+              <div className="w-full py-[60px]">
+                <h1 className="text-3xl font-600 text-qblacktext leading-none mb-[30px]">
+                  Related Product
+                </h1>
+                <div className="grid grid-cols-4 gap-[30px]">
+                  <DataIteration
+                    datas={data.products}
+                    startLength={5}
+                    endLength={9}
+                  >
+                    {({ datas }) => (
+                      <div key={datas.id} className="item">
+                        <ProductCardStyleOne datas={datas} />
+                      </div>
+                    )}
+                  </DataIteration>
+                </div>
               </div>
             </div>
           </div>
