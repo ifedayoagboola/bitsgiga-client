@@ -3,6 +3,7 @@ import AllProductPage from "./components/AllProductPage";
 import CardPage from "./components/CartPage";
 import Home from "./components/Home";
 import SingleProductPage from "./components/SingleProductPage";
+import Wishlist from "./components/Wishlist";
 
 export default function Routers() {
   return (
@@ -11,6 +12,7 @@ export default function Routers() {
       <Route exact path="/all-products" element={<AllProductPage />} />
       <Route exact path="/single-product" element={<SingleProductPage />} />
       <Route exact path="/cart" element={<CardPage />} />
+      <Route exact path="/wishlist" element={<Wishlist />} />
     </Routes>
   );
 }
