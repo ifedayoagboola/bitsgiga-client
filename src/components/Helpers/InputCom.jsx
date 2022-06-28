@@ -3,23 +3,23 @@ export default function InputCom({
   type,
   name,
   placeholder,
-  //   iconName,
+  children,
   inputHandler,
   value,
   inputClasses,
   labelClasses = "text-qgray text-[13px] font-normal",
 }) {
   return (
-    <div className="input-com">
+    <div className="input-com w-full h-full">
       {label && (
         <label
-          className={`input-label capitalize block mb-2 ${labelClasses || ""}`}
+          className={`input-label capitalize block  mb-2 ${labelClasses || ""}`}
           htmlFor={name}
         >
           {label}
         </label>
       )}
-      <div className="input-wrapper border border-qgray-border w-full overflow-hidden relative ">
+      <div className="input-wrapper border border-qgray-border w-full h-full overflow-hidden relative ">
         <input
           placeholder={placeholder}
           value={value}
@@ -30,11 +30,7 @@ export default function InputCom({
           type={type}
           id={name}
         />
-        {/* {iconName && (
-          <div className="absolute right-6 bottom-[19px] z-10">
-            <Icons name={iconName} />
-          </div>
-        )} */}
+        {children && children}
       </div>
     </div>
   );

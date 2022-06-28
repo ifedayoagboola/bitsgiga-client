@@ -206,3 +206,15 @@ body {
     height: 14px;
     box-shadow: 0px 3px 10px 0px rgba(204, 204, 204, 1);
 }
+
+/*TODO: =============== product compaire============ */
+
+.products-compaire-wrapper .table-wrapper .table-row-wrapper .product:last-child {
+    border-right: none;
+}
+.products-compaire-wrapper .table-wrapper .table-row-wrapper:nth-child(2) td {
+    padding-top: 26px;
+}
+.products-compaire-wrapper .table-wrapper .table-row-wrapper:last-child > td {
+    padding-bottom: 45px;
+}
