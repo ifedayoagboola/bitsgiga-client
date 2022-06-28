@@ -6,6 +6,7 @@ import FourZeroFour from "./components/FourZeroFour";
 import Home from "./components/Home";
 import ProductsCompaire from "./components/ProductsCompaire/index";
 import SallerPage from "./components/SallerPage";
+import Sallers from "./components/Sellers";
 import SingleProductPage from "./components/SingleProductPage";
 import Wishlist from "./components/Wishlist";
 
@@ -20,6 +21,7 @@ export default function Routers() {
       <Route exact path="/flash-sale" element={<FlashSale />} />
       <Route exact path="/saller-page" element={<SallerPage />} />
       <Route exact path="/products-compaire" element={<ProductsCompaire />} />
+      <Route exact path="/sallers" element={<Sallers />} />
       <Route exact path="*" element={<FourZeroFour />} />
     </Routes>
   );
