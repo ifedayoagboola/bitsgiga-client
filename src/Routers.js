@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import AllProductPage from "./components/AllProductPage";
 import CardPage from "./components/CartPage";
+import CheakoutPage from "./components/CheakoutPage";
 import FlashSale from "./components/FlashSale";
 import FourZeroFour from "./components/FourZeroFour";
 import Home from "./components/Home";
@@ -17,6 +18,7 @@ export default function Routers() {
       <Route exact path="/all-products" element={<AllProductPage />} />
       <Route exact path="/single-product" element={<SingleProductPage />} />
       <Route exact path="/cart" element={<CardPage />} />
+      <Route exact path="/checkout" element={<CheakoutPage />} />
       <Route exact path="/wishlist" element={<Wishlist />} />
       <Route exact path="/flash-sale" element={<FlashSale />} />
       <Route exact path="/saller-page" element={<SallerPage />} />
