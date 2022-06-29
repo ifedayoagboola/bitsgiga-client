@@ -5,6 +5,7 @@ import CheakoutPage from "./components/CheakoutPage";
 import FlashSale from "./components/FlashSale";
 import FourZeroFour from "./components/FourZeroFour";
 import Home from "./components/Home";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 import ProductsCompaire from "./components/ProductsCompaire/index";
 import SallerPage from "./components/SallerPage";
 import Sallers from "./components/Sellers";
@@ -26,6 +27,7 @@ export default function Routers() {
       <Route exact path="/products-compaire" element={<ProductsCompaire />} />
       <Route exact path="/sallers" element={<Sallers />} />
       <Route exact path="/terms-conditions" element={<TermsCondition />} />
+      <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route exact path="*" element={<FourZeroFour />} />
     </Routes>
   );
