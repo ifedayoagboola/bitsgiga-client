@@ -6,7 +6,7 @@ export default function Layout({ children, childrenClasses }) {
   return (
     <>
       <Header />
-      <div className={`w-full pt-[30px] pb-[60px] ${childrenClasses || ""}`}>
+      <div className={`w-full  ${childrenClasses || "pt-[30px] pb-[60px]"}`}>
         {children && children}
       </div>
       <DiscountBanner />

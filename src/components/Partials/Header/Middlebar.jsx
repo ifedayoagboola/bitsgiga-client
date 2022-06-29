@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import Cart from "../../Cart";
 import Compair from "../../Helpers/icons/Compair";
 import ThinBag from "../../Helpers/icons/ThinBag";
@@ -7,10 +7,10 @@ import ThinPeople from "../../Helpers/icons/ThinPeople";
 import SearchBox from "../../Helpers/SearchBox";
 
 export default function Middlebar({ className }) {
-  const [toggleCart, setToggle] = useState(false);
-  const cartHandler = () => {
-    setToggle(!toggleCart);
-  };
+  // const [toggleCart, setToggle] = useState(false);
+  // const cartHandler = () => {
+  //   setToggle(!toggleCart);
+  // };
   return (
     <div className={`w-full h-[86px] bg-white ${className}`}>
       <div className="container-x mx-auto h-full">
@@ -50,15 +50,20 @@ export default function Middlebar({ className }) {
                   1
                 </span>
               </div>
-              <div className="cart relative cursor-pointer">
-                <button onClick={cartHandler} type="button">
-                  <span>
-                    <ThinBag />
+              <div className="cart-wrapper group relative py-4">
+                <div className="cart relative cursor-pointer">
+                  <Link to="/saller">
+                    <span>
+                      <ThinBag />
+                    </span>
+                  </Link>
+                  <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
+                    15
                   </span>
-                </button>
-                <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
-                  15
-                </span>
+                </div>
+                {/* <div className="fixed left-0 top-0 w-full h-full z-40"></div> */}
+                {/* hidden group-hover:block" */}
+                <Cart className="absolute -right-[45px] top-11 z-50 hidden group-hover:block" />
               </div>
               <div>
                 <button type="button">
@@ -69,15 +74,6 @@ export default function Middlebar({ className }) {
               </div>
             </div>
           </div>
-          {toggleCart && (
-            <>
-              <div
-                onClick={cartHandler}
-                className="fixed left-0 top-0 w-full h-full z-40"
-              ></div>
-              <Cart className="absolute right-0 top-16 z-50" />
-            </>
-          )}
         </div>
       </div>
     </div>
