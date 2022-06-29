@@ -83,7 +83,7 @@ export default function ProductCardStyleOne({ datas }) {
             </span>
           ))}
         </div>
-        <a href="#">
+        <a href="/single-product">
           <p className="title mb-2 text-[15px] font-600 text-qblack leading-[24px] line-clamp-2 hover:text-blue-600">
             {datas.title}
           </p>

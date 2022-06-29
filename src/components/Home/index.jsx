@@ -26,7 +26,7 @@ export default function Home() {
           brands={brands}
           categoryTitle="Mobile & Tablet"
           sectionTitle="Gamer World"
-          seeMoreUrl="/"
+          seeMoreUrl="/all-products"
           className="category-products mb-[60px]"
         />
         <BrandSection
@@ -39,14 +39,14 @@ export default function Home() {
         />
         <ViewMoreTitle
           className="top-selling-product mb-[60px]"
-          seeMoreUrl="#"
+          seeMoreUrl="/all-products"
           categoryTitle="Top Selling Products"
         >
           <SectionStyleTwo products={products.slice(3, products.length)} />
         </ViewMoreTitle>
         <ViewMoreTitle
           className="best-sallers-section mb-[60px]"
-          seeMoreUrl="#"
+          seeMoreUrl="/all-products"
           categoryTitle="Top Selling Products"
         >
           <BestSellers />
@@ -64,7 +64,7 @@ export default function Home() {
           brands={brands}
           categoryTitle="Electronics"
           sectionTitle="Popular Sales"
-          seeMoreUrl="/"
+          seeMoreUrl="/all-products"
           className="category-products mb-[60px]"
         />
         <ProductsAds
@@ -74,7 +74,7 @@ export default function Home() {
         <SectionStyleThree
           products={products}
           sectionTitle="New Arrivals"
-          seeMoreUrl="/"
+          seeMoreUrl="/all-products"
           className="category-products mb-[60px]"
         />
         <ProductsAds
@@ -85,7 +85,7 @@ export default function Home() {
         <SectionStyleFour
           products={products}
           sectionTitle="New Arrivals"
-          seeMoreUrl="/"
+          seeMoreUrl="/all-products"
           className="category-products mb-[60px]"
         />
       </Layout>

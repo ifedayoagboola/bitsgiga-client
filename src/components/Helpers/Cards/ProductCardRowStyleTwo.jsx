@@ -15,9 +15,11 @@ export default function ProductCardRowStyleTwo({ className, datas }) {
               />
             </div>
             <div className="flex-1 h-full flex flex-col justify-center ">
-              <p className="title mb-2 text-[15px] font-600 text-qblack leading-[24px] line-clamp-1 hover:text-blue-600">
-                {datas.title}
-              </p>
+              <a href="/single-product">
+                <p className="title mb-2 text-[15px] font-600 text-qblack leading-[24px] line-clamp-1 hover:text-blue-600">
+                  {datas.title}
+                </p>
+              </a>
 
               <p className="price">
                 <span className="main-price text-qgray line-through font-600 text-[18px]">

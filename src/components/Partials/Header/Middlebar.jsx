@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Cart from "../../Cart";
 import Compair from "../../Helpers/icons/Compair";
 import ThinBag from "../../Helpers/icons/ThinBag";
@@ -31,32 +30,32 @@ export default function Middlebar({ className }) {
             </div>
             <div className="flex space-x-6 items-center">
               <div className="compaire relative">
-                <button type="button">
+                <a href="/products-compaire">
                   <span>
                     <Compair />
                   </span>
-                </button>
+                </a>
                 <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
                   2
                 </span>
               </div>
               <div className="favorite relative">
-                <button type="button">
+                <a href="/wishlist">
                   <span>
                     <ThinLove />
                   </span>
-                </button>
+                </a>
                 <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
                   1
                 </span>
               </div>
               <div className="cart-wrapper group relative py-4">
                 <div className="cart relative cursor-pointer">
-                  <Link to="/saller">
+                  <a href="/cart">
                     <span>
                       <ThinBag />
                     </span>
-                  </Link>
+                  </a>
                   <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
                     15
                   </span>

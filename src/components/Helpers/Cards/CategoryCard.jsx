@@ -16,7 +16,7 @@ export default function CategoryCard({ background, title, brands = [] }) {
           <ul>
             {brands.map((brand) => (
               <li key={brand + Math.random()}>
-                <a href="#">
+                <a href="/all-products">
                   <span className="text-sm text-qgray hober:text-qBlack border-b border-transparent hover:border-qblack hover:text-qblack capitalize">
                     {brand}
                   </span>
