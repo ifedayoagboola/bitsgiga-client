@@ -164,7 +164,7 @@ export default function CardPage({ cart = true }) {
                     <p className="text-[18px] font-medium text-qred">$365</p>
                   </div>
                 </div>
-                <a href="#">
+                <a href="/checkout">
                   <div className="w-full h-[50px] black-btn flex justify-center items-center">
                     <span className="text-sm font-semibold">
                       Proceed to Checkout
