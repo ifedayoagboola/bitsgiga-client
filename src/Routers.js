@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import About from "./components/About";
 import AllProductPage from "./components/AllProductPage";
+import Blogs from "./components/Blogs";
 import CardPage from "./components/CartPage";
 import CheakoutPage from "./components/CheakoutPage";
 import FlashSale from "./components/FlashSale";
@@ -28,6 +29,7 @@ export default function Routers() {
       <Route exact path="/products-compaire" element={<ProductsCompaire />} />
       <Route exact path="/sallers" element={<Sallers />} />
       <Route exact path="/about" element={<About />} />
+      <Route exact path="/blogs" element={<Blogs />} />
       <Route exact path="/terms-conditions" element={<TermsCondition />} />
       <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route exact path="*" element={<FourZeroFour />} />
