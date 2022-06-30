@@ -684,7 +684,11 @@ export default function About() {
               <div className="grid grid-cols-2 gap-[30px]">
                 <DataIteration datas={blog.blogs} startLength={0} endLength={2}>
                   {({ datas }) => (
-                    <div key={datas.id} className="item w-full">
+                    <div
+                      data-aos="fade-up"
+                      key={datas.id}
+                      className="item w-full"
+                    >
                       <BlogCard datas={datas} />
                     </div>
                   )}
