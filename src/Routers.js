@@ -6,6 +6,7 @@ import Blog from "./components/Blogs/Blog.jsx";
 import CardPage from "./components/CartPage";
 import CheakoutPage from "./components/CheakoutPage";
 import Contact from "./components/Contact";
+import Faq from "./components/Faq";
 import FlashSale from "./components/FlashSale";
 import FourZeroFour from "./components/FourZeroFour";
 import Home from "./components/Home";
@@ -36,6 +37,7 @@ export default function Routers() {
       <Route exact path="/blogs/blog" element={<Blog />} />
       <Route exact path="/tracking-order" element={<TrackingOrder />} />
       <Route exact path="/contact" element={<Contact />} />
+      <Route exact path="/faq" element={<Faq />} />
       <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route exact path="*" element={<FourZeroFour />} />
     </Routes>
