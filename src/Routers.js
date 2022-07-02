@@ -13,7 +13,7 @@ import ProductsCompaire from "./components/ProductsCompaire/index";
 import SallerPage from "./components/SallerPage";
 import Sallers from "./components/Sellers";
 import SingleProductPage from "./components/SingleProductPage";
-import TermsCondition from "./components/TermsCondition";
+import TrackingOrder from "./components/TrackingOrder";
 import Wishlist from "./components/Wishlist";
 
 export default function Routers() {
@@ -32,7 +32,8 @@ export default function Routers() {
       <Route exact path="/about" element={<About />} />
       <Route exact path="/blogs" element={<Blogs />} />
       <Route exact path="/blogs/blog" element={<Blog />} />
-      <Route exact path="/terms-conditions" element={<TermsCondition />} />
+      <Route exact path="/blogs/blog" element={<Blog />} />
+      <Route exact path="/tracking-order" element={<TrackingOrder />} />
       <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route exact path="*" element={<FourZeroFour />} />
     </Routes>
