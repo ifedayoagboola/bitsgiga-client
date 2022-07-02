@@ -349,7 +349,10 @@ export default function Blog() {
                 </div>
               </div>
               <div className="w-[370px]">
-                <div className="search-widget w-full p-[30px] bg-white mb-[30px]">
+                <div
+                  data-aos="fade-up"
+                  className="search-widget w-full p-[30px] bg-white mb-[30px]"
+                >
                   <h1 className="text-[22px] text-qblack font-bold mb-5">
                     Search
                   </h1>
@@ -376,7 +379,10 @@ export default function Blog() {
                     </span>
                   </div>
                 </div>
-                <div className="latest-post-widget w-full bg-white p-[30px] mb-[30px]">
+                <div
+                  data-aos="fade-up"
+                  className="latest-post-widget w-full bg-white p-[30px] mb-[30px]"
+                >
                   <h1 className="text-[22px] text-qblack font-bold mb-5">
                     Latest Post
                   </h1>
@@ -603,7 +609,10 @@ export default function Blog() {
                     </li>
                   </ul>
                 </div>
-                <div className="categories-widget w-full bg-white p-[30px] mb-[30px]">
+                <div
+                  data-aos="fade-up"
+                  className="categories-widget w-full bg-white p-[30px] mb-[30px]"
+                >
                   <h1 className="text-[22px] text-qblack font-bold mb-5">
                     Categories
                   </h1>
@@ -667,7 +676,10 @@ export default function Blog() {
                     </li>
                   </ul>
                 </div>
-                <div className="popular-tag-widget w-full bg-white p-[30px] mb-[30px]">
+                <div
+                  data-aos="fade-up"
+                  className="popular-tag-widget w-full bg-white p-[30px] mb-[30px]"
+                >
                   <h1 className="text-[22px] text-qblack font-bold mb-5">
                     Popular Tags
                   </h1>
@@ -702,6 +714,7 @@ export default function Blog() {
                   </div>
                 </div>
                 <div
+                  data-aos="fade-up"
                   className="w-full h-[358px]"
                   style={{
                     background: `url(${process.env.PUBLIC_URL}/assets/images/new-letter.jpg) no-repeat`,
