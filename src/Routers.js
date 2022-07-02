@@ -31,7 +31,7 @@ export default function Routers() {
       <Route exact path="/sallers" element={<Sallers />} />
       <Route exact path="/about" element={<About />} />
       <Route exact path="/blogs" element={<Blogs />} />
-      <Route exact path="/blog" element={<Blog />} />
+      <Route exact path="/blogs/blog" element={<Blog />} />
       <Route exact path="/terms-conditions" element={<TermsCondition />} />
       <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route exact path="*" element={<FourZeroFour />} />
