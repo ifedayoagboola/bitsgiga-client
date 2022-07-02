@@ -348,7 +348,7 @@ export default function Blog() {
                   </div>
                 </div>
               </div>
-              <div className="w-[370px]"></div>
+              <div className="w-[370px]">suvo</div>
             </div>
           </div>
         </div>
