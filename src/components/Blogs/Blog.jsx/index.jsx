@@ -376,7 +376,7 @@ export default function Blog() {
                     </span>
                   </div>
                 </div>
-                <div className="latest-post w-full bg-white p-[30px]">
+                <div className="latest-post-widget w-full bg-white p-[30px] mb-[30px]">
                   <h1 className="text-[22px] text-qblack font-bold mb-5">
                     Latest Post
                   </h1>
@@ -600,6 +600,134 @@ export default function Blog() {
                           </span>
                         </div>
                       </div>
+                    </li>
+                  </ul>
+                </div>
+                <div className="categories-widget w-full bg-white p-[30px]">
+                  <h1 className="text-[22px] text-qblack font-bold mb-5">
+                    Categories
+                  </h1>
+                  <div className="w-full h-[1px] bg-[#DCDCDC] mb-5"></div>
+                  <ul className="flex flex-col space-y-5">
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Development
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
+                    </li>
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Guide
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
+                    </li>
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Inspiration
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
+                    </li>
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Latest News
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
+                    </li>
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Revenew
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
+                    </li>
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Start Up
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
+                    </li>
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Technology
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="categories-widget w-full bg-white p-[30px]">
+                  <h1 className="text-[22px] text-qblack font-bold mb-5">
+                    Categories
+                  </h1>
+                  <div className="w-full h-[1px] bg-[#DCDCDC] mb-5"></div>
+                  <ul className="flex flex-col space-y-5">
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Development
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
+                    </li>
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Guide
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
+                    </li>
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Inspiration
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
+                    </li>
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Latest News
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
+                    </li>
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Revenew
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
+                    </li>
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Start Up
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
+                    </li>
+                    <li className="flex justify-between items-center group">
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        Technology
+                      </span>
+                      <span className="text-base text-qgraytwo group-hover:text-qyellow">
+                        (6)
+                      </span>
                     </li>
                   </ul>
                 </div>
