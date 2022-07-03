@@ -28,7 +28,7 @@ export default function TopBar({ className }) {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/faq">
                     <span className="text-xs leading-6 text-qblack font-500">
                       Support
                     </span>
