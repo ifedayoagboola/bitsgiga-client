@@ -10,7 +10,7 @@ export default function CampaignCountDown({
   const { showDate, showHour, showMinute, showSecound } = CountDown(lastDate);
 
   return (
-    <Link to="/flash-sale">
+    <div>
       <div className={`w-full h-[460px] ${className || ""}`}>
         <div className="container-x mx-auto h-full">
           <div className="flex space-x-[30px] items-center h-full">
@@ -22,7 +22,7 @@ export default function CampaignCountDown({
                 backgroundSize: "cover",
               }}
             >
-              <a href="#">
+              <Link to="/flash-sale">
                 <div className="w-full px-12 py-12">
                   <div className="countdown-wrapper w-full flex justify-between mb-10">
                     <div className="countdown-item">
@@ -103,7 +103,7 @@ export default function CampaignCountDown({
                     </span>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
             <div
               data-aos="fade-left"
@@ -165,6 +165,6 @@ export default function CampaignCountDown({
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
