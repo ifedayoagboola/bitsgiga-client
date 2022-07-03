@@ -39,7 +39,7 @@ export default function Banner({ className }) {
               </div>
             </div>
             <div
-              data-aos="fade-down"
+              data-aos="fade-up"
               className="best-services w-full bg-white flex justify-between items-center h-[110px] px-10"
             >
               <div className="item">
