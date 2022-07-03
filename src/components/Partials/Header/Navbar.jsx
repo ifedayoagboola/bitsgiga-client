@@ -976,20 +976,31 @@ export default function Navbar({ className }) {
                     </span>
                   </li>
                   <li>
-                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
-                      <span>About</span>
-                    </span>
+                    <Link to="/about">
+                      <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
+                        <span>About</span>
+                      </span>
+                    </Link>
                   </li>
                   <li>
-                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
-                      <span>Contact</span>
-                    </span>
+                    <Link to="/blogs">
+                      <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
+                        <span>Blog</span>
+                      </span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/contact">
+                      <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
+                        <span>Contact</span>
+                      </span>
+                    </Link>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="become-seller-btn">
-              <Link to="/">
+              <Link to="/become-saller">
                 <div className="black-btn w-[161px] h-[40px] flex justify-center items-center cursor-pointer">
                   <div className="flex space-x-2 items-center">
                     <span className="text-sm font-600">Become a Seller</span>

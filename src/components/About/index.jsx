@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import BlogCard from "../Helpers/Cards/BlogCard";
 import Star from "../Helpers/icons/Star";
 import PageTitle from "../Helpers/PageTitle";
@@ -70,11 +71,11 @@ export default function About() {
                   </li>
                 </ul>
 
-                <a href="#">
+                <Link to="/contact">
                   <div className="w-[121px] h-10">
                     <span className="yellow-btn">Contact Us</span>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

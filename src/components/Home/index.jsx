@@ -57,7 +57,7 @@ export default function Home() {
         </ViewMoreTitle>
         <ViewMoreTitle
           className="best-sallers-section mb-[60px]"
-          seeMoreUrl="/all-products"
+          seeMoreUrl="/sallers"
           categoryTitle="Top Selling Products"
         >
           <BestSellers />

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function BestSellers({ className }) {
   return (
     <div className={`w-full ${className || ""}`}>
@@ -13,7 +15,9 @@ export default function BestSellers({ className }) {
               alt=""
             />
           </div>
-          <p className="text-base font-500 text-center">Shopno BD</p>
+          <Link to="/saller-page">
+            <p className="text-base font-500 text-center">Shopno BD</p>
+          </Link>
         </div>
         <div
           data-aos="fade-left"
@@ -26,7 +30,9 @@ export default function BestSellers({ className }) {
               alt=""
             />
           </div>
-          <p className="text-base font-500 text-center">Eecoms Shop</p>
+          <Link to="/saller-page">
+            <p className="text-base font-500 text-center">Eecoms Shop</p>
+          </Link>
         </div>
         <div
           data-aos="fade-left"
@@ -39,7 +45,9 @@ export default function BestSellers({ className }) {
               alt=""
             />
           </div>
-          <p className="text-base font-500 text-center">Fusion X</p>
+          <Link to="/saller-page">
+            <p className="text-base font-500 text-center">Fusion X</p>
+          </Link>
         </div>
         <div
           data-aos="fade-left"
@@ -52,7 +60,9 @@ export default function BestSellers({ className }) {
               alt=""
             />
           </div>
-          <p className="text-base font-500 text-center">Rikayi Rox</p>
+          <Link to="/saller-page">
+            <p className="text-base font-500 text-center">Rikayi Rox</p>
+          </Link>
         </div>
         <div
           data-aos="fade-left"
@@ -65,7 +75,9 @@ export default function BestSellers({ className }) {
               alt=""
             />
           </div>
-          <p className="text-base font-500 text-center">Habbriyi</p>
+          <Link to="/saller-page">
+            <p className="text-base font-500 text-center">Habbriyi</p>
+          </Link>
         </div>
         <div
           data-aos="fade-left"
@@ -78,7 +90,9 @@ export default function BestSellers({ className }) {
               alt=""
             />
           </div>
-          <p className="text-base font-500 text-center">Rayhans</p>
+          <Link to="/saller-page">
+            <p className="text-base font-500 text-center">Rayhans</p>
+          </Link>
         </div>
       </div>
     </div>

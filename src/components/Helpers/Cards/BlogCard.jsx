@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function BlogCard({ className, datas }) {
   console.log(datas);
   return (
@@ -63,9 +65,11 @@ export default function BlogCard({ className, datas }) {
           </div>
         </div>
         <div className="details">
-          <h1 className="text-[22px] text-qblack font-semibold line-clamp-2 mb-1 capitalize">
-            {datas.title}
-          </h1>
+          <Link to="/blogs/blog">
+            <h1 className="text-[22px] text-qblack hover:text-blue-500 font-semibold line-clamp-2 mb-1 capitalize">
+              {datas.title}
+            </h1>
+          </Link>
           <p className="text-qgraytwo text-[15px] leading-[30px] line-clamp-2 mb-3">
             {datas.article}
           </p>

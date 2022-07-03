@@ -11,12 +11,14 @@ export default function Footer() {
           <div className="w-4/10">
             {/* logo area */}
             <div className="mb-14">
-              <img
-                width="152"
-                height="36"
-                src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
-                alt="logo"
-              />
+              <a href="/">
+                <img
+                  width="152"
+                  height="36"
+                  src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                  alt="logo"
+                />
+              </a>
             </div>
             <div>
               <ul className="flex flex-col space-y-5 ">

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Star from "../Helpers/icons/Star";
 import PageTitle from "../Helpers/PageTitle";
 import Layout from "../Partials/Layout";
@@ -106,7 +107,7 @@ export default function Sallers() {
                     </div>
 
                     <div>
-                      <a href="#">
+                      <Link to="/saller-page">
                         <div className="w-[116px] h-[40px]">
                           <div className="yellow-btn flex justify-center">
                             <div className="flex space-x-2 items-center">
@@ -140,7 +141,7 @@ export default function Sallers() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
@@ -246,7 +247,7 @@ export default function Sallers() {
                     </div>
 
                     <div>
-                      <a href="#">
+                      <Link to="/saller-page">
                         <div className="w-[116px] h-[40px]">
                           <div className="yellow-btn flex justify-center">
                             <div className="flex space-x-2 items-center">
@@ -280,7 +281,7 @@ export default function Sallers() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
@@ -387,7 +388,7 @@ export default function Sallers() {
                     </div>
 
                     <div>
-                      <a href="#">
+                      <Link to="/saller-page">
                         <div className="w-[116px] h-[40px]">
                           <div className="yellow-btn flex justify-center">
                             <div className="flex space-x-2 items-center">
@@ -421,7 +422,7 @@ export default function Sallers() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
@@ -528,7 +529,7 @@ export default function Sallers() {
                     </div>
 
                     <div>
-                      <a href="#">
+                      <Link to="/saller-page">
                         <div className="w-[116px] h-[40px]">
                           <div className="yellow-btn flex justify-center">
                             <div className="flex space-x-2 items-center">
@@ -562,7 +563,7 @@ export default function Sallers() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
@@ -669,7 +670,7 @@ export default function Sallers() {
                     </div>
 
                     <div>
-                      <a href="#">
+                      <Link to="/saller-page">
                         <div className="w-[116px] h-[40px]">
                           <div className="yellow-btn flex justify-center">
                             <div className="flex space-x-2 items-center">
@@ -703,7 +704,7 @@ export default function Sallers() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
@@ -810,7 +811,7 @@ export default function Sallers() {
                     </div>
 
                     <div>
-                      <a href="#">
+                      <Link to="/saller-page">
                         <div className="w-[116px] h-[40px]">
                           <div className="yellow-btn flex justify-center">
                             <div className="flex space-x-2 items-center">
@@ -844,7 +845,7 @@ export default function Sallers() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
