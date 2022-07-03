@@ -1,9 +1,8 @@
 import { useState } from "react";
 import "./style.css";
 
-export default function Selectbox({ datas = [], className, action }) {
+export default function Selectbox({ datas = [], className, action, children }) {
   const [item, setItem] = useState(datas[0]);
-  // custom hook
   const [toggle, setToggle] = useState(false);
   const handler = (e, value) => {
     if (action) {
@@ -21,7 +20,7 @@ export default function Selectbox({ datas = [], className, action }) {
             type="button"
             className="my-select-box-btn "
           >
-            <span>{item}</span>
+            {children ? children({ item }) : <span>{item}</span>}
           </button>
           {toggle && (
             <div

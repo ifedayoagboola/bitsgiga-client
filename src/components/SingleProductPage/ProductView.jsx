@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Star from "../Helpers/icons/Star";
+import Selectbox from "../Helpers/Selectbox";
 
 export default function ProductView({ className, reportHandler }) {
   const productsImg = [
@@ -155,34 +156,43 @@ export default function ProductView({ className, reportHandler }) {
             </div>
           </div>
 
-          <div data-aos="fade-up" className="size mb-[30px]">
+          <div data-aos="fade-up" className="product-size mb-[30px]">
             <span className="text-sm font-normal uppercase text-qgray mb-[14px] inline-block">
               SIZE
             </span>
             <div className="w-full">
               <div className=" border border-qgray-border h-[50px] flex justify-between items-center px-6 cursor-pointer">
-                <div>
-                  <span className="text-[13px] text-qblack">Small</span>
-                </div>
-                <div className="flex space-x-10 items-center">
-                  <span className="text-[13px] text-qblack">
-                    3”W x 3”D x 7”H
-                  </span>
-                  <span>
-                    <svg
-                      width="11"
-                      height="7"
-                      viewBox="0 0 11 7"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.4 6.8L0 1.4L1.4 0L5.4 4L9.4 0L10.8 1.4L5.4 6.8Z"
-                        fill="#222222"
-                      />
-                    </svg>
-                  </span>
-                </div>
+                <Selectbox
+                  className="w-full"
+                  datas={["Small", "Medium", "Large", "Extra Large"]}
+                >
+                  {({ item }) => (
+                    <>
+                      <div>
+                        <span className="text-[13px] text-qblack">{item}</span>
+                      </div>
+                      <div className="flex space-x-10 items-center">
+                        <span className="text-[13px] text-qblack">
+                          3”W x 3”D x 7”H
+                        </span>
+                        <span>
+                          <svg
+                            width="11"
+                            height="7"
+                            viewBox="0 0 11 7"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M5.4 6.8L0 1.4L1.4 0L5.4 4L9.4 0L10.8 1.4L5.4 6.8Z"
+                              fill="#222222"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </>
+                  )}
+                </Selectbox>
               </div>
             </div>
           </div>
