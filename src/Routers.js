@@ -3,6 +3,7 @@ import About from "./components/About";
 import AllProductPage from "./components/AllProductPage";
 import Login from "./components/Auth/Login/index";
 import Signup from "./components/Auth/Signup";
+import BecomeSaller from "./components/BecomeSaller";
 import Blogs from "./components/Blogs";
 import Blog from "./components/Blogs/Blog.jsx";
 import CardPage from "./components/CartPage";
@@ -42,6 +43,7 @@ export default function Routers() {
       <Route exact path="/faq" element={<Faq />} />
       <Route exact path="/login" element={<Login />} />
       <Route exact path="/signup" element={<Signup />} />
+      <Route exact path="/become-saller" element={<BecomeSaller />} />
       <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route exact path="*" element={<FourZeroFour />} />
     </Routes>
