@@ -175,6 +175,46 @@ body {
     visibility: visible;
     pointer-events: auto;
 }
+/*TODO: ===============home page============ */
+
+.header-section-wrapper
+    .topbar-dropdowns
+    :is(.country-select, .currency-select, .language-select)
+    .my-select-box
+    .my-select-box-btn
+    > span {
+    @apply text-xs font-500 text-qblack;
+    text-transform: capitalize;
+}
+
+.header-section-wrapper .topbar-dropdowns .country-select .my-select-box .my-select-box-section {
+    width: 150px;
+    left: auto;
+    right: 0;
+}
+.header-section-wrapper
+    .topbar-dropdowns
+    :is(.currency-select, .language-select)
+    .my-select-box
+    .my-select-box-section {
+    width: 120px;
+    left: auto;
+    right: 0;
+}
+.header-section-wrapper .topbar-dropdowns .my-select-box .my-select-box-section {
+    width: 120px;
+    left: auto;
+    right: 0;
+}
+.header-section-wrapper
+    .topbar-dropdowns
+    :is(.country-select, .currency-select, .language-select)
+    .my-select-box
+    .my-select-box-section
+    li {
+    font-size: 12px;
+    text-transform: capitalize;
+}
 
 /*TODO: ===============all product page============ */
 

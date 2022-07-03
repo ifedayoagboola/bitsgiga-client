@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Arrow from "../../Helpers/icons/Arrow";
+import Selectbox from "../../Helpers/Selectbox";
 
 export default function TopBar({ className }) {
   return (
@@ -38,8 +39,8 @@ export default function TopBar({ className }) {
             </div>
             <div className="topbar-dropdowns">
               <div className="flex space-x-6">
-                <button type="button" className="flex space-x-1 items-center">
-                  <span>
+                <div className="country-select flex space-x-1 items-center">
+                  <div>
                     <img
                       src={`${process.env.PUBLIC_URL}/assets/images/country-logo-16x16.png`}
                       width="16"
@@ -47,20 +48,23 @@ export default function TopBar({ className }) {
                       alt="country logo"
                       className="overflow-hidden rounded-full"
                     />
-                  </span>
-                  <span className="text-xs font-500 text-qblack">
-                    United State
-                  </span>
+                  </div>
+                  <Selectbox
+                    className="w-fit"
+                    datas={["United State", "Bangladesh", "India"]}
+                  />
+                  <div>
+                    <Arrow className="fill-current qblack" />
+                  </div>
+                </div>
+                <div className="currency-select flex space-x-1 items-center">
+                  <Selectbox className="w-fit" datas={["USD", "BDT"]} />
                   <Arrow className="fill-current qblack" />
-                </button>
-                <button type="button" className="flex space-x-1 items-center">
-                  <span className="text-xs font-500 text-qblack">USD</span>
+                </div>
+                <div className="language-select flex space-x-1 items-center">
+                  <Selectbox className="w-fit" datas={["Bangla", "english"]} />
                   <Arrow className="fill-current qblack" />
-                </button>
-                <button type="button" className="flex space-x-1 items-center">
-                  <span className="text-xs font-500 text-qblack">English</span>
-                  <Arrow className="fill-current qblack" />
-                </button>
+                </div>
               </div>
             </div>
           </div>
