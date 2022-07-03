@@ -18,6 +18,7 @@ import ProductsCompaire from "./components/ProductsCompaire/index";
 import SallerPage from "./components/SallerPage";
 import Sallers from "./components/Sellers";
 import SingleProductPage from "./components/SingleProductPage";
+import TermsCondition from "./components/TermsCondition/index";
 import TrackingOrder from "./components/TrackingOrder";
 import Wishlist from "./components/Wishlist";
 
@@ -45,6 +46,7 @@ export default function Routers() {
       <Route exact path="/signup" element={<Signup />} />
       <Route exact path="/become-saller" element={<BecomeSaller />} />
       <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route exact path="/terms-condition" element={<TermsCondition />} />
       <Route exact path="*" element={<FourZeroFour />} />
     </Routes>
   );
