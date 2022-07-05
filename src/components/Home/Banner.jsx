@@ -6,7 +6,7 @@ export default function Banner({ className }) {
           <div className="main-wrapper w-full">
             <div className="banner-card flex space-x-[30px] h-[600px] overflow-hidden mb-[30px]">
               <div data-aos="fade-right" className="w-[740px] h-full">
-                <a href="#">
+                <a href="/single-product">
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/images/banner-1.png`}
                     alt=""
@@ -19,7 +19,7 @@ export default function Banner({ className }) {
                 className="flex-1 flex flex-col space-y-[30px] h-full"
               >
                 <div className="w-full h-1/2">
-                  <a href="#">
+                  <a href="/single-product">
                     <img
                       src={`${process.env.PUBLIC_URL}/assets/images/banner-2.png`}
                       alt=""
@@ -28,7 +28,7 @@ export default function Banner({ className }) {
                   </a>
                 </div>
                 <div className="w-full h-1/2">
-                  <a href="#">
+                  <a href="/single-product">
                     <img
                       src={`${process.env.PUBLIC_URL}/assets/images/banner-3.png`}
                       alt=""
