@@ -93,8 +93,7 @@ body {
     font-weight: 900;
 }
 .container-x {
-    padding-left: 367px;
-    padding-right: 367px;
+    max-width: 1170px;
 }
 .animate-right-dir {
     animation: rightDir 1s infinite;
@@ -266,3 +265,6 @@ body {
 }
 
 /*TODO: =============== single product ============ */
+
+/* TODO: ===============RESPONSIVE */
+/* TODO: ===============RESPONSIVE END */
