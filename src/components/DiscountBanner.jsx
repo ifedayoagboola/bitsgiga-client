@@ -57,7 +57,7 @@ export default function DiscountBanner({ className }) {
           </div>
           <button
             type="button"
-            className="w-[158px] w-[80px]  h-full bg-qyellow text-sm font-600"
+            className="sm:w-[158px] w-[80px]  h-full bg-qyellow text-sm font-600"
           >
             Get the Coupon
           </button>
