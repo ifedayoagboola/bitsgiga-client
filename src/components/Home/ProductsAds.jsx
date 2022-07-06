@@ -1,25 +1,26 @@
 export default function ProductsAds({
   className,
   ads = ["", ""],
-  sectionHeight = "295px",
+  sectionHeight,
 }) {
   return (
     <div className={`w-full ${className || ""}`}>
       <div className="container-x mx-auto">
         <div
-          style={{ height: sectionHeight }}
-          className={`${
-            ads.length > 1 && ads.length <= 2 ? "flex space-x-[30px]" : ""
-          } items-center w-full overflow-hidden`}
+          className={`${sectionHeight} ${
+            ads.length > 1 && ads.length <= 2
+              ? "sm:flex xl:space-x-[30px] sm:space-x-5"
+              : ""
+          } items-center w-full  overflow-hidden`}
         >
           <div
             data-aos="fade-right"
-            className={`h-full ${
-              ads.length > 1 && ads.length <= 2 ? "w-1/2 " : "w-full"
+            className={`h-full sm:mb-0 mb-5 ${
+              ads.length > 1 && ads.length <= 2 ? "sm:w-1/2 w-full" : "w-full"
             }  `}
           >
             <a href="/single-product">
-              <img src={ads[0]} alt="" className="w-full h-full" />
+              <img src={ads[0]} alt="" className="w-full sm:h-full h-auto" />
             </a>
           </div>
           {ads.length > 1 && ads.length <= 2 && (

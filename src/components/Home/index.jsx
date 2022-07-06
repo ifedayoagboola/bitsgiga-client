@@ -24,7 +24,7 @@ export default function Home() {
     setAds(false);
   };
   useEffect(() => {
-    setAds(true);
+    setAds(false);
   }, []);
   return (
     <>
@@ -58,7 +58,7 @@ export default function Home() {
         <ViewMoreTitle
           className="best-sallers-section mb-[60px]"
           seeMoreUrl="/sallers"
-          categoryTitle="Top Selling Products"
+          categoryTitle="Best Saller"
         >
           <BestSellers />
         </ViewMoreTitle>
@@ -67,6 +67,7 @@ export default function Home() {
             `${process.env.PUBLIC_URL}/assets/images/ads-1.png`,
             `${process.env.PUBLIC_URL}/assets/images/ads-2.png`,
           ]}
+          sectionHeight="sm:h-[295px] h-full"
           className="products-ads-section mb-[60px]"
         />
         <SectionStyleOne
@@ -86,7 +87,7 @@ export default function Home() {
           products={products}
           sectionTitle="New Arrivals"
           seeMoreUrl="/all-products"
-          className="category-products mb-[60px]"
+          className="new-products mb-[60px]"
         />
         <ProductsAds
           sectionHeight="164"
@@ -95,7 +96,7 @@ export default function Home() {
         />
         <SectionStyleFour
           products={products}
-          sectionTitle="New Arrivals"
+          sectionTitle="Popular Sales"
           seeMoreUrl="/all-products"
           className="category-products mb-[60px]"
         />

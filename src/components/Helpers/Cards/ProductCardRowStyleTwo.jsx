@@ -15,7 +15,7 @@ export default function ProductCardRowStyleTwo({ className, datas }) {
           </div>
           <div className="flex-1 h-full flex flex-col justify-center ">
             <a href="/single-product">
-              <p className="title mb-2 text-[15px] font-600 text-qblack leading-[24px] line-clamp-1 hover:text-blue-600">
+              <p className="title mb-2 sm:text-[15px] text-[13px] font-600 text-qblack leading-[24px] line-clamp-1 hover:text-blue-600">
                 {datas.title}
               </p>
             </a>

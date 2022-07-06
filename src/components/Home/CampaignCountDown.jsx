@@ -11,57 +11,57 @@ export default function CampaignCountDown({
 
   return (
     <div>
-      <div className={`w-full h-[460px] ${className || ""}`}>
+      <div className={`w-full lg:h-[460px] ${className || ""}`}>
         <div className="container-x mx-auto h-full">
-          <div className="flex space-x-[30px] items-center h-full">
+          <div className="lg:flex xl:space-x-[30px] lg:space-x-5 items-center h-full">
             <div
               data-aos="fade-right"
-              className="campaign-countdown w-1/2 h-full"
+              className="campaign-countdown lg:w-1/2 h-full w-full mb-5 lg:mb-0"
               style={{
                 background: `url(${process.env.PUBLIC_URL}/assets/images/campaign-cover-countdown.jpg) no-repeat`,
                 backgroundSize: "cover",
               }}
             >
               <Link to="/flash-sale">
-                <div className="w-full px-12 py-12">
-                  <div className="countdown-wrapper w-full flex justify-between mb-10">
+                <div className="w-full xl:p-12 p-5">
+                  <div className="countdown-wrapper w-full flex lg:justify-between justify-evenly mb-10">
                     <div className="countdown-item">
-                      <div className="countdown-number w-[100px] h-[100px] rounded-full bg-white flex justify-center items-center">
-                        <span className="font-700 text-[30px] text-[#EB5757]">
+                      <div className="countdown-number sm:w-[100px] sm:h-[100px] w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center">
+                        <span className="font-700 sm:text-[30px] text-[14px] text-[#EB5757]">
                           {showDate}
                         </span>
                       </div>
-                      <p className="text-[18px] font-500 text-center leading-8">
+                      <p className="sm:text-[18px] text-[12px] font-500 text-center leading-8">
                         Days
                       </p>
                     </div>
                     <div className="countdown-item">
-                      <div className="countdown-number w-[100px] h-[100px] rounded-full bg-white flex justify-center items-center">
-                        <span className="font-700 text-[30px] text-[#2F80ED]">
+                      <div className="countdown-number sm:w-[100px] sm:h-[100px] w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center">
+                        <span className="font-700 sm:text-[30px] text-[14px] text-[#2F80ED]">
                           {showHour}
                         </span>
                       </div>
-                      <p className="text-[18px] font-500 text-center leading-8">
+                      <p className="sm:text-[18px] text-[12px] font-500 text-center leading-8">
                         Hours
                       </p>
                     </div>
                     <div className="countdown-item">
-                      <div className="countdown-number w-[100px] h-[100px] rounded-full bg-white flex justify-center items-center">
-                        <span className="font-700 text-[30px] text-[#219653]">
+                      <div className="countdown-number sm:w-[100px] sm:h-[100px] w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center">
+                        <span className="font-700 sm:text-[30px] text-[14px] text-[#219653]">
                           {showMinute}
                         </span>
                       </div>
-                      <p className="text-[18px] font-500 text-center leading-8">
+                      <p className="sm:text-[18px] text-[12px] font-500 text-center leading-8">
                         Minutes
                       </p>
                     </div>
                     <div className="countdown-item">
-                      <div className="countdown-number w-[100px] h-[100px] rounded-full bg-white flex justify-center items-center">
-                        <span className="font-700 text-[30px] text-[#EF5DA8]">
+                      <div className="countdown-number sm:w-[100px] sm:h-[100px] w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center">
+                        <span className="font-700 sm:text-[30px] text-[14px] text-[#EF5DA8]">
                           {showSecound}
                         </span>
                       </div>
-                      <p className="text-[18px] font-500 text-center leading-8">
+                      <p className="sm:text-[18px] text-[12px] font-500 text-center leading-8">
                         Seconds
                       </p>
                     </div>
@@ -107,7 +107,7 @@ export default function CampaignCountDown({
             </div>
             <div
               data-aos="fade-left"
-              className="download-app flex-1 h-full px-12 py-12"
+              className="download-app flex-1 lg:h-full h-[430px] xl:p-12 p-5"
               style={{
                 background: `url(${
                   counterbg ||

@@ -93,7 +93,8 @@ body {
     font-weight: 900;
 }
 .container-x {
-    max-width: 1170px;
+    @apply md:px-6 px-2 w-full;
+    max-width: 1216px !important;
 }
 .animate-right-dir {
     animation: rightDir 1s infinite;
@@ -116,6 +117,15 @@ body {
 .gray-btn {
     @apply flex justify-center items-center text-sm font-600;
     background: #f0f1f3;
+}
+
+.overflow-style-none::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.overflow-style-none {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 /*TODO:  ========= components ========= */
 .search-input {
@@ -267,5 +277,30 @@ body {
 /*TODO: =============== single product ============ */
 
 /* TODO: ===============RESPONSIVE */
+
+@media (max-width: 640px) {
+}
+
+@media (max-width: 768px) {
+    .category-products .products-section .item:nth-child(3) {
+        display: none;
+    }
+    .best-sallers-section .section-content .item:nth-child(3),
+    .best-sallers-section .section-content .item:nth-child(4) {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .best-sallers-section .section-content .item:nth-child(6) {
+        display: none;
+    }
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1536px) {
+}
 
 /* TODO: ===============RESPONSIVE END */

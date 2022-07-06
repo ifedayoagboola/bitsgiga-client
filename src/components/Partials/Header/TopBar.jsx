@@ -37,7 +37,7 @@ export default function TopBar({ className }) {
                 </li>
               </ul>
             </div>
-            <div className="topbar-dropdowns">
+            <div className="topbar-dropdowns sm:block hidden">
               <div className="flex space-x-6">
                 <div className="country-select flex space-x-1 items-center">
                   <div>

@@ -7,8 +7,8 @@ export default function Footer() {
   return (
     <footer className="footer-section-wrapper bg-white">
       <div className="container-x block mx-auto pt-[83px]">
-        <div className="flex justify-between mb-[95px]">
-          <div className="w-4/10">
+        <div className="lg:flex justify-between mb-[95px]">
+          <div className="lg:w-4/10 w-full mb-10 lg:mb-0">
             {/* logo area */}
             <div className="mb-14">
               <a href="/">
@@ -46,7 +46,7 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className="w-2/10">
+          <div className="lg:w-2/10 w-full mb-10 lg:mb-0">
             <div className="mb-5">
               <h6 className="text-[18] font-500 text-[#2F2F2F]">About us</h6>
             </div>
@@ -83,7 +83,7 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className="w-2/10 ">
+          <div className="lg:w-2/10 w-full mb-10 lg:mb-0 ">
             <div className="mb-5">
               <h6 className="text-[18] font-500 text-[#2F2F2F]">Online Shop</h6>
             </div>
@@ -120,7 +120,7 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className="w-2/10">
+          <div className="lg:w-2/10 w-full mb-10 lg:mb-0">
             <div className="mb-5">
               <h6 className="text-[18] font-500 text-[#2F2F2F]">
                 Useful Links
@@ -160,18 +160,20 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="bottom-bar border-t border-qgray-border h-[82px] flex justify-between items-center">
-          <div className="flex space-x-5 items-center">
-            <a href="#">
-              <Instagram className="fill-current text-qgray hover:text-qblack" />
-            </a>
-            <a href="#">
-              <Facebook className="fill-current text-qgray hover:text-qblack" />
-            </a>
-            <a href="#">
-              <Youtube className="fill-current text-qgray hover:text-qblack" />
-            </a>
-            <span className="text-base text-qgray font-300">
+        <div className="bottom-bar border-t border-qgray-border lg:h-[82px] lg:flex justify-between items-center">
+          <div className="flex lg:space-x-5 justify-between items-center mb-3">
+            <div className="flex space-x-5 items-center">
+              <a href="#">
+                <Instagram className="fill-current text-qgray hover:text-qblack" />
+              </a>
+              <a href="#">
+                <Facebook className="fill-current text-qgray hover:text-qblack" />
+              </a>
+              <a href="#">
+                <Youtube className="fill-current text-qgray hover:text-qblack" />
+              </a>
+            </div>
+            <span className="sm:text-base text-[10px] text-qgray font-300">
               ©2022
               <a
                 href="https://quomodosoft.com/"
@@ -184,14 +186,16 @@ export default function Footer() {
               All rights reserved
             </span>
           </div>
-          <a href="#">
-            <img
-              width="318"
-              height="28"
-              src={`${process.env.PUBLIC_URL}/assets/images/payment-getways.png`}
-              alt="payment-getways"
-            />
-          </a>
+          <div className="">
+            <a href="#">
+              <img
+                width="318"
+                height="28"
+                src={`${process.env.PUBLIC_URL}/assets/images/payment-getways.png`}
+                alt="payment-getways"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
