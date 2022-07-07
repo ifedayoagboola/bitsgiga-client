@@ -49,6 +49,7 @@ export default function SallerPage() {
   const filterStorage = (value) => {
     setStorage(value);
   };
+  const [filterToggle, setToggle] = useState(false);
 
   const { products } = productDatas;
 
@@ -59,7 +60,7 @@ export default function SallerPage() {
           <div className="container-x mx-auto">
             <div
               data-aos="fade-right"
-              className="saller-info w-full mb-[40px] h-[328px]  flex justify-between items-center px-11 overflow-hidden relative"
+              className="saller-info w-full mb-[40px] sm:h-[328px]  sm:flex justify-between items-center px-11 overflow-hidden relative py-10 sm:py-0"
               style={{
                 background: `url(${process.env.PUBLIC_URL}/assets/images/saller-cover.png) no-repeat`,
                 backgroundSize: "cover",
@@ -71,7 +72,7 @@ export default function SallerPage() {
                 </span>
               </div>
 
-              <div className="saller-text-details mt-[55px]">
+              <div className="saller-text-details sm:mt-[55px] mt-[100px]">
                 <ul>
                   <li className="text-black flex space-x-5 items-center leading-9 text-base font-normal">
                     <span>
@@ -131,7 +132,7 @@ export default function SallerPage() {
                 </ul>
               </div>
 
-              <div className="saller-name">
+              <div className="saller-name lg:block hidden">
                 <h1 className="text-[60px] font-bold">Quomodosoft</h1>
                 <div className="flex justify-center">
                   <div className="flex">
@@ -145,8 +146,8 @@ export default function SallerPage() {
                 </div>
               </div>
 
-              <div className="saller-logo ">
-                <div className="flex justify-center">
+              <div className="saller-logo mt-5 sm:mt-5">
+                <div className="flex sm:justify-center justify-start">
                   <div className="w-[170px] h-[170px] flex justify-center items-center rounded-full bg-white mb-1">
                     <img
                       src={`${process.env.PUBLIC_URL}/assets/images/saller-7.png`}
@@ -155,14 +156,18 @@ export default function SallerPage() {
                     />
                   </div>
                 </div>
-                <span className="text-[30px] font-medium text-center">
-                  Quomodosoft
-                </span>
+                <div className="flex sm:justify-center justify-start">
+                  <span className="text-[30px] font-medium text-center">
+                    Quomodosoft
+                  </span>
+                </div>
               </div>
             </div>
-            <div className="w-full flex space-x-[30px]">
-              <div className="w-[270px]">
+            <div className="w-full lg:flex lg:space-x-[30px]">
+              <div className="lg:w-[270px]">
                 <ProductsFilter
+                  filterToggle={filterToggle}
+                  filterToggleHandler={() => setToggle(!filterToggle)}
                   filters={filters}
                   checkboxHandler={checkboxHandler}
                   volume={volume}
@@ -171,7 +176,8 @@ export default function SallerPage() {
                   filterstorage={filterStorage}
                   className="mb-[30px]"
                 />
-                <div className="w-full h-[295px]">
+                {/* ads */}
+                <div className="w-full hidden lg:block h-[295px]">
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/images/ads-5.png`}
                     alt=""
@@ -181,7 +187,7 @@ export default function SallerPage() {
               </div>
 
               <div className="flex-1">
-                <div className="products-sorting w-full bg-white h-[70px] flex justify-between items-center p-[30px] mb-[40px]">
+                <div className="products-sorting w-full bg-white md:h-[70px] flex md:flex-row flex-col md:space-y-0 space-y-5 md:justify-between md:items-center p-[30px] mb-[40px]">
                   <div>
                     <p className="font-400 text-[13px]">
                       <span className="text-qgray"> Showing</span> 1–16 of 66
@@ -207,8 +213,28 @@ export default function SallerPage() {
                       </span>
                     </div>
                   </div>
+                  <button
+                    onClick={() => setToggle(!filterToggle)}
+                    type="button"
+                    className="w-10 lg:hidden h-10 rounded flex justify-center items-center border border-qyellow text-qyellow"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+                      />
+                    </svg>
+                  </button>
                 </div>
-                <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 xl:gap-[30px] gap-5 mb-[40px]">
+                <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1  xl:gap-[30px] gap-5 mb-[40px]">
                   <DataIteration datas={products} startLength={0} endLength={6}>
                     {({ datas }) => (
                       <div data-aos="fade-up" key={datas.id}>
@@ -225,7 +251,7 @@ export default function SallerPage() {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 xl:gap-[30px] gap-5 mb-[40px]">
+                <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 xl:gap-[30px] gap-5 mb-[40px]">
                   <DataIteration
                     datas={products}
                     startLength={6}
