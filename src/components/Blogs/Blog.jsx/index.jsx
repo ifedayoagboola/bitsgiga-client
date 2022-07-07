@@ -17,7 +17,7 @@ export default function Blog() {
         </div>
         <div className="content-area w-full">
           <div className="container-x mx-auto">
-            <div className="blog-article flex space-x-[30px] mb-7">
+            <div className="blog-article lg:flex lg:space-x-[30px] mb-7">
               <div className="flex-1">
                 <div className="img w-full h-[457px]">
                   <img
@@ -116,15 +116,15 @@ export default function Blog() {
                   </div>
                 </div>
                 <div className="extra-content w-full">
-                  <div className="w-full flex space-x-[30px] h-[235px] mb-3">
-                    <div className="w-[370px] h-full">
+                  <div className="w-full sm:flex sm:space-x-[30px]  mb-3">
+                    <div className="sm:w-[370px] h-[235px]">
                       <img
                         src={`${process.env.PUBLIC_URL}/assets/images/blog-details-1.jpg`}
                         alt="blog"
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="flex-1 h-full">
+                    <div className="flex-1 h-[235px]">
                       <img
                         src={`${process.env.PUBLIC_URL}/assets/images/blog-details-2.jpg`}
                         alt="blog"
@@ -251,8 +251,8 @@ export default function Blog() {
                   <div className="w-full h-[1px] bg-[#DCDCDC]"></div>
 
                   <div className="comment-area w-full mt-4">
-                    <div className="w-full flex justify-between items-center mb-[30px]">
-                      <div className="tags flex space-x-5 items-center">
+                    <div className="w-full sm:flex justify-between items-center mb-[30px]">
+                      <div className="tags flex space-x-5 items-center mb-5 sm:mb-0">
                         <span className="text-2xl text-qblack">Tags:</span>
                         <span className="text-base text-qgraytwo hover:text-qyellow">
                           #Technology
@@ -348,7 +348,7 @@ export default function Blog() {
                   </div>
                 </div>
               </div>
-              <div className="w-[370px]">
+              <div className="lg:w-[370px] w-full">
                 <div
                   data-aos="fade-up"
                   className="search-widget w-full p-[30px] bg-white mb-[30px]"

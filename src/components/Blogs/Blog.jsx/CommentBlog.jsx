@@ -66,8 +66,8 @@ export default function CommentBlog() {
           Leave a Comment
         </h1>
         <div className="w-full review-form ">
-          <div className="flex space-x-[30px] items-center mb-5 w-full">
-            <div className="w-full">
+          <div className="sm:flex sm:space-x-[30px] items-center mb-5 w-full">
+            <div className="w-full mb-5 sm:mb-0">
               <InputCom
                 label="name*"
                 placeholder=""
