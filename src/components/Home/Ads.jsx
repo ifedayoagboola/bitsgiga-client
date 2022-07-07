@@ -7,7 +7,7 @@ export default function Ads({ handler }) {
           className="w-full h-full fixed left-0 right-0 bg-black  bg-opacity-25"
         ></div>
         <div
-          className="w-[812px] h-[509px] relative z-50 bg-slate-700 pl-10 py-[108px] flex flex-col justify-between"
+          className="md:w-[812px] w-[310px] md:h-[509px] relative z-50 bg-slate-700 md:pl-10 pl-3 py-[108px] flex flex-col justify-between"
           style={{
             background: `url(${process.env.PUBLIC_URL}/assets/images/primary-ads.png) no-repeat`,
             backgroundSize: "cover",
@@ -24,10 +24,10 @@ export default function Ads({ handler }) {
                 />
               </a>
             </div>
-            <p className="text-[22px] text-qblack mb-2">
+            <p className="md:text-[22px] text-sm text-qblack mb-2">
               by Subscribe our Newsletter
             </p>
-            <h1 className="text-[30px] font-bold text-qblack mb-1">
+            <h1 className="md:text-[30px] text-xl font-bold text-qblack mb-1">
               Get <span className="mx-1 text-[#EB5757]">20% Off</span> Discount
               Coupon
             </h1>
@@ -36,7 +36,7 @@ export default function Ads({ handler }) {
               the ey of type andmen unlimiedted offer book.
             </p>
           </div>
-          <div className="w-[415px] h-[54px] flex mt-8">
+          <div className="md:w-[415px] w-full h-[54px] sm:flex mt-8">
             <div className="flex-1 bg-white pl-4 flex space-x-2 items-center h-full focus-within:text-qyellow text-qblack">
               <span>
                 <svg

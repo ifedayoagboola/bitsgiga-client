@@ -24,7 +24,7 @@ export default function Home() {
     setAds(false);
   };
   useEffect(() => {
-    setAds(false);
+    setAds(true);
   }, []);
   return (
     <>
