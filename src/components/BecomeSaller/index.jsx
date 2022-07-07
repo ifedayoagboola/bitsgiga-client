@@ -63,9 +63,9 @@ export default function BecomeSaller() {
         </div>
         <div className="content-wrapper w-full mb-10">
           <div className="container-x mx-auto">
-            <div className="w-full bg-white p-[30px]">
-              <div className="flex space-x-11">
-                <div className="w-[824px]">
+            <div className="w-full bg-white sm:p-[30px] p-3">
+              <div className="flex xl:flex-row flex-col-reverse xl:space-x-11">
+                <div className="xl:w-[824px]">
                   <div className="title w-full mb-4">
                     <h1 className="text-[22px] font-semibold text-qblack mb-1">
                       Seller Information
@@ -76,7 +76,7 @@ export default function BecomeSaller() {
                     </p>
                   </div>
                   <div className="input-area">
-                    <div className="flex space-x-5 mb-5">
+                    <div className="flex sm:flex-row flex-col space-y-5 sm:space-y-0 sm:space-x-5 mb-5">
                       <InputCom
                         placeholder="Demo Name"
                         label="Frist Name*"
@@ -93,7 +93,7 @@ export default function BecomeSaller() {
                         inputClasses="h-[50px]"
                       />
                     </div>
-                    <div className="flex space-x-5 mb-5">
+                    <div className="flex sm:flex-row flex-col space-y-5 sm:space-y-0 sm:space-x-5 mb-5">
                       <InputCom
                         placeholder="Demo@gmail.com"
                         label="Email Address*"
@@ -176,7 +176,7 @@ export default function BecomeSaller() {
                         inputClasses="h-[50px]"
                       />
                     </div>
-                    <div className="flex space-x-5 mb-[30px]">
+                    <div className="flex sm:flex-row flex-col space-y-5 sm:space-y-0 sm:space-x-5 mb-[30px]">
                       <InputCom
                         placeholder="● ● ● ● ● ●"
                         label="Password*"
@@ -215,7 +215,7 @@ export default function BecomeSaller() {
                     </div>
                   </div>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 mb-10 xl:mb-0">
                   <div className="update-profile w-full mb-9">
                     <h1 className="text-xl tracking-wide font-bold text-qblack flex items-center mb-2">
                       Update Profile
@@ -241,7 +241,7 @@ export default function BecomeSaller() {
                       work too.
                       <span className="ml-1 text-qblack">Max 5mb</span>.
                     </p>
-                    <div className="flex justify-center">
+                    <div className="flex xl:justify-center justify-start">
                       <div className="relative">
                         <img
                           src={
@@ -306,7 +306,7 @@ export default function BecomeSaller() {
                       work too.
                       <span className="ml-1 text-qblack">Max 5mb</span>.
                     </p>
-                    <div className="flex justify-center">
+                    <div className="flex xl:justify-center justify-start">
                       <div className="relative">
                         <img
                           src={
