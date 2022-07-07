@@ -17,9 +17,9 @@ export default function CheakoutPage() {
         </div>
         <div className="checkout-main-content w-full">
           <div className="container-x mx-auto">
-            <div className="w-full mb-10">
-              <div className="flex space-x-[18px] h-[70px]">
-                <div className="w-1/2 h-full">
+            <div className="w-full sm:mb-10 mb-5">
+              <div className="sm:flex sm:space-x-[18px] s">
+                <div className="sm:w-1/2 w-full mb-5 h-[70px]">
                   <a href="#">
                     <div className="w-full h-full bg-[#F6F6F6] text-qblack flex justify-center items-center">
                       <span className="text-[15px] font-medium">
@@ -28,7 +28,7 @@ export default function CheakoutPage() {
                     </div>
                   </a>
                 </div>
-                <div className="flex-1 h-full">
+                <div className="flex-1 h-[70px]">
                   <a href="#">
                     <div className="w-full h-full bg-[#F6F6F6] text-qblack flex justify-center items-center">
                       <span className="text-[15px] font-medium">
@@ -39,15 +39,15 @@ export default function CheakoutPage() {
                 </div>
               </div>
             </div>
-            <div className="w-full flex space-x-[30px]">
-              <div className="w-1/2">
-                <h1 className="text-2xl text-qblack font-medium mb-5">
+            <div className="w-full lg:flex lg:space-x-[30px]">
+              <div className="lg:w-1/2 w-full">
+                <h1 className="sm:text-2xl text-xl text-qblack font-medium mb-5">
                   Billing Details
                 </h1>
                 <div className="form-area">
                   <form>
-                    <div className="flex space-x-5 items-center mb-6">
-                      <div className="w-1/2">
+                    <div className="sm:flex sm:space-x-5 items-center mb-6">
+                      <div className="sm:w-1/2  mb-5 sm:mb-0">
                         <InputCom
                           label="First Name*"
                           placeholder="Demo Name"
@@ -175,7 +175,7 @@ export default function CheakoutPage() {
                 </div>
               </div>
               <div className="flex-1">
-                <h1 className="text-2xl text-qblack font-medium mb-5">
+                <h1 className="sm:text-2xl text-xl text-qblack font-medium mb-5">
                   Order Summary
                 </h1>
 
