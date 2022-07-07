@@ -16,8 +16,8 @@ export default function Contact() {
       </div>
       <div className="contact-wrapper w-full mb-10">
         <div className="container-x mx-auto">
-          <div className="main-wrapper w-full flex space-x-[30px]">
-            <div className="w-1/2 ">
+          <div className="main-wrapper w-full lg:flex lg:space-x-[30px]">
+            <div className="lg:w-1/2 w-full">
               <h1 className="text-[22px] font-semibold text-qblack leading-[30px] mb-1">
                 Contact Information
               </h1>
@@ -26,8 +26,8 @@ export default function Contact() {
                 possible.
               </p>
 
-              <div className="flex space-x-[30px] h-[196px] mb-[30px]">
-                <div className="w-1/2 h-full flex flex-col item justify-center bg-[#FFEAE5] p-5">
+              <div className="xl:flex xl:space-x-[30px] mb-[30px]">
+                <div className="xl:w-1/2 w-full  h-[196px] flex flex-col item justify-center bg-[#FFEAE5] p-5">
                   <div className="flex justify-center mb-3 ">
                     <svg
                       width="44"
@@ -64,7 +64,7 @@ export default function Contact() {
                     +(434) 5466 5467 443
                   </p>
                 </div>
-                <div className="w-1/2 h-full flex flex-col item justify-center bg-[#D3EFFF] p-5">
+                <div className="xl:w-1/2 w-full h-[196px] flex flex-col item justify-center bg-[#D3EFFF] p-5">
                   <div className="flex justify-center mb-3 ">
                     <svg
                       width="44"
@@ -151,7 +151,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 bg-white p-10">
+            <div className="flex-1 bg-white sm:p-10 p-3">
               <div className="title flex flex-col items-center">
                 <h1 className="text-[34px] font-bold text-qblack">
                   Get In Touch
