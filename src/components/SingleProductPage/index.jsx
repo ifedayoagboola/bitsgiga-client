@@ -108,13 +108,13 @@ export default function SingleProductPage() {
             className="product-des-wrapper w-full relative pb-[60px]"
             ref={reviewElement}
           >
-            <div className="tab-buttons w-full mb-10">
+            <div className="tab-buttons w-full mb-10 mt-5 sm:mt-0">
               <div className="container-x mx-auto">
                 <ul className="flex space-x-12 ">
                   <li>
                     <span
                       onClick={() => setTab("des")}
-                      className={`py-[15px] text-[15px] block border-b font-medium cursor-pointer ${
+                      className={`py-[15px] sm:text-[15px] text-sm sm:block border-b font-medium cursor-pointer ${
                         tab === "des"
                           ? "border-qyellow text-qblack "
                           : "border-transparent text-qgray"
@@ -126,7 +126,7 @@ export default function SingleProductPage() {
                   <li>
                     <span
                       onClick={() => setTab("review")}
-                      className={`py-[15px] text-[15px] block border-b font-medium cursor-pointer ${
+                      className={`py-[15px] sm:text-[15px] text-sm sm:block border-b font-medium cursor-pointer ${
                         tab === "review"
                           ? "border-qyellow text-qblack "
                           : "border-transparent text-qgray"
@@ -138,7 +138,7 @@ export default function SingleProductPage() {
                   <li>
                     <span
                       onClick={() => setTab("info")}
-                      className={`py-[15px] text-[15px] block border-b font-medium cursor-pointer ${
+                      className={`py-[15px] sm:text-[15px] text-sm sm:block border-b font-medium cursor-pointer ${
                         tab === "info"
                           ? "border-qyellow text-qblack "
                           : "border-transparent text-qgray"
@@ -149,7 +149,7 @@ export default function SingleProductPage() {
                   </li>
                 </ul>
               </div>
-              <div className="w-full h-[1px] bg-[#E8E8E8] absolute left-0 top-[52px] -z-10"></div>
+              <div className="w-full h-[1px] bg-[#E8E8E8] absolute left-0 sm:top-[52px] top-[36px] -z-10"></div>
             </div>
             <div className="tab-contents w-full min-h-[400px] ">
               <div className="container-x mx-auto">
@@ -234,10 +234,13 @@ export default function SingleProductPage() {
           <div className="related-product w-full bg-white">
             <div className="container-x mx-auto">
               <div className="w-full py-[60px]">
-                <h1 className="text-3xl font-600 text-qblacktext leading-none mb-[30px]">
+                <h1 className="sm:text-3xl text-xl font-600 text-qblacktext leading-none mb-[30px]">
                   Related Product
                 </h1>
-                <div data-aos="fade-up" className="grid grid-cols-4 gap-[30px]">
+                <div
+                  data-aos="fade-up"
+                  className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 xl:gap-[30px] gap-5"
+                >
                   <DataIteration
                     datas={data.products}
                     startLength={5}
@@ -262,7 +265,7 @@ export default function SingleProductPage() {
             ></div>
             <div
               data-aos="fade-up"
-              className="w-[548px] h-[509px] bg-white relative py-[40px] px-[38px]"
+              className="sm:w-[548px] sm:h-[509px] w-full h-full bg-white relative py-[40px] px-[38px]"
               style={{ zIndex: "999" }}
             >
               <div className="title-bar flex items-center justify-between mb-3">

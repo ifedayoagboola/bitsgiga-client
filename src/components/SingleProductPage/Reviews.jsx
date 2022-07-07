@@ -132,8 +132,8 @@ export default function Reviews({
         </div>
 
         <div className="w-full review-form ">
-          <div className="flex space-x-[30px] items-center mb-5">
-            <div className="w-1/3 ">
+          <div className="sm:flex sm:space-x-[30px] items-center mb-5">
+            <div className="sm:w-1/3 w-full">
               <InputCom
                 label="name*"
                 placeholder=""
@@ -144,7 +144,7 @@ export default function Reviews({
                 inputHandler={nameHandler}
               />
             </div>
-            <div className="w-1/3">
+            <div className="sm:w-1/3 w-full mt-5 sm:mt-0">
               <InputCom
                 label="Email*"
                 placeholder=""
@@ -155,7 +155,7 @@ export default function Reviews({
                 inputHandler={emailHandler}
               />
             </div>
-            <div className="w-1/3">
+            <div className="sm:w-1/3 w-full mt-5 sm:mt-0">
               <InputCom
                 label="Phone Number*"
                 placeholder=""

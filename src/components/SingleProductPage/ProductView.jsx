@@ -47,9 +47,11 @@ export default function ProductView({ className, reportHandler }) {
 
   return (
     <div
-      className={`product-view w-full flex justify-between ${className || ""}`}
+      className={`product-view w-full lg:flex justify-between ${
+        className || ""
+      }`}
     >
-      <div data-aos="fade-right" className="w-1/2 mr-[70px]">
+      <div data-aos="fade-right" className="lg:w-1/2 xl:mr-[70px] lg:mr-[50px]">
         <div className="w-full">
           <div className="w-full h-[600px] border border-qgray-border flex justify-center items-center overflow-hidden relative mb-3">
             <img
@@ -83,7 +85,7 @@ export default function ProductView({ className, reportHandler }) {
         </div>
       </div>
       <div className="flex-1">
-        <div className="product-details w-full">
+        <div className="product-details w-full mt-10 lg:mt-0">
           <span
             data-aos="fade-up"
             className="text-qgray text-xs font-normal uppercase tracking-wider mb-2 inline-block"

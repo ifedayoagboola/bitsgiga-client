@@ -282,17 +282,19 @@ body {
 }
 
 @media (max-width: 768px) {
-    .category-products .products-section .item:nth-child(3) {
-        display: none;
-    }
+    .category-products .products-section .item:nth-child(3),
     .best-sallers-section .section-content .item:nth-child(3),
-    .best-sallers-section .section-content .item:nth-child(4) {
+    .best-sallers-section .section-content .item:nth-child(4),
+    .single-product-wrapper .related-product .item:nth-child(3) {
         display: none;
     }
 }
 
 @media (max-width: 1024px) {
-    .best-sallers-section .section-content .item:nth-child(6) {
+    .best-sallers-section .section-content .item:nth-child(6),
+    .single-product-wrapper .saller-product .item:nth-child(8),
+    .single-product-wrapper .saller-product .item:nth-child(7),
+    .single-product-wrapper .related-product .item:nth-child(4) {
         display: none;
     }
 }
