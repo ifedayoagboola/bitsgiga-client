@@ -12,8 +12,8 @@ export default function Login() {
     <Layout childrenClasses="pt-0 pb-0">
       <div className="login-page-wrapper w-full py-10">
         <div className="container-x mx-auto">
-          <div className="flex items-center relative">
-            <div className="w-[572px] h-[783px] bg-white flex flex-col justify-center p-10 border border-[#E0E0E0]">
+          <div className="lg:flex items-center relative">
+            <div className="lg:w-[572px] w-full h-[783px] bg-white flex flex-col justify-center sm:p-10 p-5 border border-[#E0E0E0]">
               <div className="w-full">
                 <div className="title-area flex flex-col justify-center items-center relative text-center mb-7">
                   <h1 className="text-[34px] font-bold leading-[74px] text-qblack">
@@ -163,9 +163,9 @@ export default function Login() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 flex justify-center">
+            <div className="flex-1 lg:flex hidden transform scale-60 xl:scale-100   xl:justify-center ">
               <div
-                className="absolute -right-20"
+                className="absolute xl:-right-20 -right-[138px]"
                 style={{ top: "calc(50% - 258px)" }}
               >
                 <Thumbnail />
