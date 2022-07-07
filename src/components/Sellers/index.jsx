@@ -18,16 +18,16 @@ export default function Sallers() {
 
       <div className="content-wrapper w-full mb-[60px]">
         <div className="container-x mx-auto w-full">
-          <div className="grid grid-cols-2 gap-[30px]">
+          <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-[30px] gap-5">
             <div data-aos="fade-up" className="item w-full">
               <div
-                className="w-full h-[328px] p-[30px]"
+                className="w-full sm:h-[328px] sm:p-[30px] p-5"
                 style={{
                   background: `url(${process.env.PUBLIC_URL}/assets/images/sallers-cover-1.png) no-repeat`,
                   backgroundSize: "cover",
                 }}
               >
-                <div className="flex items-center justify-between w-full h-full">
+                <div className="flex sm:flex-row flex-col-reverse sm:items-center justify-between w-full h-full">
                   <div className="flex flex-col justify-between h-full">
                     <div className="">
                       <h1 className="text-[30px] font-semibold  text-qblack">
@@ -146,13 +146,16 @@ export default function Sallers() {
                   </div>
 
                   <div>
-                    <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/saller-8.png`}
-                        alt=""
-                      />
+                    <div className="flex sm:justify-center justify-start">
+                      <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/images/saller-8.png`}
+                          alt=""
+                        />
+                      </div>
                     </div>
-                    <h1 className="text-[30px] font-semibold  text-qblack text-center leading-none">
+
+                    <h1 className="sm:block hidden text-[30px] font-semibold  text-qblack text-center leading-none">
                       Fusion x
                     </h1>
                   </div>
@@ -161,13 +164,13 @@ export default function Sallers() {
             </div>
             <div data-aos="fade-up" className="item w-full">
               <div
-                className="w-full h-[328px] p-[30px]"
+                className="w-full sm:h-[328px] sm:p-[30px] p-5"
                 style={{
                   background: `url(${process.env.PUBLIC_URL}/assets/images/sallers-cover-6.png) no-repeat`,
                   backgroundSize: "cover",
                 }}
               >
-                <div className="flex items-center justify-between w-full h-full">
+                <div className="flex sm:flex-row flex-col-reverse sm:items-center justify-between w-full h-full">
                   <div className="flex flex-col justify-between h-full">
                     <div className="">
                       <h1 className="text-[30px] font-semibold  text-qblack">
@@ -286,13 +289,16 @@ export default function Sallers() {
                   </div>
 
                   <div>
-                    <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/saller-7.png`}
-                        alt=""
-                      />
+                    <div className="flex sm:justify-center justify-start">
+                      <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/images/saller-7.png`}
+                          alt=""
+                        />
+                      </div>
                     </div>
-                    <h1 className="text-[30px] font-semibold  text-qblack text-center leading-none">
+
+                    <h1 className="sm:block hidden text-[30px] font-semibold  text-qblack text-center leading-none">
                       Rahayanhan
                     </h1>
                   </div>
@@ -302,13 +308,13 @@ export default function Sallers() {
 
             <div data-aos="fade-up" className="item w-full">
               <div
-                className="w-full h-[328px] p-[30px]"
+                className="w-full sm:h-[328px] sm:p-[30px] p-5"
                 style={{
                   background: `url(${process.env.PUBLIC_URL}/assets/images/sallers-cover-2.png) no-repeat`,
                   backgroundSize: "cover",
                 }}
               >
-                <div className="flex items-center justify-between w-full h-full">
+                <div className="flex sm:flex-row flex-col-reverse sm:items-center justify-between w-full h-full">
                   <div className="flex flex-col justify-between h-full">
                     <div className="">
                       <h1 className="text-[30px] font-semibold  text-qblack">
@@ -427,13 +433,16 @@ export default function Sallers() {
                   </div>
 
                   <div>
-                    <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/saller-9.png`}
-                        alt=""
-                      />
+                    <div className="flex sm:justify-center justify-start">
+                      <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/images/saller-9.png`}
+                          alt=""
+                        />
+                      </div>
                     </div>
-                    <h1 className="text-[30px] font-semibold  text-qblack text-center leading-none">
+
+                    <h1 className="sm:block hidden text-[30px] font-semibold  text-qblack text-center leading-none">
                       Rikayi Rox
                     </h1>
                   </div>
@@ -443,13 +452,13 @@ export default function Sallers() {
 
             <div data-aos="fade-up" className="item w-full">
               <div
-                className="w-full h-[328px] p-[30px]"
+                className="w-full sm:h-[328px] sm:p-[30px] p-5"
                 style={{
                   background: `url(${process.env.PUBLIC_URL}/assets/images/sallers-cover-3.png) no-repeat`,
                   backgroundSize: "cover",
                 }}
               >
-                <div className="flex items-center justify-between w-full h-full">
+                <div className="flex sm:flex-row flex-col-reverse sm:items-center justify-between w-full h-full">
                   <div className="flex flex-col justify-between h-full">
                     <div className="">
                       <h1 className="text-[30px] font-semibold  text-qblack">
@@ -568,13 +577,16 @@ export default function Sallers() {
                   </div>
 
                   <div>
-                    <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/saller-6.png`}
-                        alt=""
-                      />
+                    <div className="flex sm:justify-center justify-start">
+                      <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/images/saller-6.png`}
+                          alt=""
+                        />
+                      </div>
                     </div>
-                    <h1 className="text-[30px] font-semibold  text-qblack text-center leading-none">
+
+                    <h1 className="sm:block hidden text-[30px] font-semibold  text-qblack text-center leading-none">
                       Habbryi
                     </h1>
                   </div>
@@ -584,13 +596,13 @@ export default function Sallers() {
 
             <div data-aos="fade-up" className="item w-full">
               <div
-                className="w-full h-[328px] p-[30px]"
+                className="w-full sm:h-[328px] sm:p-[30px] p-5"
                 style={{
                   background: `url(${process.env.PUBLIC_URL}/assets/images/sallers-cover-4.png) no-repeat`,
                   backgroundSize: "cover",
                 }}
               >
-                <div className="flex items-center justify-between w-full h-full">
+                <div className="flex sm:flex-row flex-col-reverse sm:items-center justify-between w-full h-full">
                   <div className="flex flex-col justify-between h-full">
                     <div className="">
                       <h1 className="text-[30px] font-semibold  text-qblack">
@@ -709,13 +721,16 @@ export default function Sallers() {
                   </div>
 
                   <div>
-                    <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/saller-1.png`}
-                        alt=""
-                      />
+                    <div className="flex sm:justify-center justify-start">
+                      <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/images/saller-1.png`}
+                          alt=""
+                        />
+                      </div>
                     </div>
-                    <h1 className="text-[30px] font-semibold  text-qblack text-center leading-none">
+
+                    <h1 className="sm:block hidden text-[30px] font-semibold  text-qblack text-center leading-none">
                       Shopno BD
                     </h1>
                   </div>
@@ -725,13 +740,13 @@ export default function Sallers() {
 
             <div data-aos="fade-up" className="item w-full">
               <div
-                className="w-full h-[328px] p-[30px]"
+                className="w-full sm:h-[328px] sm:p-[30px] p-5"
                 style={{
                   background: `url(${process.env.PUBLIC_URL}/assets/images/sallers-cover-5.png) no-repeat`,
                   backgroundSize: "cover",
                 }}
               >
-                <div className="flex items-center justify-between w-full h-full">
+                <div className="flex sm:flex-row flex-col-reverse sm:items-center justify-between w-full h-full">
                   <div className="flex flex-col justify-between h-full">
                     <div className="">
                       <h1 className="text-[30px] font-semibold  text-qblack">
@@ -850,13 +865,16 @@ export default function Sallers() {
                   </div>
 
                   <div>
-                    <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/saller-2.png`}
-                        alt=""
-                      />
+                    <div className="flex sm:justify-center justify-start">
+                      <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/images/saller-2.png`}
+                          alt=""
+                        />
+                      </div>
                     </div>
-                    <h1 className="text-[30px] font-semibold  text-qblack text-center leading-none">
+
+                    <h1 className="sm:block hidden text-[30px] font-semibold  text-qblack text-center leading-none">
                       E-coms BD
                     </h1>
                   </div>
