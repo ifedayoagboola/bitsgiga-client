@@ -12,10 +12,34 @@ import DataIteration from "../Helpers/DataIteration";
 export default function About() {
   const settings = {
     slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: false,
+    slidesToScroll: 3,
+    autoplay: true,
     centerMode: true,
+    infinite: true,
     centerPadding: "60px",
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 1026,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        },
+      },
+
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ],
   };
   const slider = useRef(null);
   const prev = () => {
@@ -39,8 +63,8 @@ export default function About() {
 
         <div className="aboutus-wrapper w-full">
           <div className="container-x mx-auto">
-            <div className="w-full min-h-[665px] flex space-x-12 items-center">
-              <div className="w-[570px] h-[560px] rounded overflow-hidden">
+            <div className="w-full min-h-[665px] lg:flex lg:space-x-12 items-center pb-10 lg:pb-0">
+              <div className="md:w-[570px] w-full md:h-[560px] h-auto rounded overflow-hidden my-5 lg:my-0">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/images/about-banner.png`}
                   alt="about"
@@ -89,7 +113,7 @@ export default function About() {
           </div>
           <div className="feedback-slider-wrapper w-vw relative overflow-hidden">
             <SimpleSlider selector={slider} settings={settings}>
-              <div className="item h-[385px] bg-primarygray px-10 py-9">
+              <div className="item h-[385px] bg-primarygray sm:px-10 sm:py-9 p-2">
                 <div className="flex flex-col justify-between h-full">
                   <div className="rating flex space-x-1 items-center">
                     <div className="flex items-center">
@@ -101,7 +125,7 @@ export default function About() {
                     </div>
                     <span className="text-[13px] text-qblack">(5.0)</span>
                   </div>
-                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify">
+                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify line-clamp-6">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an into the
@@ -126,7 +150,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="item h-[385px] bg-primarygray px-10 py-9">
+              <div className="item h-[385px] bg-primarygray sm:px-10 sm:py-9 p-2">
                 <div className="flex flex-col justify-between h-full">
                   <div className="rating flex space-x-1 items-center">
                     <div className="flex items-center">
@@ -138,7 +162,7 @@ export default function About() {
                     </div>
                     <span className="text-[13px] text-qblack">(5.0)</span>
                   </div>
-                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify">
+                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify line-clamp-6">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an into the
@@ -163,7 +187,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="item h-[385px] bg-primarygray px-10 py-9">
+              <div className="item h-[385px] bg-primarygray sm:px-10 sm:py-9 p-2">
                 <div className="flex flex-col justify-between h-full">
                   <div className="rating flex space-x-1 items-center">
                     <div className="flex items-center">
@@ -175,7 +199,7 @@ export default function About() {
                     </div>
                     <span className="text-[13px] text-qblack">(5.0)</span>
                   </div>
-                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify">
+                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify line-clamp-6">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an into the
@@ -200,7 +224,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="item h-[385px] bg-primarygray px-10 py-9">
+              <div className="item h-[385px] bg-primarygray sm:px-10 sm:py-9 p-2">
                 <div className="flex flex-col justify-between h-full">
                   <div className="rating flex space-x-1 items-center">
                     <div className="flex items-center">
@@ -212,7 +236,7 @@ export default function About() {
                     </div>
                     <span className="text-[13px] text-qblack">(5.0)</span>
                   </div>
-                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify">
+                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify line-clamp-6">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an into the
@@ -237,7 +261,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="item h-[385px] bg-primarygray px-10 py-9">
+              <div className="item h-[385px] bg-primarygray sm:px-10 sm:py-9 p-2">
                 <div className="flex flex-col justify-between h-full">
                   <div className="rating flex space-x-1 items-center">
                     <div className="flex items-center">
@@ -249,7 +273,7 @@ export default function About() {
                     </div>
                     <span className="text-[13px] text-qblack">(5.0)</span>
                   </div>
-                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify">
+                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify line-clamp-6">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an into the
@@ -274,7 +298,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="item h-[385px] bg-primarygray px-10 py-9">
+              <div className="item h-[385px] bg-primarygray sm:px-10 sm:py-9 p-2">
                 <div className="flex flex-col justify-between h-full">
                   <div className="rating flex space-x-1 items-center">
                     <div className="flex items-center">
@@ -286,7 +310,7 @@ export default function About() {
                     </div>
                     <span className="text-[13px] text-qblack">(5.0)</span>
                   </div>
-                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify">
+                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify line-clamp-6">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an into the
@@ -311,7 +335,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="item h-[385px] bg-primarygray px-10 py-9">
+              <div className="item h-[385px] bg-primarygray sm:px-10 sm:py-9 p-2">
                 <div className="flex flex-col justify-between h-full">
                   <div className="rating flex space-x-1 items-center">
                     <div className="flex items-center">
@@ -323,7 +347,7 @@ export default function About() {
                     </div>
                     <span className="text-[13px] text-qblack">(5.0)</span>
                   </div>
-                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify">
+                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify line-clamp-6">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an into the
@@ -348,7 +372,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="item h-[385px] bg-primarygray px-10 py-9">
+              <div className="item h-[385px] bg-primarygray sm:px-10 sm:py-9 p-2">
                 <div className="flex flex-col justify-between h-full">
                   <div className="rating flex space-x-1 items-center">
                     <div className="flex items-center">
@@ -360,7 +384,7 @@ export default function About() {
                     </div>
                     <span className="text-[13px] text-qblack">(5.0)</span>
                   </div>
-                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify">
+                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify line-clamp-6">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an into the
@@ -385,7 +409,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="item h-[385px] bg-primarygray px-10 py-9">
+              <div className="item h-[385px] bg-primarygray sm:px-10 sm:py-9 p-2">
                 <div className="flex flex-col justify-between h-full">
                   <div className="rating flex space-x-1 items-center">
                     <div className="flex items-center">
@@ -397,7 +421,7 @@ export default function About() {
                     </div>
                     <span className="text-[13px] text-qblack">(5.0)</span>
                   </div>
-                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify">
+                  <div className="text-[15px] text-qgraytwo leading-[30px] text-justify line-clamp-6">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an into the
@@ -473,7 +497,7 @@ export default function About() {
         <div className="container-x mx-auto my-[60px]">
           <div
             data-aos="fade-down"
-            className="best-services w-full bg-qyellow flex justify-between items-center h-[110px] px-10"
+            className="best-services w-full bg-qyellow flex flex-col space-y-10 lg:space-y-0 lg:flex-row lg:justify-between lg:items-center lg:h-[110px] px-10 lg:py-0 py-10"
           >
             <div className="item">
               <div className="flex space-x-5 items-center">
@@ -682,7 +706,7 @@ export default function About() {
             </div>
 
             <div className="blogs-wrapper w-full">
-              <div className="grid grid-cols-2 gap-[30px]">
+              <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-[30px] gap-5">
                 <DataIteration datas={blog.blogs} startLength={0} endLength={2}>
                   {({ datas }) => (
                     <div
