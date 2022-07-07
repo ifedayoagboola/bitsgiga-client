@@ -8,17 +8,19 @@ export default function ProductsTable({ className }) {
           <tbody>
             {/* table heading */}
             <tr className="text-[13px] font-medium text-black bg-[#F6F6F6] whitespace-nowrap px-2 border-b default-border-bottom uppercase">
-              <td className="py-4 pl-10 block whitespace-nowrap">product</td>
+              <td className="py-4 pl-10 block whitespace-nowrap  w-[380px]">
+                product
+              </td>
               <td className="py-4 whitespace-nowrap text-center">color</td>
               <td className="py-4 whitespace-nowrap text-center">size</td>
               <td className="py-4 whitespace-nowrap text-center">price</td>
               <td className="py-4 whitespace-nowrap  text-center">quantity</td>
               <td className="py-4 whitespace-nowrap  text-center">total</td>
-              <td className="py-4 whitespace-nowrap text-right w-[114px]"></td>
+              <td className="py-4 whitespace-nowrap text-right w-[114px] block"></td>
             </tr>
             {/* table heading end */}
             <tr className="bg-white border-b hover:bg-gray-50">
-              <td className="pl-10  py-4  w-[380px]">
+              <td className="pl-10  py-4 ">
                 <div className="flex space-x-6 items-center">
                   <div className="w-[80px] h-[80px] overflow-hidden flex justify-center items-center border border-[#EDEDED]">
                     <img
