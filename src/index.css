@@ -110,6 +110,7 @@ body {
         animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
 }
+
 .yellow-btn {
     @apply w-full text-[13px] text-qblacktext font-semibold bg-qyellow flex justify-center items-center h-full;
     line-height: 0;

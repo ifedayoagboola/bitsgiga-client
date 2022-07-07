@@ -208,7 +208,7 @@ export default function SallerPage() {
                     </div>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-[30px] mb-[40px]">
+                <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 xl:gap-[30px] gap-5 mb-[40px]">
                   <DataIteration datas={products} startLength={0} endLength={6}>
                     {({ datas }) => (
                       <div data-aos="fade-up" key={datas.id}>
@@ -225,7 +225,7 @@ export default function SallerPage() {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <div className="grid grid-cols-3 gap-[30px] mb-[40px]">
+                <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 xl:gap-[30px] gap-5 mb-[40px]">
                   <DataIteration
                     datas={products}
                     startLength={6}
