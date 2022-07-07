@@ -12,8 +12,8 @@ export default function Signup() {
     <Layout childrenClasses="pt-0 pb-0">
       <div className="login-page-wrapper w-full py-10">
         <div className="container-x mx-auto">
-          <div className="flex items-center relative">
-            <div className="w-[572px] h-[783px] bg-white flex flex-col justify-center p-10 border border-[#E0E0E0]">
+          <div className="lg:flex items-center relative">
+            <div className="lg:w-[572px] w-full lg:h-[783px] bg-white flex flex-col justify-center sm:p-10 p-5 border border-[#E0E0E0]">
               <div className="w-full">
                 <div className="title-area flex flex-col justify-center items-center relative text-center mb-7">
                   <h1 className="text-[34px] font-bold leading-[74px] text-qblack">
@@ -37,7 +37,7 @@ export default function Signup() {
                   </div>
                 </div>
                 <div className="input-area">
-                  <div className="flex space-x-5 mb-5">
+                  <div className="flex sm:flex-row flex-col space-y-5 sm:space-y-0 sm:space-x-5 mb-5">
                     <InputCom
                       placeholder="Demo Name"
                       label="Frist Name*"
@@ -54,7 +54,7 @@ export default function Signup() {
                       inputClasses="h-[50px]"
                     />
                   </div>
-                  <div className="flex space-x-5 mb-5">
+                  <div className="flex sm:flex-row flex-col space-y-5 sm:space-y-0 sm:space-x-5 mb-5">
                     <InputCom
                       placeholder="Demo@gmail.com"
                       label="Email Address*"
@@ -106,7 +106,7 @@ export default function Signup() {
                       inputClasses="h-[50px]"
                     />
                   </div>
-                  <div className="flex space-x-5 mb-5">
+                  <div className="flex sm:flex-row flex-col space-y-5 sm:space-y-0 sm:space-x-5 mb-5">
                     <div className="w-1/2">
                       <h6 className="input-label text-qgray capitalize text-[13px] font-normal block mb-2 ">
                         Town / City*
@@ -132,7 +132,7 @@ export default function Signup() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <div className="w-full h-[50px]">
+                      <div className="w-full h-[50px] mb-5 sm:mb-0">
                         <InputCom
                           label="Postcode / ZIP*"
                           inputClasses="w-full h-full"
@@ -196,9 +196,9 @@ export default function Signup() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 flex justify-center">
+            <div className="flex-1 lg:flex hidden transform scale-60 xl:scale-100   xl:justify-center">
               <div
-                className="absolute -right-20"
+                className="absolute xl:-right-20 -right-[138px]"
                 style={{ top: "calc(50% - 258px)" }}
               >
                 <Thumbnail />
