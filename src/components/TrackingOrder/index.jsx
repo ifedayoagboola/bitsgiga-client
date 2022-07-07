@@ -24,8 +24,8 @@ export default function TrackingOrder() {
             <p className="text-[15px] text-qgraytwo leading-8 mb-5">
               Enter your order taracking number and your secreet id.
             </p>
-            <div className="w-full bg-white px-[30px] py-[23px] flex items-center">
-              <div className="w-[642px]">
+            <div className="w-full bg-white lg:px-[30px] px-5 py-[23px] lg:flex items-center">
+              <div className="lg:w-[642px] w-full">
                 <div className="mb-3">
                   <InputCom
                     placeholder="Order Number"
@@ -47,7 +47,7 @@ export default function TrackingOrder() {
                   </div>
                 </a>
               </div>
-              <div className="flex-1 flex justify-center">
+              <div className="flex-1 flex justify-center mt-5 lg:mt-0">
                 <Thumbnail />
               </div>
             </div>
