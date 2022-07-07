@@ -8,7 +8,9 @@ export default function ProductsTable({ className }) {
           <tbody>
             {/* table heading */}
             <tr className="text-[13px] font-medium text-black bg-[#F6F6F6] whitespace-nowrap px-2 border-b default-border-bottom uppercase">
-              <td className="py-4 pl-10 block whitespace-nowrap">product</td>
+              <td className="py-4 pl-10 block whitespace-nowrap min-w-[300px]">
+                product
+              </td>
               <td className="py-4 whitespace-nowrap text-center">color</td>
               <td className="py-4 whitespace-nowrap text-center">size</td>
               <td className="py-4 whitespace-nowrap text-center">price</td>

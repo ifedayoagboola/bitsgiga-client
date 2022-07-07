@@ -5,11 +5,11 @@ export default function EmptyCardError() {
     <div className="empty-card-wrapper w-full">
       <div className="flex justify-center items-center w-full">
         <div>
-          <div className="mb-10">
+          <div className="sm:mb-10 mb-5 transform scale-50 sm:scale-100">
             <Empty />
           </div>
           <div data-aos="fade-up" className="empty-content w-full">
-            <h1 className="text-xl font-semibold text-center mb-5">
+            <h1 className="sm:text-xl text-base font-semibold text-center mb-5">
               Empty! You don’t Cart any Products
             </h1>
             <a href="/">
