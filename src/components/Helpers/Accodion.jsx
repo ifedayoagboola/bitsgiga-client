@@ -16,7 +16,7 @@ export default function Accodion({ init, title, des }) {
         type="button"
         className="w-full h-[60px] text-qblack flex justify-between items-center px-5"
       >
-        <span className="text-base font-semibold">{title}</span>
+        <span className="sm:text-base text-sm font-semibold">{title}</span>
         <span className="text-[#9A9A9A]">
           {collaps ? (
             <svg
@@ -48,7 +48,7 @@ export default function Accodion({ init, title, des }) {
       {collaps && (
         <div className="p-5 border-t border-[#E5A832]">
           <div data-aos="fade-up">
-            <p className="text-[15px]">{des}</p>
+            <p className="sm:text-[15px] text-xs">{des}</p>
           </div>
         </div>
       )}

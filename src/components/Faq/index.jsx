@@ -19,8 +19,8 @@ export default function Faq() {
       </div>
       <div className="contact-wrapper w-full mb-10">
         <div className="container-x mx-auto">
-          <div className="main-wrapper w-full flex space-x-[30px]">
-            <div className="w-1/2">
+          <div className="main-wrapper w-full lg:flex lg:space-x-[30px]">
+            <div className="lg:w-1/2 w-full mb-10 lg:mb-0">
               <h1 className="text-qblack font-bold text-[22px] mb-4">
                 Frequently asked questions
               </h1>
@@ -59,9 +59,9 @@ humour, or randomised words"
               </div>
             </div>
             <div className="flex-1">
-              <div className="bg-white p-10">
+              <div className="bg-white sm:p-10 p-5">
                 <div className="title flex flex-col items-center">
-                  <h1 className="text-[34px] font-bold text-qblack">
+                  <h1 className="lg:text-[34px] text-xl font-bold text-qblack">
                     Have Any Qustion
                   </h1>
                   <span className="-mt-5 block">
