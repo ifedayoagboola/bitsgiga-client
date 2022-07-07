@@ -22,7 +22,7 @@ export default function Blogs() {
       <div className="w-full py-[60px]">
         <div className="container-x mx-auto">
           <div className="w-full">
-            <div className="grid grid-cols-2 gap-[30px]">
+            <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-[30px] gap-5">
               <DataIteration
                 datas={blog.blogs}
                 startLength={0}
