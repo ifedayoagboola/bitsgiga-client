@@ -39,7 +39,6 @@ export default function Routers() {
       <Route exact path="/about" element={<About />} />
       <Route exact path="/blogs" element={<Blogs />} />
       <Route exact path="/blogs/blog" element={<Blog />} />
-      <Route exact path="/blogs/blog" element={<Blog />} />
       <Route exact path="/tracking-order" element={<TrackingOrder />} />
       <Route exact path="/contact" element={<Contact />} />
       <Route exact path="/faq" element={<Faq />} />
