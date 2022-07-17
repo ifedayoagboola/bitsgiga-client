@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import About from "./components/About";
 import AllProductPage from "./components/AllProductPage";
 import Login from "./components/Auth/Login/index";
-import Profile from "./components/Auth/Profile";
 import Signup from "./components/Auth/Signup";
 import BecomeSaller from "./components/BecomeSaller";
 import Blogs from "./components/Blogs";
@@ -39,13 +38,11 @@ export default function Routers() {
       <Route exact path="/about" element={<About />} />
       <Route exact path="/blogs" element={<Blogs />} />
       <Route exact path="/blogs/blog" element={<Blog />} />
-      <Route exact path="/blogs/blog" element={<Blog />} />
       <Route exact path="/tracking-order" element={<TrackingOrder />} />
       <Route exact path="/contact" element={<Contact />} />
       <Route exact path="/faq" element={<Faq />} />
       <Route exact path="/login" element={<Login />} />
       <Route exact path="/signup" element={<Signup />} />
-      <Route exact path="/profile" element={<Profile />} />
       <Route exact path="/become-saller" element={<BecomeSaller />} />
       <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route exact path="/terms-condition" element={<TermsCondition />} />
