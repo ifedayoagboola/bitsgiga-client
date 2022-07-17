@@ -149,7 +149,7 @@ export default function SingleProductPage() {
                   </li>
                 </ul>
               </div>
-              <div className="w-full h-[1px] bg-[#E8E8E8] absolute left-0 sm:top-[52px] top-[36px] -z-10"></div>
+              <div className="w-full h-[1px] bg-[#E8E8E8] absolute left-0 sm:top-[50px] top-[36px] -z-10"></div>
             </div>
             <div className="tab-contents w-full min-h-[400px] ">
               <div className="container-x mx-auto">
