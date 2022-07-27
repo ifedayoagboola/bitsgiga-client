@@ -140,7 +140,7 @@ body {
 .home-two .search-btn {
     @apply bg-qh2-green;
 }
-.home-two .cart-wrappwer .yellow-btn {
+.home-two :is(.cart-wrappwer, .product-card-style-one-two) .yellow-btn {
     @apply bg-qh2-green text-white;
 }
 
