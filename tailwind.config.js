@@ -13,6 +13,7 @@ module.exports = {
         qgraytwo: "#8E8E8E",
         "qgray-border": "#EFEFEF",
         "qblue-white": "#CBECFF",
+        "qh2-green": "#2D6F6D",
       },
       scale: {
         60: "0.6",

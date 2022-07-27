@@ -128,7 +128,24 @@ body {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
-/*TODO:  ========= components ========= */
+/*TODO:  ========= home one ========= */
+.home-one .search-btn {
+    @apply bg-qyellow;
+}
+.home-one .cart-wrappwer {
+    @apply border-qyellow;
+}
+
+/*TODO:  ========= home one end ========= */
+/*TODO:  ========= home two ========= */
+.home-two .search-btn {
+    @apply bg-qh2-green;
+}
+.home-two .cart-wrappwer .yellow-btn {
+    @apply bg-qh2-green text-white;
+}
+
+/*TODO:  ========= home two end ========= */
 .search-input {
     @apply w-full h-full focus:outline-none focus:ring-0 pl-5 text-xs font-500 placeholder:text-qgraytwo;
 }
