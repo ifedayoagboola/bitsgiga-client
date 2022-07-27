@@ -7,7 +7,6 @@ export default function Profile() {
   const [switchDashboard, setSwitchDashboard] = useState(false);
   return (
     <Layout childrenClasses="pt-0 pb-0">
-      {console.log("suvo")}
       <div className="profile-page-wrapper w-full">
         <div className="container-x mx-auto">
           <div className="w-full my-10">
