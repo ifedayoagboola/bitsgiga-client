@@ -8,6 +8,7 @@ import SectionStyleTwo from "../Helpers/SectionStyleTwoHomeTwo";
 import ViewMoreTitle from "../Helpers/ViewMoreTitle";
 import ProductsAds from "../Home/ProductsAds";
 import Banner from "./Banner";
+import CampaignCountDown from "./CampaignCountDown";
 
 export default function HomeTwo() {
   const { products } = datas;
@@ -21,6 +22,7 @@ export default function HomeTwo() {
         seeMoreUrl="/all-products"
         className="new-products mb-[60px]"
       />
+      <CampaignCountDown className="mb-[60px]" lastDate="2023-03-04 4:00:00" />
       <ProductsAds
         ads={[
           `${process.env.PUBLIC_URL}/assets/images/ads-2.2.png`,
