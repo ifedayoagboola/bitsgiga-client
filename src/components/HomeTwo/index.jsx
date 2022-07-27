@@ -4,6 +4,8 @@ import LayoutHomeTwo from "../Partials/LayoutHomeTwo";
 import datas from "../../data/productsTwo.json";
 import SectionStyleFour from "../Helpers/SectionStyleFour";
 import SectionStyleThreeHomeTwo from "../Helpers/SectionStyleThreeHomeTwo";
+import SectionStyleTwo from "../Helpers/SectionStyleTwoHomeTwo";
+import ViewMoreTitle from "../Helpers/ViewMoreTitle";
 import ProductsAds from "../Home/ProductsAds";
 import Banner from "./Banner";
 
@@ -34,6 +36,13 @@ export default function HomeTwo() {
         seeMoreUrl="/all-products"
         className="feature-products mb-[60px]"
       />
+      <ViewMoreTitle
+        className="top-selling-product mb-[60px]"
+        seeMoreUrl="/all-products"
+        categoryTitle="Top Selling Products"
+      >
+        <SectionStyleTwo products={products.slice(3, products.length)} />
+      </ViewMoreTitle>
       <ProductsAds
         ads={[`${process.env.PUBLIC_URL}/assets/images/ads-2.3.png`]}
         className="products-ads-section mb-[60px]"
