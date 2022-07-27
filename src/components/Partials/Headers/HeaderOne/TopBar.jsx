@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Arrow from "../../Helpers/icons/Arrow";
-import Selectbox from "../../Helpers/Selectbox";
+import Arrow from "../../../Helpers/icons/Arrow";
+import Selectbox from "../../../Helpers/Selectbox";
 
 export default function TopBar({ className }) {
   return (

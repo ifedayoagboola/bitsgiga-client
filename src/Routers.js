@@ -14,6 +14,7 @@ import Faq from "./components/Faq";
 import FlashSale from "./components/FlashSale";
 import FourZeroFour from "./components/FourZeroFour";
 import Home from "./components/Home";
+import HomeTwo from "./components/HomeTwo";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import ProductsCompaire from "./components/ProductsCompaire/index";
 import SallerPage from "./components/SallerPage";
@@ -27,6 +28,7 @@ export default function Routers() {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
+      <Route exact path="/home-two" element={<HomeTwo />} />
       <Route exact path="/all-products" element={<AllProductPage />} />
       <Route exact path="/single-product" element={<SingleProductPage />} />
       <Route exact path="/cart" element={<CardPage />} />

@@ -1,9 +1,9 @@
-import Cart from "../../Cart";
-import Compair from "../../Helpers/icons/Compair";
-import ThinBag from "../../Helpers/icons/ThinBag";
-import ThinLove from "../../Helpers/icons/ThinLove";
-import ThinPeople from "../../Helpers/icons/ThinPeople";
-import SearchBox from "../../Helpers/SearchBox";
+import Cart from "../../../Cart";
+import Compair from "../../../Helpers/icons/Compair";
+import ThinBag from "../../../Helpers/icons/ThinBag";
+import ThinLove from "../../../Helpers/icons/ThinLove";
+import ThinPeople from "../../../Helpers/icons/ThinPeople";
+import SearchBox from "../../../Helpers/SearchBox";
 
 export default function Middlebar({ className }) {
   // const [toggleCart, setToggle] = useState(false);
@@ -20,7 +20,7 @@ export default function Middlebar({ className }) {
                 <img
                   width="152"
                   height="36"
-                  src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                  src={`${process.env.PUBLIC_URL}/assets/images/logo-2.svg`}
                   alt="logo"
                 />
               </a>
@@ -35,7 +35,7 @@ export default function Middlebar({ className }) {
                     <Compair />
                   </span>
                 </a>
-                <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
+                <span className="w-[18px] h-[18px] rounded-full bg-qh2-green absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px] text-white">
                   2
                 </span>
               </div>
@@ -45,7 +45,7 @@ export default function Middlebar({ className }) {
                     <ThinLove />
                   </span>
                 </a>
-                <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
+                <span className="w-[18px] h-[18px] rounded-full bg-qh2-green absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px] text-white">
                   1
                 </span>
               </div>
@@ -56,7 +56,7 @@ export default function Middlebar({ className }) {
                       <ThinBag />
                     </span>
                   </a>
-                  <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
+                  <span className="w-[18px] h-[18px] rounded-full bg-qh2-green absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px] text-white">
                     15
                   </span>
                 </div>

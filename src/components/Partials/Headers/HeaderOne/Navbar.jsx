@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Arrow from "../../Helpers/icons/Arrow";
+import Arrow from "../../../Helpers/icons/Arrow";
 
 export default function Navbar({ className }) {
   const [categoryToggle, setToggle] = useState(false);

@@ -51,7 +51,7 @@ export default function SearchBox({ className }) {
           </button>
         </div>
         <button
-          className="w-[93px] bg-qyellow h-full text-sm font-600 text-qblacktext"
+          className="search-btn w-[93px] h-full text-sm font-600 text-white"
           type="button"
         >
           Search
