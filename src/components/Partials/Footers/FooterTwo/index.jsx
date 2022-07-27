@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Facebook from "../../Helpers/icons/Facebook";
-import Instagram from "../../Helpers/icons/Instagram";
-import Youtube from "../../Helpers/icons/Youtube";
+import Facebook from "../../../Helpers/icons/Facebook";
+import Instagram from "../../../Helpers/icons/Instagram";
+import Youtube from "../../../Helpers/icons/Youtube";
 
 export default function Footer() {
   return (
@@ -15,7 +15,7 @@ export default function Footer() {
                 <img
                   width="152"
                   height="36"
-                  src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                  src={`${process.env.PUBLIC_URL}/assets/images/logo-2.svg`}
                   alt="logo"
                 />
               </a>

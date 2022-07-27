@@ -1,7 +1,7 @@
 import { useState } from "react";
-import DiscountBanner from "../DiscountBanner";
+import DiscountBanner from "../Home/DiscountBanner";
 import Drawer from "../Mobile/Drawer";
-import Footer from "./Footer";
+import Footer from "./Footers/Footer";
 import Header from "./Headers/HeaderOne";
 
 export default function Layout({ children, childrenClasses }) {
