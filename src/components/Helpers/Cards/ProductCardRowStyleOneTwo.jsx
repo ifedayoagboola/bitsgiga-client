@@ -25,7 +25,7 @@ export default function ProductCardRowStyleOneTwo({ className, datas }) {
                 {datas.title}
               </p>
             </a>
-            <p className="price mb-[18px] flex space-x-2 items-center  mb-2.5">
+            <p className="price flex space-x-2 items-center  mb-2.5">
               <span className="offer-price text-qred font-600 sm:text-[24px] text-base">
                 {datas.offer_price}
               </span>
