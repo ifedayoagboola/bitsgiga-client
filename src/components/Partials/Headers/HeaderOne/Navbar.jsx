@@ -854,14 +854,45 @@ export default function Navbar({ className }) {
               </div>
               <div className="nav">
                 <ul className="nav-wrapper flex xl:space-x-10 space-x-5">
-                  <li>
+                  <li className="relative">
                     <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
                       <span>Homepage</span>
                       <span className="ml-1.5 ">
                         <Arrow className="fill-current" />
                       </span>
                     </span>
-
+                    <div className="sub-menu w-[220px] absolute left-0 top-[60px]">
+                      <div
+                        className="w-full bg-white flex justify-between items-center "
+                        style={{
+                          boxShadow: "0px 15px 50px 0px rgba(0, 0, 0, 0.14)",
+                        }}
+                      >
+                        <div className="categories-wrapper w-full h-full p-5">
+                          <div>
+                            <div className="category-items">
+                              <ul className="flex flex-col space-y-2">
+                                <li>
+                                  <a href="/home-two">
+                                    <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
+                                      Home two
+                                    </span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
+                      <span>Shop</span>
+                      <span className="ml-1.5 ">
+                        <Arrow className="fill-current" />
+                      </span>
+                    </span>
                     <div className="sub-menu w-full absolute left-0 top-[60px]">
                       <div
                         className="mega-menu-wrapper w-full bg-white p-[30px] flex justify-between items-center "
@@ -1008,14 +1039,6 @@ export default function Navbar({ className }) {
                         </div>
                       </div>
                     </div>
-                  </li>
-                  <li>
-                    <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
-                      <span>Shop</span>
-                      <span className="ml-1.5 ">
-                        <Arrow className="fill-current" />
-                      </span>
-                    </span>
                   </li>
                   <li className="relative">
                     <span className="flex items-center text-sm text-qblacktext font-600 cursor-pointer ">
