@@ -11,6 +11,7 @@ function App() {
       document.body.classList.remove("home-two");
       document.body.classList.add("home-one");
     }
+    document.body.classList.add("home-one");
     return () => {
       document.body.classList.remove("home-two");
       document.body.classList.add("home-one");
