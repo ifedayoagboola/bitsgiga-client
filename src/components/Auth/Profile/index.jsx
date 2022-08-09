@@ -16,6 +16,7 @@ import Dashboard from "./tabs/Dashboard";
 import OrderTab from "./tabs/OrderTab";
 import Payment from "./tabs/Payment";
 import ProfileTab from "./tabs/ProfileTab";
+import WishlistTab from "./tabs/WishlistTab";
 
 export default function Profile() {
   const [switchDashboard, setSwitchDashboard] = useState(false);
@@ -199,6 +200,10 @@ export default function Profile() {
                     ) : active === "order" ? (
                       <>
                         <OrderTab />
+                      </>
+                    ) : active === "wishlist" ? (
+                      <>
+                        <WishlistTab />
                       </>
                     ) : (
                       ""
