@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import datas from "../../../data/products.json";
 import BreadcrumbCom from "../../BreadcrumbCom";
 import Layout from "../../Partials/Layout";
 import IcoAdress from "./icons/IcoAdress";
@@ -18,6 +19,7 @@ import OrderTab from "./tabs/OrderTab";
 import PasswordTab from "./tabs/PasswordTab";
 import Payment from "./tabs/Payment";
 import ProfileTab from "./tabs/ProfileTab";
+import ReviewTab from "./tabs/ReviewTab";
 import SupportTab from "./tabs/SupportTab";
 import WishlistTab from "./tabs/WishlistTab";
 
@@ -219,6 +221,10 @@ export default function Profile() {
                     ) : active === "support" ? (
                       <>
                         <SupportTab />
+                      </>
+                    ) : active === "review" ? (
+                      <>
+                        <ReviewTab products={datas.products} />
                       </>
                     ) : (
                       ""
