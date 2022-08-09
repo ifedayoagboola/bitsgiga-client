@@ -15,6 +15,7 @@ import IcoSupport from "./icons/IcoSupport";
 import AddressesTab from "./tabs/AddressesTab";
 import Dashboard from "./tabs/Dashboard";
 import OrderTab from "./tabs/OrderTab";
+import PasswordTab from "./tabs/PasswordTab";
 import Payment from "./tabs/Payment";
 import ProfileTab from "./tabs/ProfileTab";
 import WishlistTab from "./tabs/WishlistTab";
@@ -209,6 +210,10 @@ export default function Profile() {
                     ) : active === "address" ? (
                       <>
                         <AddressesTab />
+                      </>
+                    ) : active === "password" ? (
+                      <>
+                        <PasswordTab />
                       </>
                     ) : (
                       ""
