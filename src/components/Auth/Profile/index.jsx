@@ -18,6 +18,7 @@ import OrderTab from "./tabs/OrderTab";
 import PasswordTab from "./tabs/PasswordTab";
 import Payment from "./tabs/Payment";
 import ProfileTab from "./tabs/ProfileTab";
+import SupportTab from "./tabs/SupportTab";
 import WishlistTab from "./tabs/WishlistTab";
 
 export default function Profile() {
@@ -214,6 +215,10 @@ export default function Profile() {
                     ) : active === "password" ? (
                       <>
                         <PasswordTab />
+                      </>
+                    ) : active === "support" ? (
+                      <>
+                        <SupportTab />
                       </>
                     ) : (
                       ""
