@@ -22,6 +22,7 @@ module.exports = {
   variants: {
     extend: {
       textColor: ["focus-within"],
+      borderStyle: ["last"],
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],

@@ -7,13 +7,13 @@ import IcoCart from "./icons/IcoCart";
 import IcoDashboard from "./icons/IcoDashboard";
 import IcoLogout from "./icons/IcoLogout";
 import IcoLove from "./icons/IcoLove";
-import IcoMessage from "./icons/IcoMessage";
 import IcoPassword from "./icons/IcoPassword";
 import IcoPayment from "./icons/IcoPayment";
 import IcoPeople from "./icons/IcoPeople";
 import IcoReviewHand from "./icons/IcoReviewHand";
 import IcoSupport from "./icons/IcoSupport";
 import Dashboard from "./tabs/Dashboard";
+import Payment from "./tabs/Payment";
 import ProfileTab from "./tabs/ProfileTab";
 
 export default function Profile() {
@@ -86,18 +86,7 @@ export default function Profile() {
                         </div>
                       </Link>
                     </div>
-                    <div className="item group">
-                      <Link to="/profile#message">
-                        <div className="flex space-x-3 items-center text-qgray hover:text-qblack">
-                          <span>
-                            <IcoMessage />
-                          </span>
-                          <span className=" font-normal text-base">
-                            Messages
-                          </span>
-                        </div>
-                      </Link>
-                    </div>
+
                     <div className="item group">
                       <Link to="/profile#payment">
                         <div className="flex space-x-3 items-center text-qgray hover:text-qblack">
@@ -201,6 +190,10 @@ export default function Profile() {
                     ) : active === "profile" ? (
                       <>
                         <ProfileTab />
+                      </>
+                    ) : active === "payment" ? (
+                      <>
+                        <Payment />
                       </>
                     ) : (
                       ""
