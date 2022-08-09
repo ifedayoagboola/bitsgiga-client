@@ -13,6 +13,7 @@ import IcoPeople from "./icons/IcoPeople";
 import IcoReviewHand from "./icons/IcoReviewHand";
 import IcoSupport from "./icons/IcoSupport";
 import Dashboard from "./tabs/Dashboard";
+import OrderTab from "./tabs/OrderTab";
 import Payment from "./tabs/Payment";
 import ProfileTab from "./tabs/ProfileTab";
 
@@ -194,6 +195,10 @@ export default function Profile() {
                     ) : active === "payment" ? (
                       <>
                         <Payment />
+                      </>
+                    ) : active === "order" ? (
+                      <>
+                        <OrderTab />
                       </>
                     ) : (
                       ""
