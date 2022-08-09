@@ -12,6 +12,7 @@ import IcoPayment from "./icons/IcoPayment";
 import IcoPeople from "./icons/IcoPeople";
 import IcoReviewHand from "./icons/IcoReviewHand";
 import IcoSupport from "./icons/IcoSupport";
+import AddressesTab from "./tabs/AddressesTab";
 import Dashboard from "./tabs/Dashboard";
 import OrderTab from "./tabs/OrderTab";
 import Payment from "./tabs/Payment";
@@ -204,6 +205,10 @@ export default function Profile() {
                     ) : active === "wishlist" ? (
                       <>
                         <WishlistTab />
+                      </>
+                    ) : active === "address" ? (
+                      <>
+                        <AddressesTab />
                       </>
                     ) : (
                       ""
