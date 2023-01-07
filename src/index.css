@@ -130,7 +130,7 @@ body {
 }
 /*TODO:  ========= home one ========= */
 .home-one .search-btn {
-    @apply bg-qyellow;
+    @apply bg-qyellow text-qblack;
 }
 .home-one .cart-wrappwer {
     @apply border-qyellow;
@@ -138,7 +138,7 @@ body {
 /*TODO:  ========= home one end ========= */
 /*TODO:  ========= home two ========= */
 .home-two .search-btn {
-    @apply bg-qh2-green;
+    @apply bg-qh2-green text-white;
 }
 .home-two :is(.cart-wrappwer, .product-card-style-one-two, .product-row-card-style-one-two) .yellow-btn {
     @apply bg-qh2-green text-white;
