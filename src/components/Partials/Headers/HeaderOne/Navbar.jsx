@@ -77,7 +77,7 @@ export default function Navbar({ className }) {
                 >
                   <ul className="categories-list">
                     <li className="category-item">
-                      <a href="#">
+                      <a href="/all-products">
                         <div className=" flex justify-between items-center px-5 h-10 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span>
@@ -158,7 +158,7 @@ export default function Navbar({ className }) {
                       </a>
                     </li>
                     <li className="category-item">
-                      <a href="#">
+                      <a href="/all-products">
                         <div className="flex justify-between items-center px-5 h-10 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span>
@@ -243,7 +243,7 @@ export default function Navbar({ className }) {
                       </a>
                     </li>
                     <li className="category-item">
-                      <a href="#">
+                      <a href="/all-products">
                         <div className=" flex justify-between items-center px-5 h-10 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span>
@@ -324,7 +324,7 @@ export default function Navbar({ className }) {
                       </a>
                     </li>
                     <li className="category-item">
-                      <a href="#">
+                      <a href="/all-products">
                         <div className="flex justify-between items-center px-5 h-10 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span>
@@ -395,7 +395,7 @@ export default function Navbar({ className }) {
                       </a>
                     </li>
                     <li className="category-item">
-                      <a href="#">
+                      <a href="/all-products">
                         <div className=" flex justify-between items-center px-5 h-10 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span>
@@ -486,7 +486,7 @@ export default function Navbar({ className }) {
                       </a>
                     </li>
                     <li className="category-item">
-                      <a href="#">
+                      <a href="/all-products">
                         <div className="flex justify-between items-center px-5 h-10 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span>
@@ -539,7 +539,7 @@ export default function Navbar({ className }) {
                       </a>
                     </li>
                     <li className="category-item ">
-                      <a href="#">
+                      <a href="/all-products">
                         <div className="flex justify-between items-center px-5 h-10 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span>
@@ -612,7 +612,7 @@ export default function Navbar({ className }) {
                       </a>
                     </li>
                     <li className="category-item">
-                      <a href="#">
+                      <a href="/all-products">
                         <div className=" flex justify-between items-center px-5 h-10 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span>
@@ -677,7 +677,7 @@ export default function Navbar({ className }) {
                       </a>
                     </li>
                     <li className="category-item">
-                      <a href="#">
+                      <a href="/all-products">
                         <div className="flex justify-between items-center px-5 h-10 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span>
@@ -732,7 +732,7 @@ export default function Navbar({ className }) {
                       </a>
                     </li>
                     <li className="category-item ">
-                      <a href="#">
+                      <a href="/all-products">
                         <div className="flex justify-between items-center px-5 h-10 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span>
@@ -797,7 +797,7 @@ export default function Navbar({ className }) {
                       </a>
                     </li>
                     <li className="category-item">
-                      <a href="#">
+                      <a href="/all-products">
                         <div className=" flex justify-between items-center px-5 h-10 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span>
@@ -911,35 +911,35 @@ export default function Navbar({ className }) {
                             <div className="category-items">
                               <ul className="flex flex-col space-y-2">
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Shop Sidebar
                                     </span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Shop Fullwidth
                                     </span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Shop Category Icon
                                     </span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Shop Category Icon
                                     </span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Shop List View
                                     </span>
@@ -957,28 +957,28 @@ export default function Navbar({ className }) {
                             <div className="category-items">
                               <ul className="flex flex-col space-y-2">
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Horizonral Thumbnail
                                     </span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Vertical Thumbnail
                                     </span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Gallery Thumbnail
                                     </span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Sticky Summary
                                     </span>
@@ -996,28 +996,28 @@ export default function Navbar({ className }) {
                             <div className="category-items">
                               <ul className="flex flex-col space-y-2">
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Phone & Tablet
                                     </span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Gaming & Sports
                                     </span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Home Appliance
                                     </span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Fashion Clothes
                                     </span>
@@ -1080,14 +1080,14 @@ export default function Navbar({ className }) {
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Shop Category Icon
                                     </span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="/all-products">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Shop List View
                                     </span>

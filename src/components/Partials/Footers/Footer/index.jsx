@@ -23,21 +23,21 @@ export default function Footer() {
             <div>
               <ul className="flex flex-col space-y-5 ">
                 <li>
-                  <Link to="/">
+                  <Link to="/tracking-order">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Track Order
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/privacy-policy">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Delivery & Returns
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/terms-condition">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Warranty
                     </span>
@@ -53,28 +53,28 @@ export default function Footer() {
             <div>
               <ul className="flex flex-col space-y-5 ">
                 <li>
-                  <Link to="/">
+                  <Link to="/about">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Rave’s Story
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/about">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Work With Us
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/about">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Coporate News
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/about">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Investors
                     </span>
@@ -90,28 +90,28 @@ export default function Footer() {
             <div>
               <ul className="flex flex-col space-y-5 ">
                 <li>
-                  <Link to="/">
+                  <Link to="/all-products">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Furniture
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/all-products">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Decoration
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/all-products">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Kitchen
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/all-products">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Interior
                     </span>
@@ -129,28 +129,28 @@ export default function Footer() {
             <div>
               <ul className="flex flex-col space-y-5 ">
                 <li>
-                  <Link to="/">
+                  <Link to="/privacy-policy">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Secure Payment
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/privacy-policy">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Privacy Policy
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/privacy-policy">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Terms of Use
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/privacy-policy">
                     <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack">
                       Archived Products
                     </span>
