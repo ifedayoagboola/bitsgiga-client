@@ -925,6 +925,84 @@ export default function Drawer({ className, open, action }) {
                       </div>
                     </div>
                   </a>
+                  <ul className="submenu-list ml-5">
+                    <li className="category-item">
+                      <a href="/home-two">
+                        <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
+                          <div className="flex items-center space-x-6">
+                            <span className="text-sm font-400">
+                              Home Two
+                            </span>
+                          </div>
+                          <div>
+                            <span>
+                              <svg
+                                  width="6"
+                                  height="9"
+                                  viewBox="0 0 6 9"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <rect
+                                    x="1.49805"
+                                    y="0.818359"
+                                    width="5.78538"
+                                    height="1.28564"
+                                    transform="rotate(45 1.49805 0.818359)"
+                                    fill="#1D1D1D"
+                                />
+                                <rect
+                                    x="5.58984"
+                                    y="4.90918"
+                                    width="5.78538"
+                                    height="1.28564"
+                                    transform="rotate(135 5.58984 4.90918)"
+                                    fill="#1D1D1D"
+                                />
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li className="category-item">
+                      <a href="/home-three">
+                        <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
+                          <div className="flex items-center space-x-6">
+                            <span className="text-sm font-400">Home Three</span>
+                          </div>
+                          <div>
+                            <span>
+                              <svg
+                                  width="6"
+                                  height="9"
+                                  viewBox="0 0 6 9"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <rect
+                                    x="1.49805"
+                                    y="0.818359"
+                                    width="5.78538"
+                                    height="1.28564"
+                                    transform="rotate(45 1.49805 0.818359)"
+                                    fill="#1D1D1D"
+                                />
+                                <rect
+                                    x="5.58984"
+                                    y="4.90918"
+                                    width="5.78538"
+                                    height="1.28564"
+                                    transform="rotate(135 5.58984 4.90918)"
+                                    fill="#1D1D1D"
+                                />
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
                 </li>
                 <li className="category-item">
                   <a href="/shops/shop">

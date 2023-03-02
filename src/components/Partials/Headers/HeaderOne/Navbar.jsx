@@ -886,6 +886,13 @@ export default function Navbar({ className,type }) {
                                     </span>
                                   </a>
                                 </li>
+                                <li>
+                                  <a href="/home-three">
+                                    <span className={`text-qgray text-sm font-400 border-b border-transparent   ${type===3?'hover:text-qh3-blue hover:border-qh3-blue':'hover:text-qyellow hover:border-qyellow'}`}>
+                                      Home three
+                                    </span>
+                                  </a>
+                                </li>
                               </ul>
                             </div>
                           </div>
