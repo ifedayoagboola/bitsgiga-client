@@ -23,12 +23,14 @@ import SingleProductPage from "./components/SingleProductPage";
 import TermsCondition from "./components/TermsCondition/index";
 import TrackingOrder from "./components/TrackingOrder";
 import Wishlist from "./components/Wishlist";
+import HomeThree from "./components/HomeThree";
 
 export default function Routers() {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route exact path="/home-two" element={<HomeTwo />} />
+      <Route exact path="/home-three" element={<HomeThree />} />
       <Route exact path="/all-products" element={<AllProductPage />} />
       <Route exact path="/single-product" element={<SingleProductPage />} />
       <Route exact path="/cart" element={<CardPage />} />

@@ -115,6 +115,10 @@ body {
   @apply w-full text-[13px] text-qblacktext font-semibold bg-qyellow flex justify-center items-center h-full;
   line-height: 0;
 }
+.blue-btn {
+  @apply w-full text-[13px] text-white font-semibold bg-qh3-blue flex justify-center items-center h-full;
+  line-height: 0;
+}
 .gray-btn {
   @apply flex justify-center items-center text-sm font-600;
   background: #f0f1f3;

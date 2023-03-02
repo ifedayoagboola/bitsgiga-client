@@ -1,4 +1,4 @@
-export default function SearchBox({ className }) {
+export default function SearchBox({ className,type }) {
   return (
     <>
       <div
@@ -51,7 +51,7 @@ export default function SearchBox({ className }) {
           </button>
         </div>
         <button
-          className="search-btn w-[93px] h-full text-sm font-600 text-white"
+          className={` w-[93px] h-full text-sm font-600  ${type===3?'bg-qh3-blue text-white':'search-btn'}`}
           type="button"
         >
           Search

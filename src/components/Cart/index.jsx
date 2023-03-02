@@ -1,9 +1,9 @@
-export default function Cart({ className }) {
+export default function Cart({ className,type }) {
   return (
     <>
       <div
         style={{ boxShadow: " 0px 15px 50px 0px rgba(0, 0, 0, 0.14)" }}
-        className={`cart-wrappwer w-[300px] bg-white border-t-[3px]  ${
+        className={`w-[300px] bg-white border-t-[3px] ${type===3?'border-qh3-blue':'cart-wrappwer'}  ${
           className || ""
         }`}
       >
@@ -232,7 +232,7 @@ export default function Cart({ className }) {
               </a>
               <a href="#">
                 <div className="w-full h-[50px]">
-                  <div className="yellow-btn">
+                  <div className={type===3?'blue-btn':'yellow-btn'}>
                     <span className="text-sm">Checkout Now</span>
                   </div>
                 </div>
