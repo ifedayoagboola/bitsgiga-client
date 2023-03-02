@@ -27,14 +27,25 @@ export default function HeaderOne({ className, drawerAction,type=1 }) {
             </svg>
           </div>
           <div>
-            <a href="/">
-              <img
-                width="152"
-                height="36"
-                src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
-                alt="logo"
-              />
-            </a>
+            {type===3?(
+                <a href="/">
+                  <img
+                      width="152"
+                      height="36"
+                      src={`${process.env.PUBLIC_URL}/assets/images/logo-3.svg`}
+                      alt="logo"
+                  />
+                </a>
+            ):(
+                <a href="/">
+                  <img
+                      width="152"
+                      height="36"
+                      src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                      alt="logo"
+                  />
+                </a>
+            )}
           </div>
           <div className="cart relative cursor-pointer">
             <a href="/cart">
@@ -42,7 +53,7 @@ export default function HeaderOne({ className, drawerAction,type=1 }) {
                 <ThinBag />
               </span>
             </a>
-            <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
+            <span className={`w-[18px] h-[18px] rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px] ${type===3?'bg-qh3-blue text-white':'bg-qyellow text-qblack'}`}>
               15
             </span>
           </div>

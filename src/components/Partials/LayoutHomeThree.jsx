@@ -4,7 +4,7 @@ import Footer from "./Footers/Footer";
 import Header from "./Headers/HeaderOne";
 import DrawerThree from "../Mobile/DrawerThree";
 
-export default function LayoutHomeThree({ children, childrenClasses }) {
+export default function LayoutHomeThree({ children, childrenClasses,type }) {
     const [drawer, setDrawer] = useState(false);
     return (
         <>
@@ -14,8 +14,8 @@ export default function LayoutHomeThree({ children, childrenClasses }) {
                 <div className={`w-full  ${childrenClasses || "pt-[30px] pb-[60px]"}`}>
                     {children && children}
                 </div>
-                <DiscountBanner />
-                <Footer />
+                <DiscountBanner type={3} />
+                <Footer type={type} />
             </div>
         </>
     );

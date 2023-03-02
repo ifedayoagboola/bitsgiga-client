@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import Facebook from "../../../Helpers/icons/Facebook";
 import Instagram from "../../../Helpers/icons/Instagram";
 import Youtube from "../../../Helpers/icons/Youtube";
-export default function Footer() {
+
+export default function Footer({type}) {
 
     return (
         <footer className="footer-section-wrapper bg-white print:hidden">
@@ -10,14 +10,26 @@ export default function Footer() {
                 <div className="w-full flex flex-col items-center mb-[50px]">
                     {/* logo area */}
                     <div className="mb-[40px]">
-                        <a href="/">
-                            <img
-                                width="152"
-                                height="36"
-                                src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
-                                alt="logo"
-                            />
-                        </a>
+                        {type===3?(
+                            <a href="/">
+                                <img
+                                    width="152"
+                                    height="36"
+                                    src={`${process.env.PUBLIC_URL}/assets/images/logo-3.svg`}
+                                    alt="logo"
+                                />
+                            </a>
+                        ):(
+                            <a href="/">
+                                <img
+                                    width="152"
+                                    height="36"
+                                    src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                                    alt="logo"
+                                />
+                            </a>
+                        )}
+
                     </div>
                     <div className="w-full h-[1px] bg-[#E9E9E9]"></div>
                 </div>

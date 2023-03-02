@@ -1,254 +1,298 @@
-export default function Banner({ className }) {
+import { useRef } from "react";
+import {Link} from "react-router-dom";
+import SimpleSlider from "../Helpers/SliderCom";
+
+export default function Banner({ className,}) {
+  const sliderRef = useRef(null);
+  const settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    fade: true,
+    arrows: false,
+  };
   return (
-    <>
-      <div className={`w-full ${className || ""}`}>
-        <div className="container-x mx-auto">
-          <div className="main-wrapper w-full">
-            <div className="banner-card xl:flex xl:space-x-[30px] xl:h-[600px]  mb-[30px]">
-              <div data-aos="fade-right" className="xl:w-[740px] w-full h-full">
-                <a href="/single-product">
-                  <picture>
-                    <source
-                      media="(min-width:1025px)"
-                      srcSet={`${process.env.PUBLIC_URL}/assets/images/banner-1.png`}
+      <>
+        <div className={`w-full xl:h-[733px] h-[500px] ${className || ""}`}>
+          <div className="main-wrapper w-full h-full">
+            <div className="hero-slider-wrapper xl:h-full mb-20 xl:mb-0  w-full relative">
+              <div className="absolute left-0 top-0 w-full h-full items-center justify-between hidden xl:flex">
+                <button
+                    type="button"
+                    onClick={() => sliderRef.current.slickPrev()}
+                    className="relative hover:text-qh3-blue text-[#8cb1f6] 2xl:left-32 left-5 cursor-pointer z-10"
+                >
+                  <svg
+                      className="fill-current"
+                      width="84"
+                      height="68"
+                      viewBox="0 0 84 68"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                        cx="33.5402"
+                        cy="33.5402"
+                        r="33.5402"
+                        fill="current-bolor"
                     />
-                    <img
-                      src={`${process.env.PUBLIC_URL}/assets/images/banner-1.2.png`}
-                      alt=""
-                      className="w-full max-w-full h-auto object-cover"
+                    <path
+                        d="M34.1823 35.8723C34.7331 35.8723 35.2127 35.8723 35.6934 35.8723C41.1617 35.8723 46.6299 35.8723 52.097 35.8723C59.5949 35.8723 67.094 35.8711 74.5919 35.8711C76.8275 35.8711 79.0631 35.8768 81.2987 35.87C82.318 35.8666 83.1014 35.4179 83.5643 34.4775C84.035 33.5224 83.9104 32.5933 83.2828 31.7665C82.7931 31.1225 82.1065 30.817 81.2931 30.8204C79.5805 30.8272 77.868 30.8238 76.1554 30.8238C70.1642 30.8238 64.174 30.8238 58.1828 30.8238C50.4701 30.8238 42.7563 30.8238 35.0436 30.8238C34.7598 30.8238 34.4772 30.8238 34.1188 30.8238C34.3581 30.5614 34.5417 30.3467 34.7387 30.1457C35.9216 28.9429 37.1122 27.747 38.2929 26.5419C39.517 25.2926 40.7299 24.0319 41.954 22.7825C43.6476 21.0528 45.3646 19.3468 47.0349 17.5921C47.6336 16.9629 47.795 16.1417 47.5557 15.2819C47.0138 13.3375 44.7482 12.7855 43.3516 14.2268C41.2829 16.3609 39.192 18.4723 37.1111 20.5939C35.5966 22.1385 34.0821 23.6843 32.5687 25.2312C30.8161 27.0224 29.0657 28.8157 27.3131 30.608C27.0159 30.9112 26.7166 31.2122 26.4184 31.5143C25.546 32.3968 25.4614 33.9335 26.2904 34.8546C27.2875 35.9608 28.3257 37.0285 29.3561 38.1018C30.3098 39.0956 31.2735 40.0791 32.2371 41.0616C33.1351 41.9781 34.041 42.8879 34.9412 43.8033C35.798 44.6745 36.6515 45.5479 37.5062 46.4201C38.5633 47.5002 39.6205 48.5815 40.6787 49.6605C41.7436 50.7474 42.8286 51.815 43.8702 52.9258C44.7993 53.9173 46.4763 53.8674 47.3198 53.0144C48.3525 51.9695 48.4126 50.4828 47.4188 49.422C46.5564 48.5009 45.6562 47.6161 44.7738 46.7143C42.5537 44.4439 40.3349 42.1712 38.1149 39.9008C36.8841 38.6424 35.65 37.3862 34.4182 36.1278C34.3548 36.0642 34.2947 35.9949 34.1823 35.8723Z"
+                        fill="#232532"
                     />
-                  </picture>
-                </a>
-              </div>
-              <div
-                data-aos="fade-left"
-                className="flex-1 flex xl:flex-col flex-row  xl:space-y-[30px] h-full"
-              >
-                <div className="w-full xl:h-1/2">
-                  <a href="/single-product">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/assets/images/banner-2.png`}
-                      alt=""
-                      className="w-full h-full"
+                  </svg>
+                </button>
+                <button
+                    type="button"
+                    onClick={() => sliderRef.current.slickNext()}
+                    className="relative hover:text-qh3-blue text-[#8cb1f6]  2xl:right-32 right-5 cursor-pointer z-10"
+                >
+                  <svg
+                      width="84"
+                      height="68"
+                      viewBox="0 0 84 68"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`fill-current`}
+                  >
+                    <circle
+                        cx="50.3094"
+                        cy="33.5402"
+                        r="33.5402"
+                        transform="rotate(180 50.3094 33.5402)"
+                        fill=""
                     />
-                  </a>
-                </div>
-                <div className="w-full xl:h-1/2">
-                  <a href="/single-product">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/assets/images/banner-3.png`}
-                      alt=""
-                      className="w-full h-full"
+                    <path
+                        d="M49.6673 31.2081C49.1165 31.2081 48.6369 31.2081 48.1562 31.2081C42.688 31.2081 37.2197 31.2081 31.7526 31.2081C24.2547 31.2081 16.7556 31.2092 9.2577 31.2092C7.02211 31.2092 4.78653 31.2035 2.55094 31.2103C1.53163 31.2138 0.748235 31.6624 0.285318 32.6028C-0.185393 33.558 -0.0607625 34.487 0.566847 35.3139C1.05647 35.9579 1.74306 36.2634 2.55651 36.26C4.26908 36.2532 5.98166 36.2566 7.69423 36.2566C13.6855 36.2566 19.6756 36.2566 25.6668 36.2566C33.3795 36.2566 41.0933 36.2566 48.806 36.2566C49.0898 36.2566 49.3724 36.2566 49.7308 36.2566C49.4915 36.5189 49.3079 36.7336 49.1109 36.9346C47.9281 38.1374 46.7374 39.3334 45.5567 40.5384C44.3327 41.7877 43.1197 43.0484 41.8957 44.2978C40.202 46.0276 38.485 47.7335 36.8147 49.4883C36.216 50.1175 36.0547 50.9386 36.2939 51.7984C36.8358 53.7428 39.1015 54.2948 40.498 52.8535C42.5667 50.7194 44.6576 48.608 46.7385 46.4864C48.253 44.9418 49.7675 43.396 51.2809 41.8491C53.0335 40.058 54.7839 38.2646 56.5366 36.4724C56.8337 36.1691 57.133 35.8681 57.4312 35.566C58.3037 34.6835 58.3882 33.1468 57.5592 32.2257C56.5621 31.1195 55.5239 30.0519 54.4935 28.9786C53.5398 27.9848 52.5762 27.0012 51.6125 26.0187C50.7145 25.1022 49.8087 24.1924 48.9084 23.277C48.0516 22.4059 47.1981 21.5325 46.3434 20.6602C45.2863 19.5801 44.2292 18.4988 43.1709 17.4198C42.106 16.3329 41.021 15.2653 39.9794 14.1545C39.0503 13.163 37.3733 13.213 36.5298 14.0659C35.4971 15.1108 35.4371 16.5975 36.4308 17.6584C37.2932 18.5795 38.1934 19.4642 39.0759 20.366C41.2959 22.6364 43.5148 24.9091 45.7348 27.1795C46.9655 28.4379 48.1996 29.6941 49.4314 30.9525C49.4949 31.0161 49.5549 31.0854 49.6673 31.2081Z"
+                        fill="#232532"
                     />
-                  </a>
-                </div>
+                  </svg>
+                </button>
               </div>
-            </div>
-            <div
-              data-aos="fade-up"
-              className="best-services w-full bg-white flex flex-col space-y-10 lg:space-y-0 lg:flex-row lg:justify-between lg:items-center lg:h-[110px] px-10 lg:py-0 py-10"
-            >
-              <div className="item">
-                <div className="flex space-x-5 items-center">
-                  <div>
-                    <span>
-                      <svg
-                        width="36"
-                        height="36"
-                        viewBox="0 0 36 36"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M1 1H5.63636V24.1818H35"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                          strokeLinecap="square"
-                        />
-                        <path
-                          d="M8.72763 35.0002C10.4347 35.0002 11.8185 33.6163 11.8185 31.9093C11.8185 30.2022 10.4347 28.8184 8.72763 28.8184C7.02057 28.8184 5.63672 30.2022 5.63672 31.9093C5.63672 33.6163 7.02057 35.0002 8.72763 35.0002Z"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                          strokeLinecap="square"
-                        />
-                        <path
-                          d="M31.9073 35.0002C33.6144 35.0002 34.9982 33.6163 34.9982 31.9093C34.9982 30.2022 33.6144 28.8184 31.9073 28.8184C30.2003 28.8184 28.8164 30.2022 28.8164 31.9093C28.8164 33.6163 30.2003 35.0002 31.9073 35.0002Z"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                          strokeLinecap="square"
-                        />
-                        <path
-                          d="M34.9982 1H11.8164V18H34.9982V1Z"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                          strokeLinecap="square"
-                        />
-                        <path
-                          d="M11.8164 7.18164H34.9982"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                          strokeLinecap="square"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-black text-[15px] font-700 tracking-wide mb-1">
-                      Free Shipping
-                    </p>
-                    <p className="text-sm text-qgray">
-                      When ordering over $100
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="flex space-x-5 items-center">
-                  <div>
-                    <span>
-                      <svg
-                        width="32"
-                        height="34"
-                        viewBox="0 0 32 34"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M31 17.4502C31 25.7002 24.25 32.4502 16 32.4502C7.75 32.4502 1 25.7002 1 17.4502C1 9.2002 7.75 2.4502 16 2.4502C21.85 2.4502 26.95 5.7502 29.35 10.7002"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                        />
-                        <path
-                          d="M30.7 2L29.5 10.85L20.5 9.65"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                          strokeLinecap="square"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-black text-[15px] font-700 tracking-wide mb-1">
-                      Free Return
-                    </p>
-                    <p className="text-sm text-qgray">
-                      Get Return within 30 days
-                    </p>
+              <SimpleSlider settings={settings} selector={sliderRef}>
+                <div className="item w-full xl:h-[733px] h-[500px]">
+                  <div
+                      className="w-full h-full relative"
+                      style={{
+                        backgroundImage: `url(/assets/images/banner-1.3.png)`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                      }}
+                  >
+                    <div className="container-x mx-auto flex items-center  h-full">
+                      <div className="w-full h-full xl:flex items-center pt-20 xl:pt-0">
+                        <div className="xl:w-[626px] w-full">
+                          <p className="md:text-[34px] text-[20px] font-medium text-white mb-[7px]">
+                            VR BOX 3D Glass
+                          </p>
+                          <h1 className="md:text-[66px] text-[40px]  font-bold text-white md:leading-[80px] leading-[40px] mb-[44px]">
+                            Explore Our Tech Collection Perfect Gadget
+                          </h1>
+
+                          <Link
+                              to="#"
+                              passhref
+                          >
+                            <a rel="noopener noreferrer">
+                                <div
+                                    className={`w-[160px] h-[52px] flex justify-center items-center group rounded bg-qh3-blue text-white relative transition-all duration-300 ease-in-out overflow-hidden cursor-pointer ${
+                                        className || ""
+                                    }`}
+                                >
+                                    <div
+                                        className="flex space-x-1 items-center transition-all duration-300 ease-in-out relative z-10"
+                                    >
+                                    <span className="text-sm font-600 tracking-wide leading-7 mr-2">
+                                      Shop Now
+                                    </span>
+                                        <span>
+                                      <svg
+                                          width="7"
+                                          height="11"
+                                          viewBox="0 0 7 11"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          className="fill-current"
+                                      >
+                                        <rect
+                                            x="2.08984"
+                                            y="0.636719"
+                                            width="6.94219"
+                                            height="1.54271"
+                                            transform="rotate(45 2.08984 0.636719)"
+                                        ></rect>
+                                        <rect
+                                            x="7"
+                                            y="5.54492"
+                                            width="6.94219"
+                                            height="1.54271"
+                                            transform="rotate(135 7 5.54492)"
+                                        ></rect>
+                                      </svg>
+                                    </span>
+                                    </div>
+                                    <div
+                                        style={{ transition: `transform 0.25s ease-in-out` }}
+                                        className="w-full h-full bg-black absolute top-0 left-0 right-0 bottom-0 transform scale-x-0 group-hover:scale-x-100 origin-[center_left] group-hover:origin-[center_right]"
+                                    ></div>
+                                </div>
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="item">
-                <div className="flex space-x-5 items-center">
-                  <div>
-                    <span>
-                      <svg
-                        width="32"
-                        height="38"
-                        viewBox="0 0 32 38"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M22.6654 18.667H9.33203V27.0003H22.6654V18.667Z"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                          strokeLinecap="square"
-                        />
-                        <path
-                          d="M12.668 18.6663V13.6663C12.668 11.833 14.168 10.333 16.0013 10.333C17.8346 10.333 19.3346 11.833 19.3346 13.6663V18.6663"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                          strokeLinecap="square"
-                        />
-                        <path
-                          d="M31 22C31 30.3333 24.3333 37 16 37C7.66667 37 1 30.3333 1 22V5.33333L16 2L31 5.33333V22Z"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                          strokeLinecap="square"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-black text-[15px] font-700 tracking-wide mb-1">
-                      Secure Payment
-                    </p>
-                    <p className="text-sm text-qgray">
-                      100% Secure Online Payment
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="flex space-x-5 items-center">
-                  <div>
-                    <span>
-                      <svg
-                        width="32"
-                        height="35"
-                        viewBox="0 0 32 35"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7 13H5.5C2.95 13 1 11.05 1 8.5V1H7"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                        />
-                        <path
-                          d="M25 13H26.5C29.05 13 31 11.05 31 8.5V1H25"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                        />
-                        <path
-                          d="M16 28V22"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                        />
-                        <path
-                          d="M16 22C11.05 22 7 17.95 7 13V1H25V13C25 17.95 20.95 22 16 22Z"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                          strokeLinecap="square"
-                        />
-                        <path
-                          d="M25 34H7C7 30.7 9.7 28 13 28H19C22.3 28 25 30.7 25 34Z"
-                          stroke="#FFBB38"
-                          strokeWidth="2"
-                          strokeMiterlimit="10"
-                          strokeLinecap="square"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-black text-[15px] font-700 tracking-wide mb-1">
-                      Best Quality
-                    </p>
-                    <p className="text-sm text-qgray">
-                      Original Product Guarenteed
-                    </p>
+                <div className="item w-full xl:h-[733px] h-[500px]">
+                  <div
+                      style={{
+                        backgroundImage: `url(/assets/images/banner-2.3.png)`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                      }}
+                      className="w-full h-full relative"
+                  >
+                    <div className="container-x mx-auto flex items-center  h-full">
+                      <div className="w-full h-full xl:flex items-center pt-20 xl:pt-0">
+                        <div className="xl:w-[626px] w-full">
+                          <p className="md:text-[34px] text-[20px] font-medium text-qh3-blue mb-[7px]">
+                            VR BOX 3D Glass
+                          </p>
+                          <h1 className="md:text-[66px] text-[40px]  font-bold text-qblack md:leading-[80px] leading-[40px] mb-[44px]">
+                            Explore Our Tech Collection Perfect Gadget
+                          </h1>
+
+                          <Link
+                              to="#"
+                              passhref
+                          >
+                            <a rel="noopener noreferrer">
+                                <div
+                                    className={`w-[160px] h-[52px] flex justify-center items-center group rounded bg-qh3-blue text-white relative transition-all duration-300 ease-in-out overflow-hidden cursor-pointer ${
+                                        className || ""
+                                    }`}
+                                >
+                                    <div
+                                        className="flex space-x-1 items-center transition-all duration-300 ease-in-out relative z-10"
+                                    >
+                                    <span className="text-sm font-600 tracking-wide leading-7 mr-2">
+                                      Shop Now
+                                    </span>
+                                        <span>
+                                      <svg
+                                          width="7"
+                                          height="11"
+                                          viewBox="0 0 7 11"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          className="fill-current"
+                                      >
+                                        <rect
+                                            x="2.08984"
+                                            y="0.636719"
+                                            width="6.94219"
+                                            height="1.54271"
+                                            transform="rotate(45 2.08984 0.636719)"
+                                        ></rect>
+                                        <rect
+                                            x="7"
+                                            y="5.54492"
+                                            width="6.94219"
+                                            height="1.54271"
+                                            transform="rotate(135 7 5.54492)"
+                                        ></rect>
+                                      </svg>
+                                    </span>
+                                    </div>
+                                    <div
+                                        style={{ transition: `transform 0.25s ease-in-out` }}
+                                        className="w-full h-full bg-black absolute top-0 left-0 right-0 bottom-0 transform scale-x-0 group-hover:scale-x-100 origin-[center_left] group-hover:origin-[center_right]"
+                                    ></div>
+                                </div>
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+                <div className="item w-full xl:h-[733px] h-[500px]">
+                  <div
+                      style={{
+                        backgroundImage: `url(/assets/images/banner-3.1.png)`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                      }}
+                      className="w-full h-full relative"
+                  >
+                    <div className="container-x mx-auto flex items-center  h-full">
+                      <div className="w-full h-full xl:flex items-center pt-20 xl:pt-0">
+                        <div className="xl:w-[626px] w-full">
+                          <p className="md:text-[34px] text-[20px] font-medium text-qh3-blue mb-[7px]">
+                            VR BOX 3D Glass
+                          </p>
+                          <h1 className="md:text-[66px] text-[40px]  font-bold text-qblack md:leading-[80px] leading-[40px] mb-[44px]">
+                            Explore Our Tech Collection Perfect Gadget
+                          </h1>
+
+                          <Link
+                              to="#"
+                              passhref
+                          >
+                            <a rel="noopener noreferrer">
+                              <div
+                                  className={`w-[160px] h-[52px] flex justify-center items-center group rounded bg-qh3-blue text-white relative transition-all duration-300 ease-in-out overflow-hidden cursor-pointer ${
+                                      className || ""
+                                  }`}
+                              >
+                                <div
+                                    className="flex space-x-1 items-center transition-all duration-300 ease-in-out relative z-10"
+                                >
+                                    <span className="text-sm font-600 tracking-wide leading-7 mr-2">
+                                      Shop Now
+                                    </span>
+                                    <span>
+                                      <svg
+                                          width="7"
+                                          height="11"
+                                          viewBox="0 0 7 11"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          className="fill-current"
+                                      >
+                                        <rect
+                                            x="2.08984"
+                                            y="0.636719"
+                                            width="6.94219"
+                                            height="1.54271"
+                                            transform="rotate(45 2.08984 0.636719)"
+                                        ></rect>
+                                        <rect
+                                            x="7"
+                                            y="5.54492"
+                                            width="6.94219"
+                                            height="1.54271"
+                                            transform="rotate(135 7 5.54492)"
+                                        ></rect>
+                                      </svg>
+                                    </span>
+                                </div>
+                                <div
+                                    style={{ transition: `transform 0.25s ease-in-out` }}
+                                    className="w-full h-full bg-black absolute top-0 left-0 right-0 bottom-0 transform scale-x-0 group-hover:scale-x-100 origin-[center_left] group-hover:origin-[center_right]"
+                                ></div>
+                              </div>
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SimpleSlider>
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </>
   );
 }

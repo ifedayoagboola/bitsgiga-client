@@ -3,7 +3,7 @@ import QuickViewIco from "../icons/QuickViewIco";
 import Star from "../icons/Star";
 import ThinLove from "../icons/ThinLove";
 
-export default function ProductCardStyleOne({ datas }) {
+export default function ProductCardStyleOne({ datas,type }) {
   const available =
     (datas.cam_product_sale /
       (datas.cam_product_available + datas.cam_product_sale)) *
@@ -36,7 +36,7 @@ export default function ProductCardStyleOne({ datas }) {
                   style={{
                     width: `${datas.campaingn_product ? 100 - available : 0}%`,
                   }}
-                  className="h-full absolute left-0 top-0 bg-qyellow"
+                  className={`h-full absolute left-0 top-0  ${type===3?'bg-qh3-blue':'bg-qyellow'}`}
                 ></div>
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function ProductCardStyleOne({ datas }) {
       <div className="product-card-details px-[30px] pb-[30px] relative">
         {/* add to card button */}
         <div className="absolute w-full h-10 px-[30px] left-0 top-40 group-hover:top-[85px] transition-all duration-300 ease-in-out">
-          <button type="button" className="yellow-btn">
+          <button type="button" className={type===3?'blue-btn':'yellow-btn'}>
             <div className="flex items-center space-x-3">
               <span>
                 <svg

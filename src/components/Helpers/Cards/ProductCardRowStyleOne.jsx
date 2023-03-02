@@ -3,7 +3,7 @@ import QuickViewIco from "../icons/QuickViewIco";
 import Star from "../icons/Star";
 import ThinLove from "../icons/ThinLove";
 
-export default function ProductCardRowStyleTwo({ className, datas }) {
+export default function ProductCardRowStyleTwo({ className, datas,type }) {
   return (
     <div
       data-aos="fade-left"
@@ -43,7 +43,7 @@ export default function ProductCardRowStyleTwo({ className, datas }) {
               </span>
             </p>
             <button type="button" className="w-[110px] h-[30px]">
-              <span className="yellow-btn"> Add To Cart</span>
+              <span className={type===3?'blue-btn':'yellow-btn'}> Add To Cart</span>
             </button>
           </div>
         </div>
