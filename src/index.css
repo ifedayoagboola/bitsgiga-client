@@ -144,6 +144,9 @@ body {
 .home-two .search-btn {
     @apply bg-qh2-green text-white;
 }
+.home-two .search-btn {
+  @apply bg-qh4-pink text-qblack;
+}
 .home-two :is(.cart-wrappwer, .product-card-style-one-two, .product-row-card-style-one-two) .yellow-btn {
     @apply bg-qh2-green text-white;
 }

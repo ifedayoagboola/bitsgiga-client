@@ -42,7 +42,7 @@ export default function TopBar({ className }) {
                 <div className="country-select flex space-x-1 items-center">
                   <div>
                     <img
-                src={`${process.env.PUBLIC_URL}/assets/images/country-logo-16x16.png`}
+                      src={`${process.env.PUBLIC_URL}/assets/images/country-logo-16x16.png`}
                       width="16"
                       height="16"
                       alt="country logo"

@@ -24,6 +24,7 @@ import TermsCondition from "./components/TermsCondition/index";
 import TrackingOrder from "./components/TrackingOrder";
 import Wishlist from "./components/Wishlist";
 import HomeThree from "./components/HomeThree";
+import HomeFour from "./components/HomeFour";
 
 export default function Routers() {
   return (
@@ -31,6 +32,7 @@ export default function Routers() {
       <Route exact path="/" element={<Home />} />
       <Route exact path="/home-two" element={<HomeTwo />} />
       <Route exact path="/home-three" element={<HomeThree />} />
+      <Route exact path="/home-four" element={<HomeFour />} />
       <Route exact path="/all-products" element={<AllProductPage />} />
       <Route exact path="/single-product" element={<SingleProductPage />} />
       <Route exact path="/cart" element={<CardPage />} />

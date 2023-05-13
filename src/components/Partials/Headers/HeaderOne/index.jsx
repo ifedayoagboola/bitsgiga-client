@@ -17,7 +17,7 @@ export default function HeaderOne({ className, drawerAction,type=1 }) {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              strokeWidth="2"
+            strokeWidth="2"
             >
               <path
                 strokeLinecap="round"
@@ -33,6 +33,15 @@ export default function HeaderOne({ className, drawerAction,type=1 }) {
                       width="152"
                       height="36"
                       src={`${process.env.PUBLIC_URL}/assets/images/logo-3.svg`}
+                      alt="logo"
+                  />
+                </a>
+            ):type===4?(
+                <a href="/">
+                  <img
+                      width="152"
+                      height="36"
+                      src={`${process.env.PUBLIC_URL}/assets/images/logo-4.svg`}
                       alt="logo"
                   />
                 </a>

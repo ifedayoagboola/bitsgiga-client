@@ -7,13 +7,16 @@ function App() {
   useEffect(() => {
     if (location.pathname === "/home-two") {
       document.body.classList.add("home-two");
-    } else if (location.pathname === "/") {
+    }else if (location.pathname === "/home-four") {
+      document.body.classList.add("home-two");
+    }else if (location.pathname === "/") {
       document.body.classList.remove("home-two");
       document.body.classList.add("home-one");
     }
     document.body.classList.add("home-one");
     return () => {
       document.body.classList.remove("home-two");
+      document.body.classList.remove("home-four");
       document.body.classList.add("home-one");
     };
   }, [location.pathname]);
