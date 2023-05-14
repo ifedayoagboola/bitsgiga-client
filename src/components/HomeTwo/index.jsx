@@ -30,7 +30,7 @@ export default function HomeTwo() {
         seeMoreUrl="/all-products"
         className="new-products mb-[60px]"
       />
-      <CampaignCountDown className="mb-[60px]" lastDate="2023-03-04 4:00:00" />
+      <CampaignCountDown className="mb-[60px]" lastDate="2023-10-04 4:00:00" />
       <ProductsAds
         ads={[
           `${process.env.PUBLIC_URL}/assets/images/ads-2.2.png`,

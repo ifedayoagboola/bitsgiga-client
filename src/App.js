@@ -7,9 +7,9 @@ function App() {
   useEffect(() => {
     if (location.pathname === "/home-two") {
       document.body.classList.add("home-two");
-    }else if (location.pathname === "/home-four") {
-      document.body.classList.add("home-two");
-    }else if (location.pathname === "/") {
+    } else if (location.pathname === "/home-four") {
+      document.body.classList.add("home-four");
+    } else if (location.pathname === "/") {
       document.body.classList.remove("home-two");
       document.body.classList.add("home-one");
     }

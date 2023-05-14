@@ -31,7 +31,7 @@ export default function HeaderFour({ className, drawerAction }) {
               <img
                 width="152"
                 height="36"
-                src={`${process.env.PUBLIC_URL}/assets/images/logo-2.svg`}
+                src={`${process.env.PUBLIC_URL}/assets/images/logo-4.svg`}
                 alt="logo"
               />
             </a>
@@ -42,7 +42,7 @@ export default function HeaderFour({ className, drawerAction }) {
                 <ThinBag />
               </span>
             </a>
-            <span className="w-[18px] h-[18px] rounded-full bg-qh2-green absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
+            <span className="w-[18px] h-[18px] text-qblack rounded-full bg-qh4-pink absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
               15
             </span>
           </div>

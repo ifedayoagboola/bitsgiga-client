@@ -46,7 +46,7 @@ export default function Home() {
         />
         <CampaignCountDown
           className="mb-[60px]"
-          lastDate="2023-03-04 4:00:00"
+          lastDate="2023-10-04 4:00:00"
         />
         <ViewMoreTitle
           className="top-selling-product mb-[60px]"
