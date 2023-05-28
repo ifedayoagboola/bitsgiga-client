@@ -794,7 +794,7 @@ export default function Navbar({ className, type }) {
                                           : "hover:text-qyellow hover:border-qyellow"
                                       }`}
                                     >
-                                      Home two
+                                      Home Two
                                     </span>
                                   </a>
                                 </li>
@@ -807,7 +807,7 @@ export default function Navbar({ className, type }) {
                                           : "hover:text-qyellow hover:border-qyellow"
                                       }`}
                                     >
-                                      Home three
+                                      Home Three
                                     </span>
                                   </a>
                                 </li>
@@ -821,6 +821,19 @@ export default function Navbar({ className, type }) {
                                       }`}
                                     >
                                       Home Four
+                                    </span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/home-five">
+                                    <span
+                                      className={`text-qgray text-sm font-400 border-b border-transparent   ${
+                                        type === 3
+                                          ? "hover:text-qh3-blue hover:border-qh3-blue"
+                                          : "hover:text-qyellow hover:border-qyellow"
+                                      }`}
+                                    >
+                                      Home Five
                                     </span>
                                   </a>
                                 </li>

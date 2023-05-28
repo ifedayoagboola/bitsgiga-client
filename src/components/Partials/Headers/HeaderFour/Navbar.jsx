@@ -705,9 +705,37 @@ export default function Navbar({ className }) {
                             <div className="category-items">
                               <ul className="flex flex-col space-y-2">
                                 <li>
+                                  <a href="/">
+                                    <span className="text-qgray text-sm font-400 border-b border-transparent hover:text-qyellow hover:border-qyellow">
+                                      Home One
+                                    </span>
+                                  </a>
+                                </li>
+                                <li>
                                   <a href="/home-two">
-                                    <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
-                                      Home two
+                                    <span className="text-qgray text-sm font-400 border-b border-transparent hover:text-qyellow hover:border-qyellow ">
+                                      Home Two
+                                    </span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/home-three">
+                                    <span className="text-qgray text-sm font-400 border-b border-transparent hover:text-qyellow hover:border-qyellow">
+                                      Home Three
+                                    </span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/home-four">
+                                    <span className="text-qgray text-sm font-400 border-b border-transparent hover:text-qyellow hover:border-qyellow">
+                                      Home Four
+                                    </span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/home-five">
+                                    <span className="text-qgray text-sm font-400 border-b border-transparent hover:text-qyellow hover:border-qyellow">
+                                      Home Five
                                     </span>
                                   </a>
                                 </li>

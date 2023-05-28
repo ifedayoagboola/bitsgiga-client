@@ -150,11 +150,17 @@ body {
 .home-four .cart-wrappwer {
   @apply border-qh4-pink;
 }
+.home-five .search-btn {
+  @apply bg-qh5-bwhite text-qblack;
+}
+.home-five .cart-wrappwer {
+  @apply border-qh5-bwhite;
+}
 .home-two :is(.cart-wrappwer, .product-card-style-one-two, .product-row-card-style-one-two) .yellow-btn {
     @apply bg-qh2-green text-white;
 }
 .home-four .yellow-btn {
-  @apply bg-qh4-pink text-qblack;
+  @apply bg-qh5-bwhite text-qblack;
 }
 /*TODO:  ========= home two end ========= */
 .search-input {
@@ -321,6 +327,17 @@ body {
 /*TODO: =============== profile ============ */
 .items-wrapper-bank-payment .items li:last-child {
   border-bottom: none;
+}
+.hero-slider-wrapper .slick-dots {
+  bottom: 30px;
+  text-align: center;
+}
+.hero-slider-wrapper .slick-dots li button:before {
+  content: "";
+  background: #000000;
+  width: 22px;
+  height: 7px;
+  border-radius: 4px;
 }
 
 /* TODO: ===============RESPONSIVE */

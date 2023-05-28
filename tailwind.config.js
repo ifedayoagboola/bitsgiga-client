@@ -15,7 +15,8 @@ module.exports = {
         "qblue-white": "#CBECFF",
         "qh2-green": "#2D6F6D",
         "qh4-pink": "#FDB2BB",
-          "qh3-blue":"#1868D5"
+        "qh5-bwhite": "#95D7DE",
+        "qh3-blue": "#1868D5",
       },
       scale: {
         60: "0.6",
