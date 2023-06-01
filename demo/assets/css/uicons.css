@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "uicons-solid-straight";
+  src: url("../fonts/icon-fonts/uicons-solid-straight.eot#iefix")
+      format("embedded-opentype"),
+    url("../fonts/icon-fonts/uicons-solid-straight.woff2") format("woff2"),
+    url("../fonts/icon-fonts/uicons-solid-straight.woff") format("woff");
+}
+
+i[class^="fi-ss-"]:before,
+i[class*=" fi-ss-"]:before,
+span[class^="fi-ss-"]:before,
+span[class*="fi-ss-"]:before {
+  font-family: uicons-solid-straight !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fi-ss-arrow-up:before {
+  content: "\f155";
+}
+.fi-ss-cross:before {
+  content: "\f236";
+}

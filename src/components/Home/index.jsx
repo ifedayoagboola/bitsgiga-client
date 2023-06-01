@@ -23,7 +23,8 @@ export default function Home() {
   // const adsHandle = () => {
   //   setAds(false);
   // };
-  // useEffect(() => {
+  // useEffect(() => gs
+  // {
   //   setAds(true);
   // }, []);
   return (
