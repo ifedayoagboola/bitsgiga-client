@@ -25,7 +25,7 @@ export default function Navbar({ className }) {
 
   return (
     <div
-      className={`nav-widget-wrapper w-full bg-qh2-green h-[60px] relative z-30  ${
+      className={`nav-widget-wrapper w-full bg-qh5-bwhite h-[60px] relative z-30  ${
         className || ""
       }`}
     >
@@ -686,7 +686,7 @@ export default function Navbar({ className }) {
                 <ul className="nav-wrapper flex xl:space-x-10 space-x-5">
                   <li className="relative">
                     <Link to="/">
-                      <span className="flex items-center text-sm text-white font-600 cursor-pointer ">
+                      <span className="flex items-center text-sm text-qblack font-600 cursor-pointer ">
                         <span>Homepage</span>
                         <span className="ml-1.5 ">
                           <Arrow className="fill-current" />
@@ -747,7 +747,7 @@ export default function Navbar({ className }) {
                     </div>
                   </li>
                   <li>
-                    <span className="flex items-center text-sm text-white font-600 cursor-pointer ">
+                    <span className="flex items-center text-sm text-qblack font-600 cursor-pointer ">
                       <span>Shop</span>
                       <span className="ml-1.5 ">
                         <Arrow className="fill-current" />
@@ -901,7 +901,7 @@ export default function Navbar({ className }) {
                     </div>
                   </li>
                   <li className="relative">
-                    <span className="flex items-center text-sm text-white font-600 cursor-pointer ">
+                    <span className="flex items-center text-sm text-qblack font-600 cursor-pointer ">
                       <span>Pages</span>
                       <span className="ml-1.5 ">
                         <Arrow className="fill-current" />
@@ -962,21 +962,21 @@ export default function Navbar({ className }) {
                   </li>
                   <li>
                     <Link to="/about">
-                      <span className="flex items-center text-sm text-white font-600 cursor-pointer ">
+                      <span className="flex items-center text-sm text-qblack font-600 cursor-pointer ">
                         <span>About</span>
                       </span>
                     </Link>
                   </li>
                   <li>
                     <Link to="/blogs">
-                      <span className="flex items-center text-sm text-white font-600 cursor-pointer ">
+                      <span className="flex items-center text-sm text-qblack font-600 cursor-pointer ">
                         <span>Blog</span>
                       </span>
                     </Link>
                   </li>
                   <li>
                     <Link to="/contact">
-                      <span className="flex items-center text-sm text-white font-600 cursor-pointer ">
+                      <span className="flex items-center text-sm text-qblack font-600 cursor-pointer ">
                         <span>Contact</span>
                       </span>
                     </Link>
@@ -986,7 +986,7 @@ export default function Navbar({ className }) {
             </div>
             <div className="become-seller-btn  w-[161px] h-[40px]">
               <Link to="/become-saller">
-                <div className="yellow-btn flex justify-center items-center cursor-pointer">
+                <div className="black-btn flex justify-center items-center cursor-pointer h-full">
                   <div className="flex space-x-2 items-center">
                     <span className="text-sm font-600">Become a Seller</span>
                     <span>

@@ -4,6 +4,7 @@ import ThinBag from "../../../Helpers/icons/ThinBag";
 import ThinLove from "../../../Helpers/icons/ThinLove";
 import ThinPeople from "../../../Helpers/icons/ThinPeople";
 import SearchBox from "../../../Helpers/SearchBox";
+import { Link } from "react-router-dom";
 
 export default function Middlebar({ className }) {
   // const [toggleCart, setToggle] = useState(false);
@@ -65,11 +66,11 @@ export default function Middlebar({ className }) {
                 <Cart className="absolute -right-[45px] top-11 z-50 hidden group-hover:block" />
               </div>
               <div>
-                <button type="button">
+                <Link to="/profile">
                   <span>
                     <ThinPeople />
                   </span>
-                </button>
+                </Link>
               </div>
             </div>
           </div>
