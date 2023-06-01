@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import datas from "../../data/products.json";
 import SectionStyleFour from "../Helpers/SectionStyleFour";
 import SectionStyleOne from "../Helpers/SectionStyleOne";
@@ -6,7 +6,7 @@ import SectionStyleThree from "../Helpers/SectionStyleThree";
 import SectionStyleTwo from "../Helpers/SectionStyleTwo";
 import ViewMoreTitle from "../Helpers/ViewMoreTitle";
 import Layout from "../Partials/Layout";
-import Ads from "./Ads";
+// import Ads from "./Ads";
 import Banner from "./Banner";
 import BestSellers from "./BestSellers";
 import BrandSection from "./BrandSection";
@@ -19,17 +19,17 @@ export default function Home() {
   products.forEach((product) => {
     brands.push(product.brand);
   });
-  const [ads, setAds] = useState(false);
-  const adsHandle = () => {
-    setAds(false);
-  };
-  useEffect(() => {
-    setAds(true);
-  }, []);
+  // const [ads, setAds] = useState(false);
+  // const adsHandle = () => {
+  //   setAds(false);
+  // };
+  // useEffect(() => {
+  //   setAds(true);
+  // }, []);
   return (
     <>
       <Layout>
-        {ads && <Ads handler={adsHandle} />}
+        {/*{ads && <Ads handler={adsHandle} />}*/}
         <div className="btn w-5 h-5 "></div>
         <Banner className="banner-wrapper mb-[60px]" />
         <SectionStyleOne
