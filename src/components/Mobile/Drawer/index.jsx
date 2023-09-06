@@ -7,7 +7,9 @@ export default function Drawer({ className, open, action }) {
   return (
     <>
       <div
-        className={`drawer-wrapper w-full  h-full relative  ${className || ""}`}
+        className={`drawer-wrapper w-full  h-full relative block lg:hidden  ${
+          className || ""
+        }`}
       >
         {open && (
           <div
@@ -16,7 +18,7 @@ export default function Drawer({ className, open, action }) {
           ></div>
         )}
         <div
-          className={`w-[280px] transition-all duration-300 ease-in-out h-screen overflow-y-auto overflow-x-hidden overflow-style-none bg-white fixed left-0 top-0 z-50 ${
+          className={`w-[280px] transition-all duration-300 ease-in-out h-screen overflow-y-auto overflow-x-hidden overflow-style-none bg-white fixed top-0 z-50 ${
             open ? "left-0" : "-left-[280px]"
           }`}
         >
