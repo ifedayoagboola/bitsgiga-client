@@ -2,6 +2,7 @@ import { useState } from "react";
 import InputCom from "../../Helpers/InputCom";
 import Layout from "../../Partials/Layout";
 import Thumbnail from "./Thumbnail";
+import { Link } from "react-router-dom";
 
 export default function Signup() {
   const [checked, setValue] = useState(false);
@@ -188,9 +189,9 @@ export default function Signup() {
                   <div className="signup-area flex justify-center">
                     <p className="text-base text-qgraytwo font-normal">
                       Alrady have an Account?
-                      <a href="/login" className="ml-2 text-qblack">
+                      <Link to="/login" className="ml-2 text-qblack">
                         Log In
-                      </a>
+                      </Link>
                     </p>
                   </div>
                 </div>

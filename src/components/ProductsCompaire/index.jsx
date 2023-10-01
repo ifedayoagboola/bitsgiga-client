@@ -66,7 +66,9 @@ export default function ProductsCompaire() {
                     <div className="product-img flex justify-center mb-3 ">
                       <div className="w-[161px] h-[161px]">
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/product-img-15.jpg`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/product-img-15.jpg`}
                           alt=""
                           className="w-full h-full object-contain"
                         />
@@ -112,7 +114,9 @@ export default function ProductsCompaire() {
                     <div className="product-img flex justify-center mb-3 ">
                       <div className="w-[161px] h-[161px]">
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/product-img-16.jpg`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/product-img-16.jpg`}
                           alt=""
                           className="w-full h-full object-contain"
                         />
@@ -158,7 +162,9 @@ export default function ProductsCompaire() {
                     <div className="product-img flex justify-center mb-3 ">
                       <div className="w-[161px] h-[161px]">
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/product-img-12.jpg`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/product-img-12.jpg`}
                           alt=""
                           className="w-full h-full object-contain"
                         />
@@ -204,7 +210,9 @@ export default function ProductsCompaire() {
                     <div className="product-img flex justify-center mb-3 ">
                       <div className="w-[161px] h-[161px]">
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/product-img-11.jpg`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/product-img-11.jpg`}
                           alt=""
                           className="w-full h-full object-contain"
                         />
@@ -426,7 +434,7 @@ export default function ProductsCompaire() {
                   <td className="w-[233px] px-[26px] align-top bg-[#FAFAFA]">
                     <div className="">
                       <h1 className="text-[15px] font-medium text-qblack ">
-                        Processor
+                        import.metaor
                       </h1>
                     </div>
                   </td>

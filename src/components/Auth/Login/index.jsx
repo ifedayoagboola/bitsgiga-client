@@ -2,6 +2,7 @@ import { useState } from "react";
 import InputCom from "../../Helpers/InputCom";
 import Layout from "../../Partials/Layout";
 import Thumbnail from "./Thumbnail";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [checked, setValue] = useState(false);
@@ -82,12 +83,12 @@ export default function Login() {
                         Remember Me
                       </span>
                     </div>
-                    <a
-                      href="/forgot-password"
+                    <Link
+                      to="/forgot-password"
                       className="text-base text-qyellow"
                     >
                       Forgot Password
-                    </a>
+                    </Link>
                   </div>
                   <div className="signin-area mb-3.5">
                     <div className="flex justify-center">
@@ -155,9 +156,9 @@ export default function Login() {
                   <div className="signup-area flex justify-center">
                     <p className="text-base text-qgraytwo font-normal">
                       Dont’t have an aceount ?
-                      <a href="/signup" className="ml-2 text-qblack">
+                      <Link to="/signup" className="ml-2 text-qblack">
                         Sign up free
-                      </a>
+                      </Link>
                     </p>
                   </div>
                 </div>

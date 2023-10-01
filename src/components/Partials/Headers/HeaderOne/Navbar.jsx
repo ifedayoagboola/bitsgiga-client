@@ -78,7 +78,7 @@ export default function Navbar({ className, type }) {
                 >
                   <ul className="categories-list">
                     <li className="category-item">
-                      <a href="/all-products">
+                      <Link to="/all-products">
                         <div
                           className={`flex justify-between items-center px-5 h-10 bg-white  transition-all duration-300 ease-in-out cursor-pointer text-qblack ${
                             type === 3
@@ -138,10 +138,10 @@ export default function Navbar({ className, type }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="category-item">
-                      <a href="/all-products">
+                      <Link to="/all-products">
                         <div
                           className={`flex justify-between items-center px-5 h-10 bg-white  transition-all duration-300 ease-in-out cursor-pointer text-qblack ${
                             type === 3
@@ -202,10 +202,10 @@ export default function Navbar({ className, type }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="category-item">
-                      <a href="/all-products">
+                      <Link to="/all-products">
                         <div
                           className={`flex justify-between items-center px-5 h-10 bg-white  transition-all duration-300 ease-in-out cursor-pointer text-qblack ${
                             type === 3
@@ -265,10 +265,10 @@ export default function Navbar({ className, type }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="category-item">
-                      <a href="/all-products">
+                      <Link to="/all-products">
                         <div
                           className={`flex justify-between items-center px-5 h-10 bg-white  transition-all duration-300 ease-in-out cursor-pointer text-qblack ${
                             type === 3
@@ -324,10 +324,10 @@ export default function Navbar({ className, type }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="category-item">
-                      <a href="/all-products">
+                      <Link to="/all-products">
                         <div
                           className={`flex justify-between items-center px-5 h-10 bg-white  transition-all duration-300 ease-in-out cursor-pointer text-qblack ${
                             type === 3
@@ -388,10 +388,10 @@ export default function Navbar({ className, type }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="category-item">
-                      <a href="/all-products">
+                      <Link to="/all-products">
                         <div
                           className={`flex justify-between items-center px-5 h-10 bg-white  transition-all duration-300 ease-in-out cursor-pointer text-qblack ${
                             type === 3
@@ -446,10 +446,10 @@ export default function Navbar({ className, type }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="category-item ">
-                      <a href="/all-products">
+                      <Link to="/all-products">
                         <div
                           className={`flex justify-between items-center px-5 h-10 bg-white  transition-all duration-300 ease-in-out cursor-pointer text-qblack ${
                             type === 3
@@ -507,10 +507,10 @@ export default function Navbar({ className, type }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="category-item">
-                      <a href="/all-products">
+                      <Link to="/all-products">
                         <div
                           className={`flex justify-between items-center px-5 h-10 bg-white  transition-all duration-300 ease-in-out cursor-pointer text-qblack ${
                             type === 3
@@ -566,10 +566,10 @@ export default function Navbar({ className, type }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="category-item">
-                      <a href="/all-products">
+                      <Link to="/all-products">
                         <div
                           className={`flex justify-between items-center px-5 h-10 bg-white  transition-all duration-300 ease-in-out cursor-pointer text-qblack ${
                             type === 3
@@ -626,10 +626,10 @@ export default function Navbar({ className, type }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="category-item ">
-                      <a href="/all-products">
+                      <Link to="/all-products">
                         <div
                           className={`flex justify-between items-center px-5 h-10 bg-white  transition-all duration-300 ease-in-out cursor-pointer text-qblack ${
                             type === 3
@@ -685,10 +685,10 @@ export default function Navbar({ className, type }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="category-item">
-                      <a href="/all-products">
+                      <Link to="/all-products">
                         <div
                           className={`flex justify-between items-center px-5 h-10 bg-white  transition-all duration-300 ease-in-out cursor-pointer text-qblack ${
                             type === 3
@@ -743,7 +743,7 @@ export default function Navbar({ className, type }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -773,7 +773,7 @@ export default function Navbar({ className, type }) {
                             <div className="category-items">
                               <ul className="flex flex-col space-y-2">
                                 <li>
-                                  <a href="/">
+                                  <Link to="/">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -783,10 +783,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Home One
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/home-two">
+                                  <Link to="/home-two">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -796,10 +796,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Home Two
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/home-three">
+                                  <Link to="/home-three">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -809,10 +809,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Home Three
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/home-four">
+                                  <Link to="/home-four">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -822,10 +822,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Home Four
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/home-five">
+                                  <Link to="/home-five">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -835,7 +835,7 @@ export default function Navbar({ className, type }) {
                                     >
                                       Home Five
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -873,7 +873,7 @@ export default function Navbar({ className, type }) {
                             <div className="category-items">
                               <ul className="flex flex-col space-y-2">
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -883,10 +883,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Shop Sidebar
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -896,10 +896,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Shop Fullwidth
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -909,10 +909,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Shop Category Icon
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -922,10 +922,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Shop Category Icon
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -935,7 +935,7 @@ export default function Navbar({ className, type }) {
                                     >
                                       Shop List View
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -949,7 +949,7 @@ export default function Navbar({ className, type }) {
                             <div className="category-items">
                               <ul className="flex flex-col space-y-2">
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -959,10 +959,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Horizonral Thumbnail
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -972,10 +972,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Vertical Thumbnail
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -985,10 +985,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Gallery Thumbnail
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -998,7 +998,7 @@ export default function Navbar({ className, type }) {
                                     >
                                       Sticky Summary
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -1012,7 +1012,7 @@ export default function Navbar({ className, type }) {
                             <div className="category-items">
                               <ul className="flex flex-col space-y-2">
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -1022,10 +1022,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Phone & Tablet
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -1035,10 +1035,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Gaming & Sports
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -1048,10 +1048,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Home Appliance
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -1061,7 +1061,7 @@ export default function Navbar({ className, type }) {
                                     >
                                       Fashion Clothes
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -1071,7 +1071,9 @@ export default function Navbar({ className, type }) {
                           <div className="w-full h-[235px]">
                             <img
                               width=""
-                              src={`${process.env.PUBLIC_URL}/assets/images/mega-menu-thumb.jpg`}
+                              src={`${
+                                import.meta.env.VITE_PUBLIC_URL
+                              }/assets/images/mega-menu-thumb.jpg`}
                               alt=""
                               className="w-full h-full object-contain"
                             />
@@ -1103,7 +1105,7 @@ export default function Navbar({ className, type }) {
                             <div className="category-items">
                               <ul className="flex flex-col space-y-2">
                                 <li>
-                                  <a href="/privacy-policy">
+                                  <Link to="/privacy-policy">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -1113,10 +1115,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Privacy Policy
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/terms-condition">
+                                  <Link to="/terms-condition">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -1126,10 +1128,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Terms and Conditions
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/faq">
+                                  <Link to="/faq">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -1139,10 +1141,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       FAQ
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -1152,10 +1154,10 @@ export default function Navbar({ className, type }) {
                                     >
                                       Shop Category Icon
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/all-products">
+                                  <Link to="/all-products">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent   ${
                                         type === 3
@@ -1165,7 +1167,7 @@ export default function Navbar({ className, type }) {
                                     >
                                       Shop List View
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function BlogCard({ className, datas }) {
-  console.log(datas);
   return (
     <div
       className={`blog-card-wrapper w-full border border-[#D3D3D3] ${
@@ -10,7 +9,9 @@ export default function BlogCard({ className, datas }) {
     >
       <div className="img w-full h-[340px]">
         <img
-          src={`${process.env.PUBLIC_URL}/assets/images/${datas.picture}`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}/assets/images/${
+            datas.picture
+          }`}
           alt="blog"
           className="w-full h-full object-cover"
         />

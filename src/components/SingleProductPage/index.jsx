@@ -181,7 +181,7 @@ export default function SingleProductPage() {
                           slim body with metal cover
                         </li>
                         <li className="font-normal text-qgray leading-9">
-                          latest Intel Core i5-1135G7 processor (4 cores / 8
+                          latest Intel Core i5-1135G7 import.metaor (4 cores / 8
                           threads)
                         </li>
                         <li className="font-normal text-qgray leading-9">

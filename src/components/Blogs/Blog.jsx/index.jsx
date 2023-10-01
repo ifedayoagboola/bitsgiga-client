@@ -21,7 +21,9 @@ export default function Blog() {
               <div className="flex-1">
                 <div className="img w-full h-[457px]">
                   <img
-                    src={`${process.env.PUBLIC_URL}/assets/images/blog-img-1.jpg`}
+                    src={`${
+                      import.meta.env.VITE_PUBLIC_URL
+                    }/assets/images/blog-img-1.jpg`}
                     alt="blog"
                     className="w-full h-full object-cover"
                   />
@@ -119,14 +121,18 @@ export default function Blog() {
                   <div className="w-full sm:flex sm:space-x-[30px]  mb-3">
                     <div className="sm:w-[370px] h-[235px]">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/blog-details-1.jpg`}
+                        src={`${
+                          import.meta.env.VITE_PUBLIC_URL
+                        }/assets/images/blog-details-1.jpg`}
                         alt="blog"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="flex-1 h-[235px]">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/blog-details-2.jpg`}
+                        src={`${
+                          import.meta.env.VITE_PUBLIC_URL
+                        }/assets/images/blog-details-2.jpg`}
                         alt="blog"
                         className="w-full h-full object-cover"
                       />
@@ -391,7 +397,9 @@ export default function Blog() {
                     <li className="flex space-x-5 items-center h-[95px]">
                       <div className="w-[85px] h-full  overflow-hidden rounded">
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/blog-img-2.jpg`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/blog-img-2.jpg`}
                           alt="blog"
                           className="w-full h-full object-cover"
                         />
@@ -464,7 +472,9 @@ export default function Blog() {
                     <li className="flex space-x-5 items-center h-[95px]">
                       <div className="w-[85px] h-full  overflow-hidden rounded">
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/blog-img-3.jpg`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/blog-img-3.jpg`}
                           alt="blog"
                           className="w-full h-full object-cover"
                         />
@@ -537,7 +547,9 @@ export default function Blog() {
                     <li className="flex space-x-5 items-center h-[95px]">
                       <div className="w-[85px] h-full  overflow-hidden rounded">
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/blog-img-4.jpg`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/blog-img-4.jpg`}
                           alt="blog"
                           className="w-full h-full object-cover"
                         />
@@ -717,7 +729,9 @@ export default function Blog() {
                   data-aos="fade-up"
                   className="w-full h-[358px]"
                   style={{
-                    background: `url(${process.env.PUBLIC_URL}/assets/images/new-letter.jpg) no-repeat`,
+                    background: `url(${
+                      import.meta.env.VITE_PUBLIC_URL
+                    }/assets/images/new-letter.jpg) no-repeat`,
                     backgroundSize: "cover",
                   }}
                 >

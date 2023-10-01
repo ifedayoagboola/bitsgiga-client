@@ -36,7 +36,9 @@ export default function Reviews({
                   <div className="flex space-x-3 items-center">
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/comment-user-1.png`}
+                        src={`${
+                          import.meta.env.VITE_PUBLIC_URL
+                        }/assets/images/comment-user-1.png`}
                         alt=""
                         className="w-full h-full object-cover"
                       />
@@ -79,7 +81,9 @@ export default function Reviews({
                         <div className="flex space-x-3 items-center">
                           <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                             <img
-                              src={`${process.env.PUBLIC_URL}/assets/images/comment-user-2.png`}
+                              src={`${
+                                import.meta.env.VITE_PUBLIC_URL
+                              }/assets/images/comment-user-2.png`}
                               alt=""
                               className="w-full h-full object-cover"
                             />

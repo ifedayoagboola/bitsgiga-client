@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Compair from "./Helpers/icons/Compair";
 import QuickViewIco from "./Helpers/icons/QuickViewIco";
 import ThinLove from "./Helpers/icons/ThinLove";
@@ -15,7 +16,9 @@ export default function TestCom() {
               <div
                 className="product-card-img w-full h-[322px] mt-4"
                 style={{
-                  background: `url(${process.env.PUBLIC_URL}/assets/images/product-img-2.1.jpg) no-repeat center`,
+                  background: `url(${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/product-img-2.1.jpg) no-repeat center`,
                 }}
               ></div>
               <div className="product-card-details flex justify-center h-[102px] items-center  relative">
@@ -28,11 +31,11 @@ export default function TestCom() {
                   </button>
                 </div>
                 <div>
-                  <a href="/single-product">
+                  <Link to="/single-product">
                     <p className="title mb-2.5 text-[20px] font-600 text-center text-qblack leading-[24px] line-clamp-2 hover:text-blue-600">
                       Table and Chair Set
                     </p>
-                  </a>
+                  </Link>
                   <div className="price">
                     <span className="offer-price text-center text-qred font-600 text-[18px] mr-1 inline-block">
                       32,499BDT

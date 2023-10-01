@@ -62,7 +62,8 @@ export default function TermsCondition() {
                     slim body with metal cover
                   </li>
                   <li className="text-[15px] text-qgraytwo leading-7">
-                    latest Intel Core i5-1135G7 processor (4 cores / 8 threads)
+                    latest Intel Core i5-1135G7 import.metaor (4 cores / 8
+                    threads)
                   </li>
                   <li className="text-[15px] text-qgraytwo leading-7">
                     8GB DDR4 RAM and fast 512GB PCIe SSD

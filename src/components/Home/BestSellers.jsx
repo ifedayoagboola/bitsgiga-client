@@ -11,7 +11,9 @@ export default function BestSellers({ className }) {
         >
           <div className="w-[170px] h-[170px] rounded-full bg-white flex justify-center items-center overflow-hidden mb-2">
             <img
-              src={`${process.env.PUBLIC_URL}/assets/images/saller-1.png`}
+              src={`${
+                import.meta.env.VITE_PUBLIC_URL
+              }/assets/images/saller-1.png`}
               alt=""
             />
           </div>
@@ -26,7 +28,9 @@ export default function BestSellers({ className }) {
         >
           <div className="w-[170px] h-[170px] rounded-full bg-white flex justify-center items-center overflow-hidden mb-2">
             <img
-              src={`${process.env.PUBLIC_URL}/assets/images/saller-2.png`}
+              src={`${
+                import.meta.env.VITE_PUBLIC_URL
+              }/assets/images/saller-2.png`}
               alt=""
             />
           </div>
@@ -41,7 +45,9 @@ export default function BestSellers({ className }) {
         >
           <div className="w-[170px] h-[170px] rounded-full bg-white flex justify-center items-center overflow-hidden mb-2">
             <img
-              src={`${process.env.PUBLIC_URL}/assets/images/saller-3.png`}
+              src={`${
+                import.meta.env.VITE_PUBLIC_URL
+              }/assets/images/saller-3.png`}
               alt=""
             />
           </div>
@@ -56,7 +62,9 @@ export default function BestSellers({ className }) {
         >
           <div className="w-[170px] h-[170px] rounded-full bg-white flex justify-center items-center overflow-hidden mb-2">
             <img
-              src={`${process.env.PUBLIC_URL}/assets/images/saller-4.png`}
+              src={`${
+                import.meta.env.VITE_PUBLIC_URL
+              }/assets/images/saller-4.png`}
               alt=""
             />
           </div>
@@ -71,7 +79,9 @@ export default function BestSellers({ className }) {
         >
           <div className="w-[170px] h-[170px] rounded-full bg-white flex justify-center items-center overflow-hidden mb-2">
             <img
-              src={`${process.env.PUBLIC_URL}/assets/images/saller-5.png`}
+              src={`${
+                import.meta.env.VITE_PUBLIC_URL
+              }/assets/images/saller-5.png`}
               alt=""
             />
           </div>
@@ -86,7 +96,9 @@ export default function BestSellers({ className }) {
         >
           <div className="w-[170px] h-[170px] rounded-full bg-white flex justify-center items-center overflow-hidden mb-2">
             <img
-              src={`${process.env.PUBLIC_URL}/assets/images/saller-6.png`}
+              src={`${
+                import.meta.env.VITE_PUBLIC_URL
+              }/assets/images/saller-6.png`}
               alt=""
             />
           </div>

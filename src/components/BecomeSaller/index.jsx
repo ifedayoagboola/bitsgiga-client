@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import InputCom from "../Helpers/InputCom";
 import PageTitle from "../Helpers/PageTitle";
 import Layout from "../Partials/Layout";
+import { Link } from "react-router-dom";
 
 export default function BecomeSaller() {
   const [profileImg, setProfileImg] = useState(null);
@@ -208,9 +209,9 @@ export default function BecomeSaller() {
                     <div className="signup-area flex justify-center">
                       <p className="text-sm text-qgraytwo font-normal">
                         Alrady have an Account?
-                        <a href="/login" className="ml-2 text-qblack">
+                        <Link to="/login" className="ml-2 text-qblack">
                           Log In
-                        </a>
+                        </Link>
                       </p>
                     </div>
                   </div>
@@ -246,7 +247,9 @@ export default function BecomeSaller() {
                         <img
                           src={
                             profileImg ||
-                            `${process.env.PUBLIC_URL}/assets/images/edit-profileimg.jpg`
+                            `${
+                              import.meta.env.VITE_PUBLIC_URL
+                            }/assets/images/edit-profileimg.jpg`
                           }
                           alt=""
                           className="sm:w-[198px] sm:h-[198px] w-[199px] h-[199px] rounded-full overflow-hidden object-cover"
@@ -311,7 +314,9 @@ export default function BecomeSaller() {
                         <img
                           src={
                             logoImg ||
-                            `${process.env.PUBLIC_URL}/assets/images/edit-logoimg.jpg`
+                            `${
+                              import.meta.env.VITE_PUBLIC_URL
+                            }/assets/images/edit-logoimg.jpg`
                           }
                           alt=""
                           className="sm:w-[198px] sm:h-[198px] w-[199px] h-[199px] rounded-full overflow-hidden object-cover"
@@ -374,7 +379,9 @@ export default function BecomeSaller() {
                         <img
                           src={
                             coverImg ||
-                            `${process.env.PUBLIC_URL}/assets/images/edit-coverimg.jpg`
+                            `${
+                              import.meta.env.VITE_PUBLIC_URL
+                            }/assets/images/edit-coverimg.jpg`
                           }
                           alt=""
                           className="w-full h-[120px] rounded-lg overflow-hidden object-cover"

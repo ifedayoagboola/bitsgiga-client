@@ -1,6 +1,7 @@
 import React from "react";
 import DataIteration from "../../../Helpers/DataIteration";
 import Star from "../../../Helpers/icons/Star";
+import { Link } from "react-router-dom";
 
 export default function ReviewTab({ className, products }) {
   return (
@@ -19,7 +20,9 @@ export default function ReviewTab({ className, products }) {
                   <div className="flex space-x-2 items-center w-full h-full p-2">
                     <div className="w-1/3 h-full">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/${datas.image}`}
+                        src={`${
+                          import.meta.env.VITE_PUBLIC_URL
+                        }/assets/images/${datas.image}`}
                         alt=""
                         className="w-full h-full object-contain"
                       />
@@ -37,11 +40,11 @@ export default function ReviewTab({ className, products }) {
                             </span>
                           ))}
                         </div>
-                        <a href="/single-product">
+                        <Link to="/single-product">
                           <p className="title mb-2 sm:text-[15px] text-[13px] font-600 text-qblack leading-[24px] line-clamp-1 hover:text-blue-600">
                             {datas.title}
                           </p>
-                        </a>
+                        </Link>
                         <p className="price mb-[26px] text-sm text-qgray line-clamp-2">
                           Didn't I tell you not put your phone on charge because
                           weekend?

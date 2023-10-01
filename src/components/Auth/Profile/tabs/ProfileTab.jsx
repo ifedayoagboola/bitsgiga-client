@@ -126,7 +126,9 @@ export default function ProfileTab() {
                   <img
                     src={
                       profileImg ||
-                      `${process.env.PUBLIC_URL}/assets/images/edit-profileimg.jpg`
+                      `${
+                        import.meta.env.VITE_PUBLIC_URL
+                      }/assets/images/edit-profileimg.jpg`
                     }
                     alt=""
                     className="object-cover w-full h-full"

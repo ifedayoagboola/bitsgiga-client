@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BreadcrumbCom from "../BreadcrumbCom";
 import Layout from "../Partials/Layout";
 import ErrorThumb from "./ErrorThumb";
@@ -18,7 +19,7 @@ export default function FourZeroFour() {
                   <h1 className="sm:text-xl text-base font-semibold text-center mb-5">
                     Sorry! We cant’t Find that page!
                   </h1>
-                  <a href="/">
+                  <Link to="/">
                     <div className="flex justify-center w-full ">
                       <div className="w-[180px] h-[50px] ">
                         <span type="button" className="yellow-btn">
@@ -26,7 +27,7 @@ export default function FourZeroFour() {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

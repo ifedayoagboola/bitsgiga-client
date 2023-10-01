@@ -13,7 +13,9 @@ export default function CampaignCountDown({ className, lastDate }) {
               data-aos="fade-right"
               className="campaign-countdown h-full w-full mb-5 lg:mb-0"
               style={{
-                background: `url(${process.env.PUBLIC_URL}/assets/images/campaign-cover-countdown-2.jpg) no-repeat`,
+                background: `url(${
+                  import.meta.env.VITE_PUBLIC_URL
+                }/assets/images/campaign-cover-countdown-2.jpg) no-repeat`,
                 backgroundSize: "cover",
               }}
             >

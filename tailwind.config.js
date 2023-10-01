@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+// import plugin from "tailwindcss/line-clamp";
+export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -29,5 +30,5 @@ module.exports = {
       borderStyle: ["last"],
     },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  // plugins: [plugin],
 };

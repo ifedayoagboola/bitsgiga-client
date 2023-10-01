@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ProductCardRowStyleTwo({ className, datas }) {
   return (
     <div
@@ -8,17 +10,19 @@ export default function ProductCardRowStyleTwo({ className, datas }) {
         <div className="w-full h-full flex space-x-5 justify-center items-center">
           <div className="w-[75px] h-[75px]">
             <img
-              src={`${process.env.PUBLIC_URL}/assets/images/${datas.image}`}
+              src={`${import.meta.env.VITE_PUBLIC_URL}/assets/images/${
+                datas.image
+              }`}
               alt=""
               className="w-full h-full object-cover"
             />
           </div>
           <div className="flex-1 h-full flex flex-col justify-center ">
-            <a href="/single-product">
+            <Link to="/single-product">
               <p className="title mb-2 sm:text-[15px] text-[13px] font-600 text-qblack leading-[24px] line-clamp-1 hover:text-blue-600">
                 {datas.title}
               </p>
-            </a>
+            </Link>
 
             <p className="price">
               <span className="main-price text-qgray line-through font-600 text-[18px]">

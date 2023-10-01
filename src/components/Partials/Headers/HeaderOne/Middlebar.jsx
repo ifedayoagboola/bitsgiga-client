@@ -14,32 +14,38 @@ export default function Middlebar({ className, type }) {
           <div className="flex justify-between items-center h-full">
             <div>
               {type === 3 ? (
-                <a href="/">
+                <Link to="/">
                   <img
                     width="152"
                     height="36"
-                    src={`${process.env.PUBLIC_URL}/assets/images/logo-3.svg`}
+                    src={`${
+                      import.meta.env.VITE_PUBLIC_URL
+                    }/assets/images/logo-3.svg`}
                     alt="logo"
                   />
-                </a>
+                </Link>
               ) : type === 4 ? (
-                <a href="/">
+                <Link to="/">
                   <img
                     width="152"
                     height="36"
-                    src={`${process.env.PUBLIC_URL}/assets/images/logo-4.svg`}
+                    src={`${
+                      import.meta.env.VITE_PUBLIC_URL
+                    }/assets/images/logo-4.svg`}
                     alt="logo"
                   />
-                </a>
+                </Link>
               ) : (
-                <a href="/">
+                <Link to="/">
                   <img
                     width="152"
                     height="36"
-                    src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                    src={`${
+                      import.meta.env.VITE_PUBLIC_URL
+                    }/assets/images/logo.svg`}
                     alt="logo"
                   />
-                </a>
+                </Link>
               )}
             </div>
             <div className="w-[517px] h-[44px]">
@@ -47,11 +53,11 @@ export default function Middlebar({ className, type }) {
             </div>
             <div className="flex space-x-6 items-center">
               <div className="compaire relative">
-                <a href="/products-compaire">
+                <Link to="/products-compaire">
                   <span>
                     <Compair />
                   </span>
-                </a>
+                </Link>
                 <span
                   className={`w-[18px] h-[18px] rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px] ${
                     type === 3 ? "bg-qh3-blue text-white" : "bg-qyellow"
@@ -61,11 +67,11 @@ export default function Middlebar({ className, type }) {
                 </span>
               </div>
               <div className="favorite relative">
-                <a href="/wishlist">
+                <Link to="/wishlist">
                   <span>
                     <ThinLove />
                   </span>
-                </a>
+                </Link>
                 <span
                   className={`w-[18px] h-[18px] rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px] ${
                     type === 3 ? "bg-qh3-blue text-white" : "bg-qyellow"
@@ -76,11 +82,11 @@ export default function Middlebar({ className, type }) {
               </div>
               <div className="cart-wrapper group relative py-4">
                 <div className="cart relative cursor-pointer">
-                  <a href="/cart">
+                  <Link to="/cart">
                     <span>
                       <ThinBag />
                     </span>
-                  </a>
+                  </Link>
                   <span
                     className={`w-[18px] h-[18px] rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px] ${
                       type === 3 ? "bg-qh3-blue text-white" : "bg-qyellow"

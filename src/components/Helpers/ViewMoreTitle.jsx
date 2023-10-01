@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ViewMoreTitle({
   categoryTitle = "",
   className,
@@ -14,7 +16,7 @@ export default function ViewMoreTitle({
             </h1>
           </div>
           <div>
-            <a href={seeMoreUrl}>
+            <Link to={seeMoreUrl}>
               <div className="flex space-x-2 items-center">
                 <p className="text-base font-600 text-qblack">View More</p>
                 <span className="animate-right-dir">
@@ -36,7 +38,7 @@ export default function ViewMoreTitle({
                   </svg>
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="section-content">{children && children}</div>

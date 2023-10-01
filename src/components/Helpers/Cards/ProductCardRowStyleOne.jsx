@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import Compair from "../icons/Compair";
 import QuickViewIco from "../icons/QuickViewIco";
 import Star from "../icons/Star";
 import ThinLove from "../icons/ThinLove";
 
-export default function ProductCardRowStyleTwo({ className, datas,type }) {
+export default function ProductCardRowStyleTwo({ className, datas, type }) {
   return (
     <div
       data-aos="fade-left"
@@ -14,7 +15,9 @@ export default function ProductCardRowStyleTwo({ className, datas,type }) {
       <div className="flex space-x-5 items-center w-full h-full lg:p-[30px] sm:p-5 p-2">
         <div className="lg:w-1/2 w-1/3 h-full">
           <img
-            src={`${process.env.PUBLIC_URL}/assets/images/${datas.image}`}
+            src={`${import.meta.env.VITE_PUBLIC_URL}/assets/images/${
+              datas.image
+            }`}
             alt=""
             className="w-full h-full object-contain"
           />
@@ -29,11 +32,11 @@ export default function ProductCardRowStyleTwo({ className, datas,type }) {
                 </span>
               ))}
             </div>
-            <a href="/single-product">
+            <Link to="/single-product">
               <p className="title mb-2 sm:text-[15px] text-[13px] font-600 text-qblack leading-[24px] line-clamp-2 hover:text-blue-600">
                 {datas.title}
               </p>
-            </a>
+            </Link>
             <p className="price mb-[26px]">
               <span className="main-price text-qgray line-through font-600 sm:text-[18px] text-base">
                 {datas.price}
@@ -43,7 +46,10 @@ export default function ProductCardRowStyleTwo({ className, datas,type }) {
               </span>
             </p>
             <button type="button" className="w-[110px] h-[30px]">
-              <span className={type===3?'blue-btn':'yellow-btn'}> Add To Cart</span>
+              <span className={type === 3 ? "blue-btn" : "yellow-btn"}>
+                {" "}
+                Add To Cart
+              </span>
             </button>
           </div>
         </div>

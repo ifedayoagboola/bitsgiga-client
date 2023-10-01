@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Ads({ handler }) {
   return (
     <>
@@ -9,20 +11,24 @@ export default function Ads({ handler }) {
         <div
           className="md:w-[812px] w-[310px] md:h-[509px] relative z-50 bg-slate-700 md:pl-10 pl-3 py-[108px] flex flex-col justify-between"
           style={{
-            background: `url(${process.env.PUBLIC_URL}/assets/images/primary-ads.png) no-repeat`,
+            background: `url(${
+              import.meta.env.VITE_PUBLIC_URL
+            }/assets/images/primary-ads.png) no-repeat`,
             backgroundSize: "cover",
           }}
         >
           <div>
             <div className="logo mb-[20px]">
-              <a href="/">
+              <Link to="/">
                 <img
                   width="152"
                   height="36"
-                  src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                  src={`${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/logo.svg`}
                   alt="logo"
                 />
-              </a>
+              </Link>
             </div>
             <p className="md:text-[22px] text-sm text-qblack mb-2">
               by Subscribe our Newsletter

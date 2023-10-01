@@ -23,7 +23,9 @@ export default function Sallers() {
               <div
                 className="w-full sm:h-[328px] sm:p-[30px] p-5"
                 style={{
-                  background: `url(${process.env.PUBLIC_URL}/assets/images/sallers-cover-1.png) no-repeat`,
+                  background: `url(${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/sallers-cover-1.png) no-repeat`,
                   backgroundSize: "cover",
                 }}
               >
@@ -149,7 +151,9 @@ export default function Sallers() {
                     <div className="flex sm:justify-center justify-start">
                       <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/saller-8.png`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/saller-8.png`}
                           alt=""
                         />
                       </div>
@@ -166,7 +170,9 @@ export default function Sallers() {
               <div
                 className="w-full sm:h-[328px] sm:p-[30px] p-5"
                 style={{
-                  background: `url(${process.env.PUBLIC_URL}/assets/images/sallers-cover-6.png) no-repeat`,
+                  background: `url(${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/sallers-cover-6.png) no-repeat`,
                   backgroundSize: "cover",
                 }}
               >
@@ -292,7 +298,9 @@ export default function Sallers() {
                     <div className="flex sm:justify-center justify-start">
                       <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/saller-7.png`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/saller-7.png`}
                           alt=""
                         />
                       </div>
@@ -310,7 +318,9 @@ export default function Sallers() {
               <div
                 className="w-full sm:h-[328px] sm:p-[30px] p-5"
                 style={{
-                  background: `url(${process.env.PUBLIC_URL}/assets/images/sallers-cover-2.png) no-repeat`,
+                  background: `url(${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/sallers-cover-2.png) no-repeat`,
                   backgroundSize: "cover",
                 }}
               >
@@ -436,7 +446,9 @@ export default function Sallers() {
                     <div className="flex sm:justify-center justify-start">
                       <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/saller-9.png`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/saller-9.png`}
                           alt=""
                         />
                       </div>
@@ -454,7 +466,9 @@ export default function Sallers() {
               <div
                 className="w-full sm:h-[328px] sm:p-[30px] p-5"
                 style={{
-                  background: `url(${process.env.PUBLIC_URL}/assets/images/sallers-cover-3.png) no-repeat`,
+                  background: `url(${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/sallers-cover-3.png) no-repeat`,
                   backgroundSize: "cover",
                 }}
               >
@@ -580,7 +594,9 @@ export default function Sallers() {
                     <div className="flex sm:justify-center justify-start">
                       <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/saller-6.png`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/saller-6.png`}
                           alt=""
                         />
                       </div>
@@ -598,7 +614,9 @@ export default function Sallers() {
               <div
                 className="w-full sm:h-[328px] sm:p-[30px] p-5"
                 style={{
-                  background: `url(${process.env.PUBLIC_URL}/assets/images/sallers-cover-4.png) no-repeat`,
+                  background: `url(${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/sallers-cover-4.png) no-repeat`,
                   backgroundSize: "cover",
                 }}
               >
@@ -724,7 +742,9 @@ export default function Sallers() {
                     <div className="flex sm:justify-center justify-start">
                       <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/saller-1.png`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/saller-1.png`}
                           alt=""
                         />
                       </div>
@@ -742,7 +762,9 @@ export default function Sallers() {
               <div
                 className="w-full sm:h-[328px] sm:p-[30px] p-5"
                 style={{
-                  background: `url(${process.env.PUBLIC_URL}/assets/images/sallers-cover-5.png) no-repeat`,
+                  background: `url(${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/sallers-cover-5.png) no-repeat`,
                   backgroundSize: "cover",
                 }}
               >
@@ -868,7 +890,9 @@ export default function Sallers() {
                     <div className="flex sm:justify-center justify-start">
                       <div className="w-[170px] h-[170px] rounded-full bg-white mb-[20px] flex justify-center items-center">
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/saller-2.png`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/saller-2.png`}
                           alt=""
                         />
                       </div>

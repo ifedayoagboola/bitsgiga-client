@@ -11,14 +11,16 @@ export default function Footer() {
           <div className="lg:w-4/10 w-full mb-10 lg:mb-0">
             {/* logo area */}
             <div className="mb-14">
-              <a href="/">
+              <Link to="/">
                 <img
                   width="152"
                   height="36"
-                  src={`${process.env.PUBLIC_URL}/assets/images/logo-2.svg`}
+                  src={`${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/logo-2.svg`}
                   alt="logo"
                 />
-              </a>
+              </Link>
             </div>
             <div>
               <ul className="flex flex-col space-y-5 ">
@@ -191,7 +193,9 @@ export default function Footer() {
               <img
                 width="318"
                 height="28"
-                src={`${process.env.PUBLIC_URL}/assets/images/payment-getways.png`}
+                src={`${
+                  import.meta.env.VITE_PUBLIC_URL
+                }/assets/images/payment-getways.png`}
                 alt="payment-getways"
               />
             </a>

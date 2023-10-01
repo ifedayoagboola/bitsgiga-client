@@ -705,39 +705,39 @@ export default function Navbar({ className }) {
                             <div className="category-items">
                               <ul className="flex flex-col space-y-2">
                                 <li>
-                                  <a href="/">
+                                  <Link to="/">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:text-qyellow hover:border-qyellow">
                                       Home One
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/home-two">
+                                  <Link to="/home-two">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:text-qyellow hover:border-qyellow ">
                                       Home Two
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/home-three">
+                                  <Link to="/home-three">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:text-qyellow hover:border-qyellow">
                                       Home Three
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/home-four">
+                                  <Link to="/home-four">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:text-qyellow hover:border-qyellow">
                                       Home Four
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/home-five">
+                                  <Link to="/home-five">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:text-qyellow hover:border-qyellow">
                                       Home Five
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -891,7 +891,9 @@ export default function Navbar({ className }) {
                           <div className="w-full h-[235px]">
                             <img
                               width=""
-                              src={`${process.env.PUBLIC_URL}/assets/images/mega-menu-thumb.jpg`}
+                              src={`${
+                                import.meta.env.VITE_PUBLIC_URL
+                              }/assets/images/mega-menu-thumb.jpg`}
                               alt=""
                               className="w-full h-full object-contain"
                             />
@@ -919,25 +921,25 @@ export default function Navbar({ className }) {
                             <div className="category-items">
                               <ul className="flex flex-col space-y-2">
                                 <li>
-                                  <a href="/privacy-policy">
+                                  <Link to="/privacy-policy">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Privacy Policy
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/terms-condition">
+                                  <Link to="/terms-condition">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       Terms and Conditions
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="/faq">
+                                  <Link to="/faq">
                                     <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow">
                                       FAQ
                                     </span>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
                                   <a href="#">

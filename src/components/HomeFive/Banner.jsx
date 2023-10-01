@@ -48,8 +48,8 @@ export default function Banner({ className }) {
                           Shop the Hottest Brands and Designs at Shop0
                         </h1>
 
-                        <Link to="#" passhref>
-                          <a rel="noopener noreferrer">
+                        <Link to="#" passhref="true">
+                          <div rel="noopener noreferrer">
                             <div className="flex justify-center items-center bg-qh5-bwhite w-[160px] h-[52px] group rounded-lg hover:text-white relative transition-all duration-300 ease-in-out overflow-hidden cursor-pointer">
                               <div className="flex space-x-1 items-center transition-all duration-300 ease-in-out relative z-10">
                                 <span className="text-sm font-600 tracking-wide leading-7 mr-2">
@@ -88,7 +88,7 @@ export default function Banner({ className }) {
                                 className="w-full h-full bg-black absolute top-0 left-0 right-0 bottom-0 transform scale-x-0 group-hover:scale-x-100 origin-[center_left] group-hover:origin-[center_right]"
                               ></div>
                             </div>
-                          </a>
+                          </div>
                         </Link>
                       </div>
                     </div>
@@ -114,8 +114,8 @@ export default function Banner({ className }) {
                           Shop the Hottest Brands and Designs at Shop0
                         </h1>
 
-                        <Link to="#" passhref>
-                          <a rel="noopener noreferrer">
+                        <Link to="#" passhref="true">
+                          <div rel="noopener noreferrer">
                             <div className="flex justify-center items-center bg-qh5-bwhite w-[160px] h-[52px] group rounded-lg hover:text-white relative transition-all duration-300 ease-in-out overflow-hidden cursor-pointer">
                               <div className="flex space-x-1 items-center transition-all duration-300 ease-in-out relative z-10">
                                 <span className="text-sm font-600 tracking-wide leading-7 mr-2">
@@ -154,7 +154,7 @@ export default function Banner({ className }) {
                                 className="w-full h-full bg-black absolute top-0 left-0 right-0 bottom-0 transform scale-x-0 group-hover:scale-x-100 origin-[center_left] group-hover:origin-[center_right]"
                               ></div>
                             </div>
-                          </a>
+                          </div>
                         </Link>
                       </div>
                     </div>
@@ -180,8 +180,8 @@ export default function Banner({ className }) {
                           Shop the Hottest Brands and Designs at Shop0
                         </h1>
 
-                        <Link to="#" passhref>
-                          <a rel="noopener noreferrer">
+                        <Link to="#" passhref="true">
+                          <div rel="noopener noreferrer">
                             <div className="flex justify-center items-center bg-qh5-bwhite w-[160px] h-[52px] group rounded-lg hover:text-white relative transition-all duration-300 ease-in-out overflow-hidden cursor-pointer">
                               <div className="flex space-x-1 items-center transition-all duration-300 ease-in-out relative z-10">
                                 <span className="text-sm font-600 tracking-wide leading-7 mr-2">
@@ -220,7 +220,7 @@ export default function Banner({ className }) {
                                 className="w-full h-full bg-black absolute top-0 left-0 right-0 bottom-0 transform scale-x-0 group-hover:scale-x-100 origin-[center_left] group-hover:origin-[center_right]"
                               ></div>
                             </div>
-                          </a>
+                          </div>
                         </Link>
                       </div>
                     </div>

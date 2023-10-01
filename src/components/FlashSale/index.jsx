@@ -14,7 +14,9 @@ export default function FlashSale() {
           <div className="w-full">
             <div
               style={{
-                background: `url(${process.env.PUBLIC_URL}/assets/images/flash-sale-ads.png) no-repeat`,
+                background: `url(${
+                  import.meta.env.VITE_PUBLIC_URL
+                }/assets/images/flash-sale-ads.png) no-repeat`,
                 backgroundSize: "cover",
               }}
               data-aos="fade-right"

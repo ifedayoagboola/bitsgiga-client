@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Empty from "./Empty";
 
 export default function EmptyCardError() {
@@ -12,7 +13,7 @@ export default function EmptyCardError() {
             <h1 className="sm:text-xl text-base font-semibold text-center mb-5">
               Empty! You don’t Cart any Products
             </h1>
-            <a href="/">
+            <Link to="/">
               <div className="flex justify-center w-full ">
                 <div className="w-[180px] h-[50px] ">
                   <span type="button" className="yellow-btn">
@@ -20,7 +21,7 @@ export default function EmptyCardError() {
                   </span>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

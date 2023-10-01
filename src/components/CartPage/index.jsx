@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BreadcrumbCom from "../BreadcrumbCom";
 import EmptyCardError from "../EmptyCardError";
 import InputCom from "../Helpers/InputCom";
@@ -179,13 +180,13 @@ export default function CardPage({ cart = true }) {
                       <p className="text-[18px] font-medium text-qred">$365</p>
                     </div>
                   </div>
-                  <a href="/checkout">
+                  <Link to="/checkout">
                     <div className="w-full h-[50px] black-btn flex justify-center items-center">
                       <span className="text-sm font-semibold">
                         Proceed to Checkout
                       </span>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

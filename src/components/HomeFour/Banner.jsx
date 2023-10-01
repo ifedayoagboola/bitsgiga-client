@@ -67,7 +67,9 @@ export default function Banner({ className }) {
             <div
               data-aos="fade-up"
               style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/service-bg.png)`,
+                backgroundImage: `url(${
+                  import.meta.env.VITE_PUBLIC_URL
+                }/assets/images/service-bg.png)`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}

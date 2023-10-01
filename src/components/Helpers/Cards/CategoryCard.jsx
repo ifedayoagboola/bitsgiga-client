@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function CategoryCard({ background, title, brands = [] }) {
   return (
     <div
@@ -5,7 +7,9 @@ export default function CategoryCard({ background, title, brands = [] }) {
       style={{
         background: `url(${
           background ||
-          `${process.env.PUBLIC_URL}/assets/images/section-category-1.jpg`
+          `${
+            import.meta.env.VITE_PUBLIC_URL
+          }/assets/images/section-category-1.jpg`
         }) no-repeat`,
         backgroundSize: "cover",
       }}
@@ -16,11 +20,11 @@ export default function CategoryCard({ background, title, brands = [] }) {
           <ul>
             {brands.map((brand) => (
               <li key={brand + Math.random()}>
-                <a href="/all-products">
+                <Link to="/all-products">
                   <span className="text-sm text-qgray hober:text-qBlack border-b border-transparent hover:border-qblack hover:text-qblack capitalize">
                     {brand}
                   </span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

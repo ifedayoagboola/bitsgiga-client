@@ -17,46 +17,48 @@ export default function Middlebar({ className }) {
         <div className="relative h-full">
           <div className="flex justify-between items-center h-full">
             <div>
-              <a href="/">
+              <Link to="/">
                 <img
                   width="152"
                   height="36"
-                  src={`${process.env.PUBLIC_URL}/assets/images/logo-2.svg`}
+                  src={`${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/logo-2.svg`}
                   alt="logo"
                 />
-              </a>
+              </Link>
             </div>
             <div className="w-[517px] h-[44px]">
               <SearchBox className="search-com" />
             </div>
             <div className="flex space-x-6 items-center">
               <div className="compaire relative">
-                <a href="/products-compaire">
+                <Link to="/products-compaire">
                   <span>
                     <Compair />
                   </span>
-                </a>
+                </Link>
                 <span className="w-[18px] h-[18px] rounded-full bg-qh2-green absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px] text-white">
                   2
                 </span>
               </div>
               <div className="favorite relative">
-                <a href="/wishlist">
+                <Link to="/wishlist">
                   <span>
                     <ThinLove />
                   </span>
-                </a>
+                </Link>
                 <span className="w-[18px] h-[18px] rounded-full bg-qh2-green absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px] text-white">
                   1
                 </span>
               </div>
               <div className="cart-wrapper group relative py-4">
                 <div className="cart relative cursor-pointer">
-                  <a href="/cart">
+                  <Link to="/cart">
                     <span>
                       <ThinBag />
                     </span>
-                  </a>
+                  </Link>
                   <span className="w-[18px] h-[18px] rounded-full bg-qh2-green absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px] text-white">
                     15
                   </span>

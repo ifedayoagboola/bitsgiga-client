@@ -18,7 +18,9 @@ export default function CampaignCountDown({
               data-aos="fade-right"
               className="campaign-countdown lg:w-1/2 h-full w-full mb-5 lg:mb-0"
               style={{
-                background: `url(${process.env.PUBLIC_URL}/assets/images/campaign-cover-countdown.jpg) no-repeat`,
+                background: `url(${
+                  import.meta.env.VITE_PUBLIC_URL
+                }/assets/images/campaign-cover-countdown.jpg) no-repeat`,
                 backgroundSize: "cover",
               }}
             >
@@ -111,7 +113,9 @@ export default function CampaignCountDown({
               style={{
                 background: `url(${
                   counterbg ||
-                  `${process.env.PUBLIC_URL}/assets/images/download-app-cover.png`
+                  `${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/download-app-cover.png`
                 }) no-repeat`,
                 backgroundSize: "cover",
               }}
@@ -134,7 +138,9 @@ export default function CampaignCountDown({
                         <img
                           width="170"
                           height="69"
-                          src={`${process.env.PUBLIC_URL}/assets/images/play-store.png`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/play-store.png`}
                           alt=""
                         />
                       </a>
@@ -144,7 +150,9 @@ export default function CampaignCountDown({
                         <img
                           width="170"
                           height="69"
-                          src={`${process.env.PUBLIC_URL}/assets/images/apple-store.png`}
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/assets/images/apple-store.png`}
                           alt=""
                         />
                       </a>
@@ -155,7 +163,9 @@ export default function CampaignCountDown({
                   <img
                     src={
                       appscreen ||
-                      `${process.env.PUBLIC_URL}/assets/images/app-screen.png`
+                      `${
+                        import.meta.env.VITE_PUBLIC_URL
+                      }/assets/images/app-screen.png`
                     }
                     alt=""
                   />

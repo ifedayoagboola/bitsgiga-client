@@ -9,7 +9,9 @@ export default function SallerInfo({ products }) {
         <div className="sm:flex sm:space-x-5 items-center sm:w-1/4">
           <div className="saller w-[73px] h-[73px] rounded-full overflow-hidden">
             <img
-              src={`${process.env.PUBLIC_URL}/assets/images/comment-user-1.png`}
+              src={`${
+                import.meta.env.VITE_PUBLIC_URL
+              }/assets/images/comment-user-1.png`}
               alt="saller"
               className="w-full h-full object-cover"
             />

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ThinBag from "../../../Helpers/icons/ThinBag";
 import Middlebar from "./Middlebar";
 import Navbar from "./Navbar";
@@ -27,21 +28,23 @@ export default function HeaderTwo({ className, drawerAction }) {
             </svg>
           </div>
           <div>
-            <a href="/">
+            <Link to="/">
               <img
                 width="152"
                 height="36"
-                src={`${process.env.PUBLIC_URL}/assets/images/logo-2.svg`}
+                src={`${
+                  import.meta.env.VITE_PUBLIC_URL
+                }/assets/images/logo-2.svg`}
                 alt="logo"
               />
-            </a>
+            </Link>
           </div>
           <div className="cart relative cursor-pointer">
-            <a href="/cart">
+            <Link to="/cart">
               <span>
                 <ThinBag />
               </span>
-            </a>
+            </Link>
             <span className="w-[18px] h-[18px] rounded-full bg-qh2-green absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
               15
             </span>

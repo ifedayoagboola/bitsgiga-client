@@ -108,44 +108,46 @@ export default function Dashboard() {
           </p>
           <div className="mt-5">
             <table>
-              <tr className="inline-flex mb-5">
-                <td className="text-base text-qgraytwo w-[100px] block">
-                  <div>Name:</div>
-                </td>
-                <td className="text-base text-qblack font-medium">
-                  Shuvo khan
-                </td>
-              </tr>
-              <tr className="inline-flex mb-5">
-                <td className="text-base text-qgraytwo w-[100px] block">
-                  <div>Email:</div>
-                </td>
-                <td className="text-base text-qblack font-medium">
-                  rafiqulislamsuvobd@gmail.com
-                </td>
-              </tr>
-              <tr className="inline-flex mb-5">
-                <td className="text-base text-qgraytwo w-[100px] block">
-                  <div>Phone:</div>
-                </td>
-                <td className="text-base text-qblack font-medium">
-                  01792166627
-                </td>
-              </tr>
-              <tr className="inline-flex mb-5">
-                <td className="text-base text-qgraytwo w-[100px] block">
-                  <div>City:</div>
-                </td>
-                <td className="text-base text-qblack font-medium">
-                  Dhaka,Bangladesh
-                </td>
-              </tr>
-              <tr className="inline-flex mb-5">
-                <td className="text-base text-qgraytwo w-[100px] block">
-                  <div>Zip:</div>
-                </td>
-                <td className="text-base text-qblack font-medium">4040</td>
-              </tr>
+              <tbody>
+                <tr className="inline-flex mb-5">
+                  <td className="text-base text-qgraytwo w-[100px] block">
+                    <div>Name:</div>
+                  </td>
+                  <td className="text-base text-qblack font-medium">
+                    Shuvo khan
+                  </td>
+                </tr>
+                <tr className="inline-flex mb-5">
+                  <td className="text-base text-qgraytwo w-[100px] block">
+                    <div>Email:</div>
+                  </td>
+                  <td className="text-base text-qblack font-medium">
+                    rafiqulislamsuvobd@gmail.com
+                  </td>
+                </tr>
+                <tr className="inline-flex mb-5">
+                  <td className="text-base text-qgraytwo w-[100px] block">
+                    <div>Phone:</div>
+                  </td>
+                  <td className="text-base text-qblack font-medium">
+                    01792166627
+                  </td>
+                </tr>
+                <tr className="inline-flex mb-5">
+                  <td className="text-base text-qgraytwo w-[100px] block">
+                    <div>City:</div>
+                  </td>
+                  <td className="text-base text-qblack font-medium">
+                    Dhaka,Bangladesh
+                  </td>
+                </tr>
+                <tr className="inline-flex mb-5">
+                  <td className="text-base text-qgraytwo w-[100px] block">
+                    <div>Zip:</div>
+                  </td>
+                  <td className="text-base text-qblack font-medium">4040</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>

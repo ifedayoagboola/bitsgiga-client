@@ -9,7 +9,9 @@ export default function Payment() {
             <div className="flex space-x-5 items-center mb-3 sm:mb-0">
               <div className="sm:w-[120px] sm:h-[120px] flex items-center justify-center rounded-full sm:bg-[#F2F2F2]">
                 <img
-                  src={`${process.env.PUBLIC_URL}/assets/images/card-1.svg`}
+                  src={`${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/card-1.svg`}
                   alt="payment"
                 />
               </div>
@@ -38,7 +40,9 @@ export default function Payment() {
             <div className="flex space-x-5 items-center mb-3 sm:mb-0">
               <div className="sm:w-[120px] sm:h-[120px] flex items-center justify-center rounded-full sm:bg-[#F2F2F2]">
                 <img
-                  src={`${process.env.PUBLIC_URL}/assets/images/card-2.svg`}
+                  src={`${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/card-2.svg`}
                   alt="payment"
                 />
               </div>
@@ -67,7 +71,9 @@ export default function Payment() {
             <div className="flex space-x-5 items-center mb-3 sm:mb-0">
               <div className="sm:w-[120px] sm:h-[120px] flex items-center justify-center rounded-full sm:bg-[#F2F2F2]">
                 <img
-                  src={`${process.env.PUBLIC_URL}/assets/images/card-3.svg`}
+                  src={`${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/card-3.svg`}
                   alt="payment"
                 />
               </div>
@@ -96,7 +102,9 @@ export default function Payment() {
             <div className="flex space-x-5 items-center mb-3 sm:mb-0">
               <div className="sm:w-[120px] sm:h-[120px] flex items-center justify-center rounded-full sm:bg-[#F2F2F2]">
                 <img
-                  src={`${process.env.PUBLIC_URL}/assets/images/card-4.svg`}
+                  src={`${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/card-4.svg`}
                   alt="payment"
                 />
               </div>

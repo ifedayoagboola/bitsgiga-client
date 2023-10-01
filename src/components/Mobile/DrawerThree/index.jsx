@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Compair from "../../Helpers/icons/Compair";
 import ThinLove from "../../Helpers/icons/ThinLove";
+import { Link } from "react-router-dom";
 
 export default function DrawerThree({ className, open, action }) {
   const [tab, setTab] = useState("category");
@@ -26,21 +27,21 @@ export default function DrawerThree({ className, open, action }) {
             <div className="flex justify-between items-center">
               <div className="flex space-x-5 items-center">
                 <div className="compaire relative">
-                  <a href="/products-compaire">
+                  <Link to="/products-compaire">
                     <span>
                       <Compair />
                     </span>
-                  </a>
+                  </Link>
                   <span className="w-[18px] h-[18px] text-white rounded-full bg-qh3-blue absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
                     2
                   </span>
                 </div>
                 <div className="favorite relative">
-                  <a href="/wishlist">
+                  <Link to="/wishlist">
                     <span>
                       <ThinLove />
                     </span>
-                  </a>
+                  </Link>
                   <span className="w-[18px] h-[18px] text-white rounded-full bg-qh3-blue absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
                     1
                   </span>
@@ -120,7 +121,7 @@ export default function DrawerThree({ className, open, action }) {
             <div className="category-item mt-5 w-full">
               <ul className="categories-list">
                 <li className="category-item">
-                  <a href="/all-products">
+                  <Link to="/all-products">
                     <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span>
@@ -198,10 +199,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="category-item">
-                  <a href="/all-products">
+                  <Link to="/all-products">
                     <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span>
@@ -283,10 +284,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="category-item">
-                  <a href="/all-products">
+                  <Link to="/all-products">
                     <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span>
@@ -362,10 +363,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="category-item">
-                  <a href="/all-products">
+                  <Link to="/all-products">
                     <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span>
@@ -433,10 +434,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="category-item">
-                  <a href="/all-products">
+                  <Link to="/all-products">
                     <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span>
@@ -524,10 +525,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="category-item">
-                  <a href="/all-products">
+                  <Link to="/all-products">
                     <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span>
@@ -577,10 +578,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="category-item ">
-                  <a href="/all-products">
+                  <Link to="/all-products">
                     <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span>
@@ -648,10 +649,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="category-item">
-                  <a href="/all-products">
+                  <Link to="/all-products">
                     <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span>
@@ -713,10 +714,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="category-item">
-                  <a href="/all-products">
+                  <Link to="/all-products">
                     <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span>
@@ -768,10 +769,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="category-item ">
-                  <a href="/all-products">
+                  <Link to="/all-products">
                     <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span>
@@ -831,10 +832,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="category-item">
-                  <a href="/all-products">
+                  <Link to="/all-products">
                     <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span>
@@ -884,7 +885,7 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -892,7 +893,7 @@ export default function DrawerThree({ className, open, action }) {
             <div className="menu-item mt-5 w-full">
               <ul className="categories-list">
                 <li className="category-item">
-                  <a href="/">
+                  <Link to="/">
                     <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span className="text-sm font-400">Home</span>
@@ -926,10 +927,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                   <ul className="submenu-list ml-5">
                     <li className="category-item">
-                      <a href="/home-two">
+                      <Link to="/home-two">
                         <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span className="text-sm font-400">Home Two</span>
@@ -963,10 +964,10 @@ export default function DrawerThree({ className, open, action }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="category-item">
-                      <a href="/home-three">
+                      <Link to="/home-three">
                         <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span className="text-sm font-400">Home Three</span>
@@ -1000,12 +1001,12 @@ export default function DrawerThree({ className, open, action }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li className="category-item">
-                  <a href="/shops/shop">
+                  <Link to="/shops/shop">
                     <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span className="text-sm font-400">Shop</span>
@@ -1039,10 +1040,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="category-item">
-                  <a href="#">
+                  <Link to="#">
                     <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span className="text-sm font-400">Pages</span>
@@ -1076,10 +1077,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                   <ul className="submenu-list ml-5">
                     <li className="category-item">
-                      <a href="/privacy-policy">
+                      <Link to="/privacy-policy">
                         <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span className="text-sm font-400">
@@ -1115,10 +1116,10 @@ export default function DrawerThree({ className, open, action }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="category-item">
-                      <a href="/faq">
+                      <Link to="/faq">
                         <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span className="text-sm font-400">FAQ</span>
@@ -1152,10 +1153,10 @@ export default function DrawerThree({ className, open, action }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="category-item">
-                      <a href="/terms-condition">
+                      <Link to="/terms-condition">
                         <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span className="text-sm font-400">
@@ -1191,13 +1192,13 @@ export default function DrawerThree({ className, open, action }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
 
                 <li className="category-item">
-                  <a href="/about">
+                  <Link to="/about">
                     <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span className="text-sm font-400">About</span>
@@ -1231,10 +1232,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="category-item">
-                  <a href="/Blogs">
+                  <Link to="/Blogs">
                     <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span className="text-sm font-400">Blogs</span>
@@ -1268,10 +1269,10 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="category-item">
-                  <a href="/contact">
+                  <Link to="/contact">
                     <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-qh3-blue transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span className="text-sm font-400">Contact</span>
@@ -1305,7 +1306,7 @@ export default function DrawerThree({ className, open, action }) {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

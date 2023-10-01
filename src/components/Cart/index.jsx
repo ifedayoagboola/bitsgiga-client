@@ -1,11 +1,11 @@
-export default function Cart({ className,type }) {
+export default function Cart({ className, type }) {
   return (
     <>
       <div
         style={{ boxShadow: " 0px 15px 50px 0px rgba(0, 0, 0, 0.14)" }}
-        className={`w-[300px] bg-white border-t-[3px] ${type===3?'border-qh3-blue':'cart-wrappwer'}  ${
-          className || ""
-        }`}
+        className={`w-[300px] bg-white border-t-[3px] ${
+          type === 3 ? "border-qh3-blue" : "cart-wrappwer"
+        }  ${className || ""}`}
       >
         <div className="w-full h-full">
           <div className="product-items h-[310px] overflow-y-scroll">
@@ -14,7 +14,9 @@ export default function Cart({ className,type }) {
                 <div className="flex space-x-[6px] justify-center items-center px-4 my-[20px]">
                   <div className="w-[65px] h-full">
                     <img
-                      src={`${process.env.PUBLIC_URL}/assets/images/product-img-1.jpg`}
+                      src={`${
+                        import.meta.env.VITE_PUBLIC_URL
+                      }/assets/images/product-img-1.jpg`}
                       alt=""
                       className="w-full h-full object-contain"
                     />
@@ -48,7 +50,9 @@ export default function Cart({ className,type }) {
                 <div className="flex space-x-[6px] justify-center items-center px-4 my-[20px]">
                   <div className="w-[65px] h-full">
                     <img
-                      src={`${process.env.PUBLIC_URL}/assets/images/product-img-1.jpg`}
+                      src={`${
+                        import.meta.env.VITE_PUBLIC_URL
+                      }/assets/images/product-img-1.jpg`}
                       alt=""
                       className="w-full h-full object-contain"
                     />
@@ -82,7 +86,9 @@ export default function Cart({ className,type }) {
                 <div className="flex space-x-[6px] justify-center items-center px-4 my-[20px]">
                   <div className="w-[65px] h-full">
                     <img
-                      src={`${process.env.PUBLIC_URL}/assets/images/product-img-1.jpg`}
+                      src={`${
+                        import.meta.env.VITE_PUBLIC_URL
+                      }/assets/images/product-img-1.jpg`}
                       alt=""
                       className="w-full h-full object-contain"
                     />
@@ -116,7 +122,9 @@ export default function Cart({ className,type }) {
                 <div className="flex space-x-[6px] justify-center items-center px-4 my-[20px]">
                   <div className="w-[65px] h-full">
                     <img
-                      src={`${process.env.PUBLIC_URL}/assets/images/product-img-1.jpg`}
+                      src={`${
+                        import.meta.env.VITE_PUBLIC_URL
+                      }/assets/images/product-img-1.jpg`}
                       alt=""
                       className="w-full h-full object-contain"
                     />
@@ -150,7 +158,9 @@ export default function Cart({ className,type }) {
                 <div className="flex space-x-[6px] justify-center items-center px-4 my-[20px]">
                   <div className="w-[65px] h-full">
                     <img
-                      src={`${process.env.PUBLIC_URL}/assets/images/product-img-1.jpg`}
+                      src={`${
+                        import.meta.env.VITE_PUBLIC_URL
+                      }/assets/images/product-img-1.jpg`}
                       alt=""
                       className="w-full h-full object-contain"
                     />
@@ -184,7 +194,9 @@ export default function Cart({ className,type }) {
                 <div className="flex space-x-[6px] justify-center items-center px-4 my-[20px]">
                   <div className="w-[65px] h-full">
                     <img
-                      src={`${process.env.PUBLIC_URL}/assets/images/product-img-1.jpg`}
+                      src={`${
+                        import.meta.env.VITE_PUBLIC_URL
+                      }/assets/images/product-img-1.jpg`}
                       alt=""
                       className="w-full h-full object-contain"
                     />
@@ -232,7 +244,7 @@ export default function Cart({ className,type }) {
               </a>
               <a href="#">
                 <div className="w-full h-[50px]">
-                  <div className={type===3?'blue-btn':'yellow-btn'}>
+                  <div className={type === 3 ? "blue-btn" : "yellow-btn"}>
                     <span className="text-sm">Checkout Now</span>
                   </div>
                 </div>

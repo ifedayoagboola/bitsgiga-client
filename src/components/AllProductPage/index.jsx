@@ -75,7 +75,9 @@ export default function AllProductPage() {
                 {/* ads */}
                 <div className="w-full hidden lg:block h-[295px]">
                   <img
-                    src={`${process.env.PUBLIC_URL}/assets/images/ads-5.png`}
+                    src={`${
+                      import.meta.env.VITE_PUBLIC_URL
+                    }/assets/images/ads-5.png`}
                     alt=""
                     className="w-full h-full object-contain"
                   />
@@ -142,7 +144,9 @@ export default function AllProductPage() {
 
                 <div className="w-full h-[164px] overflow-hidden mb-[40px]">
                   <img
-                    src={`${process.env.PUBLIC_URL}/assets/images/ads-6.png`}
+                    src={`${
+                      import.meta.env.VITE_PUBLIC_URL
+                    }/assets/images/ads-6.png`}
                     alt=""
                     className="w-full h-full object-contain"
                   />

@@ -66,7 +66,9 @@ export default function About() {
             <div className="w-full min-h-[665px] lg:flex lg:space-x-12 items-center pb-10 lg:pb-0">
               <div className="md:w-[570px] w-full md:h-[560px] h-auto rounded overflow-hidden my-5 lg:my-0">
                 <img
-                  src={`${process.env.PUBLIC_URL}/assets/images/about-banner.png`}
+                  src={`${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/assets/images/about-banner.png`}
                   alt="about"
                   className="w-full h"
                 />
@@ -86,7 +88,8 @@ export default function About() {
                 <ul className="text-[15px] text-qgraytwo leading-7 list-disc ml-5 mb-5">
                   <li>slim body with metal cover</li>
                   <li>
-                    latest Intel Core i5-1135G7 processor (4 cores / 8 threads)
+                    latest Intel Core i5-1135G7 import.metaor (4 cores / 8
+                    threads)
                   </li>
                   <li>8GB DDR4 RAM and fast 512GB PCIe SSD</li>
                   <li>
@@ -137,7 +140,9 @@ export default function About() {
                   <div className="flex items-center space-x-2.5 mt-3">
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/comment-user-1.png`}
+                        src={`${
+                          import.meta.env.VITE_PUBLIC_URL
+                        }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
                     </div>
@@ -174,7 +179,9 @@ export default function About() {
                   <div className="flex items-center space-x-2.5 mt-3">
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/comment-user-1.png`}
+                        src={`${
+                          import.meta.env.VITE_PUBLIC_URL
+                        }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
                     </div>
@@ -211,7 +218,9 @@ export default function About() {
                   <div className="flex items-center space-x-2.5 mt-3">
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/comment-user-1.png`}
+                        src={`${
+                          import.meta.env.VITE_PUBLIC_URL
+                        }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
                     </div>
@@ -248,7 +257,9 @@ export default function About() {
                   <div className="flex items-center space-x-2.5 mt-3">
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/comment-user-1.png`}
+                        src={`${
+                          import.meta.env.VITE_PUBLIC_URL
+                        }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
                     </div>
@@ -285,7 +296,9 @@ export default function About() {
                   <div className="flex items-center space-x-2.5 mt-3">
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/comment-user-1.png`}
+                        src={`${
+                          import.meta.env.VITE_PUBLIC_URL
+                        }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
                     </div>
@@ -322,7 +335,9 @@ export default function About() {
                   <div className="flex items-center space-x-2.5 mt-3">
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/comment-user-1.png`}
+                        src={`${
+                          import.meta.env.VITE_PUBLIC_URL
+                        }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
                     </div>
@@ -359,7 +374,9 @@ export default function About() {
                   <div className="flex items-center space-x-2.5 mt-3">
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/comment-user-1.png`}
+                        src={`${
+                          import.meta.env.VITE_PUBLIC_URL
+                        }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
                     </div>
@@ -396,7 +413,9 @@ export default function About() {
                   <div className="flex items-center space-x-2.5 mt-3">
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/comment-user-1.png`}
+                        src={`${
+                          import.meta.env.VITE_PUBLIC_URL
+                        }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
                     </div>
@@ -433,7 +452,9 @@ export default function About() {
                   <div className="flex items-center space-x-2.5 mt-3">
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/comment-user-1.png`}
+                        src={`${
+                          import.meta.env.VITE_PUBLIC_URL
+                        }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
                     </div>
