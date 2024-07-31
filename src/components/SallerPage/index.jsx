@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "react-input-range/lib/css/index.css";
 import productDatas from "../../data/products.json";
 import ProductCardStyleOne from "../Helpers/Cards/ProductCardStyleOne";
 import DataIteration from "../Helpers/DataIteration";
@@ -185,7 +184,7 @@ export default function SallerPage() {
                   <img
                     src={`${
                       import.meta.env.VITE_PUBLIC_URL
-                    }/assets/images/ads-5.png`}
+                    }/assets/images/bannera-5.png`}
                     alt=""
                     className="w-full h-full object-contain"
                   />
@@ -254,7 +253,7 @@ export default function SallerPage() {
                   <img
                     src={`${
                       import.meta.env.VITE_PUBLIC_URL
-                    }/assets/images/ads-6.png`}
+                    }/assets/images/bannera-6.png`}
                     alt=""
                     className="w-full h-full object-contain"
                   />

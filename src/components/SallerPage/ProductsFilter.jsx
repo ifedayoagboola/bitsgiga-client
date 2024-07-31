@@ -1,5 +1,4 @@
-import InputRange from "react-input-range";
-import "react-input-range/lib/css/index.css";
+import RangeSlider from "react-range-slider-input";
 import Checkbox from "../Helpers/Checkbox";
 
 export default function ProductsFilter({
@@ -476,12 +475,11 @@ export default function ProductsFilter({
             <h1 className="text-black text-base font-500">Price Range</h1>
           </div>
           <div className="price-range mb-5">
-            <InputRange
-              draggableTrack
-              maxValue={1000}
-              minValue={0}
+            <RangeSlider
               value={volume}
-              onChange={volumeHandler}
+              onInput={volumeHandler}
+              min={100}
+              max={500}
             />
           </div>
           <p className="text-xs text-qblack font-400">
