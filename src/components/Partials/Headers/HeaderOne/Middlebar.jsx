@@ -42,7 +42,7 @@ export default function Middlebar({ className, type }) {
                     height="36"
                     src={`${
                       import.meta.env.VITE_PUBLIC_URL
-                    }/assets/images/logo.svg`}
+                    }/assets/images/logo-dark1.jpeg`}
                     alt="logo"
                   />
                 </Link>

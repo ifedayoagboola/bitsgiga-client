@@ -7,7 +7,7 @@ export default {
       colors: {
         primarygray: "#f8f8f8",
         qblack: "#222222",
-        qyellow: "#FFBB38",
+        qyellow: "#F19042",
         qred: "#EF262C",
         qgray: "#797979",
         qblacktext: "#1D1D1D",

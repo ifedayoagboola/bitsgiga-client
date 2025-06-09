@@ -60,7 +60,7 @@ export default function HeaderOne({ className, drawerAction, type = 1 }) {
                   height="36"
                   src={`${
                     import.meta.env.VITE_PUBLIC_URL
-                  }/assets/images/logo.svg`}
+                  }/assets/images/logo-dark1.jpeg`}
                   alt="logo"
                 />
               </Link>
