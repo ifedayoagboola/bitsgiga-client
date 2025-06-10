@@ -20,7 +20,7 @@ export default function Banner({ className }) {
               <button
                 type="button"
                 onClick={() => sliderRef.current.slickPrev()}
-                className="relative hover:text-qh3-blue text-[#8cb1f6] 2xl:left-32 left-5 cursor-pointer z-10"
+                className="relative hover:text-qh3-blue text-[#ff6000] 2xl:left-32 left-5 cursor-pointer z-10"
               >
                 <svg
                   className="fill-current"
@@ -45,7 +45,7 @@ export default function Banner({ className }) {
               <button
                 type="button"
                 onClick={() => sliderRef.current.slickNext()}
-                className="relative hover:text-qh3-blue text-[#8cb1f6]  2xl:right-32 right-5 cursor-pointer z-10"
+                className="relative hover:text-qh3-blue text-[#000]  2xl:right-32 right-5 cursor-pointer z-10"
               >
                 <svg
                   width="84"

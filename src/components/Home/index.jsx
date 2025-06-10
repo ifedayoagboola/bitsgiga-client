@@ -6,8 +6,10 @@ import SectionStyleThree from "../Helpers/SectionStyleThree";
 import SectionStyleTwo from "../Helpers/SectionStyleTwo";
 import ViewMoreTitle from "../Helpers/ViewMoreTitle";
 import Layout from "../Partials/Layout";
+import AfterBanner from "./AfterBanner";
 // import Ads from "./Ads";
-import Banner from "./Banner";
+// import Banner from "./Banner";
+import Banner from "../HomeThree/Banner";
 import BestSellers from "./BestSellers";
 import BrandSection from "./BrandSection";
 import CampaignCountDown from "./CampaignCountDown";
@@ -31,8 +33,9 @@ export default function Home() {
     <>
       <Layout>
         {/* {ads && <Ads handler={adsHandle} />} */}
-        <div className="btn w-5 h-5 "></div>
+        {/* <div className="btn w-5 h-5 "></div> */}
         <Banner className="banner-wrapper mb-[60px]" />
+        <AfterBanner className="banner-wrapper mb-[60px]" />
         <SectionStyleOne
           products={products}
           brands={brands}
@@ -41,10 +44,7 @@ export default function Home() {
           seeMoreUrl="/all-products"
           className="category-products mb-[60px]"
         />
-        <BrandSection
-          sectionTitle="Shop by Brand"
-          className="brand-section-wrapper mb-[60px]"
-        />
+       
         <CampaignCountDown
           className="mb-[60px]"
           lastDate="2025-10-04 4:00:00"
