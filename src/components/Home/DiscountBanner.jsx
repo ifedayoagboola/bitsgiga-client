@@ -219,7 +219,7 @@ export default function DiscountBanner({ className, type }) {
               Coupon
             </h1>
             <p className="text-center sm:text-[18px] text-sm font-400">
-              by Subscribe our Newsletter
+              by Subscribing our Newsletter
             </p>
           </div>
           <div

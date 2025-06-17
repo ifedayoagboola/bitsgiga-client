@@ -7,10 +7,8 @@ import SectionStyleTwo from "../Helpers/SectionStyleTwo";
 import ViewMoreTitle from "../Helpers/ViewMoreTitle";
 import Layout from "../Partials/Layout";
 import AfterBanner from "./AfterBanner";
-// import Ads from "./Ads";
 import Banner from "./Banner";
 import BestSellers from "./BestSellers";
-import BrandSection from "./BrandSection";
 import CampaignCountDown from "./CampaignCountDown";
 import ProductsAds from "./ProductsAds";
 
@@ -20,19 +18,10 @@ export default function Home() {
   products.forEach((product) => {
     brands.push(product.brand);
   });
-  // const [ads, setAds] = useState(false);
-  // const adsHandle = () => {
-  //   setAds(false);
-  // };
-  // useEffect(() => gs
-  // {
-  //   setAds(true);
-  // }, []);
+
   return (
     <>
       <Layout>
-        {/* {ads && <Ads handler={adsHandle} />} */}
-        {/* <div className="btn w-5 h-5 "></div> */}
         <Banner className="banner-wrapper mb-[60px]" />
         <AfterBanner className="banner-wrapper mb-[60px]" />
         <SectionStyleOne
@@ -58,14 +47,14 @@ export default function Home() {
         <ViewMoreTitle
           className="best-sallers-section mb-[60px]"
           seeMoreUrl="/sallers"
-          categoryTitle="Best Saller"
+          categoryTitle="Best Sellers"
         >
           <BestSellers />
         </ViewMoreTitle>
         <ProductsAds
           ads={[
-            `${import.meta.env.VITE_PUBLIC_URL}/assets/images/bannera-1.png`,
-            `${import.meta.env.VITE_PUBLIC_URL}/assets/images/bannera-2.png`,
+            `${import.meta.env.VITE_PUBLIC_URL}/assets/images/ads-1-1.png`,
+            `${import.meta.env.VITE_PUBLIC_URL}/assets/images/ads-2-2.png`,
           ]}
           sectionHeight="sm:h-[295px] h-full"
           className="products-ads-section mb-[60px]"
@@ -73,7 +62,7 @@ export default function Home() {
         <SectionStyleOne
           categoryBackground={`${
             import.meta.env.VITE_PUBLIC_URL
-          }/assets/images/section-category-2.jpg`}
+          }/assets/images/section-category-3.png`}
           products={products.slice(4, products.length)}
           brands={brands}
           categoryTitle="Electronics"
@@ -82,7 +71,7 @@ export default function Home() {
           className="category-products mb-[60px]"
         />
         <ProductsAds
-          ads={[`${import.meta.env.VITE_PUBLIC_URL}/assets/images/bannera-3.png`]}
+          ads={[`${import.meta.env.VITE_PUBLIC_URL}/assets/images/ads-3-3.png`]}
           className="products-ads-section mb-[60px]"
         />
         <SectionStyleThree
@@ -93,7 +82,7 @@ export default function Home() {
         />
         <ProductsAds
           sectionHeight="164"
-          ads={[`${import.meta.env.VITE_PUBLIC_URL}assets/images/bannera-4.png`]}
+          ads={[`${import.meta.env.VITE_PUBLIC_URL}assets/images/ads-7.png`]}
           className="products-ads-section mb-[60px]"
         />
         <SectionStyleFour

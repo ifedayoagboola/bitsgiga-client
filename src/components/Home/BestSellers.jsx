@@ -18,7 +18,7 @@ export default function BestSellers({ className }) {
             />
           </div>
           <Link to="/saller-page">
-            <p className="text-base font-500 text-center">Shopno BD</p>
+            <p className="text-base font-500 text-center">Fame Tech</p>
           </Link>
         </div>
         <div

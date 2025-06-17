@@ -56,7 +56,7 @@ export default function AllProductPage() {
     <>
       <Layout>
         <div className="products-page-wrapper w-full">
-          <div className="container-x mx-auto">
+          <div className="container-x mx-auto py-5">
             <BreadcrumbCom />
             <div className="w-full lg:flex lg:space-x-[30px]">
               <div className="lg:w-[270px]">
@@ -76,7 +76,7 @@ export default function AllProductPage() {
                   <img
                     src={`${
                       import.meta.env.VITE_PUBLIC_URL
-                    }/assets/images/bannera-5.png`}
+                    }/assets/images/ads-9.png`}
                     alt=""
                     className="w-full h-full object-contain"
                   />
@@ -145,7 +145,7 @@ export default function AllProductPage() {
                   <img
                     src={`${
                       import.meta.env.VITE_PUBLIC_URL
-                    }/assets/images/bannera-6.png`}
+                    }/assets/images/ads-8.png`}
                     alt=""
                     className="w-full h-full object-contain"
                   />

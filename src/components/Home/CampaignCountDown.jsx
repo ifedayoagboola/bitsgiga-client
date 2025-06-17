@@ -20,7 +20,7 @@ export default function CampaignCountDown({
               style={{
                 background: `url(${
                   import.meta.env.VITE_PUBLIC_URL
-                }/assets/images/campaign-cover-countdown.jpg) no-repeat`,
+                }/assets/images/campaign-cover-countdown-5.png) no-repeat`,
                 backgroundSize: "cover",
               }}
             >
@@ -130,7 +130,7 @@ export default function CampaignCountDown({
                     <span className="text-qred border-b-2 border-qred mx-2">
                       Mobile App
                     </span>
-                    <br /> It’s Make easy for you life !
+                    <br /> Made easy for you!
                   </h1>
                   <div className="flex space-x-5 items-center">
                     <div>
@@ -152,7 +152,7 @@ export default function CampaignCountDown({
                           height="69"
                           src={`${
                             import.meta.env.VITE_PUBLIC_URL
-                          }/assets/images/apple-store.png`}
+                          }/assets/images/apple-store-1.png`}
                           alt=""
                         />
                       </a>
@@ -165,7 +165,7 @@ export default function CampaignCountDown({
                       appscreen ||
                       `${
                         import.meta.env.VITE_PUBLIC_URL
-                      }/assets/images/app-screen.png`
+                      }/assets/images/app-screen-2.png`
                     }
                     alt=""
                   />

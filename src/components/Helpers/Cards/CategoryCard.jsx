@@ -9,7 +9,7 @@ export default function CategoryCard({ background, title, brands = [] }) {
           background ||
           `${
             import.meta.env.VITE_PUBLIC_URL
-          }/assets/images/section-category-1.jpg`
+          }/assets/images/section-category-3.png`
         }) no-repeat`,
         backgroundSize: "cover",
       }}
