@@ -86,7 +86,7 @@ export default function Banner({ className }) {
                           VR BOX 3D Glass
                         </p>
                         <h1 className="md:text-[66px] text-[40px]  font-bold text-white md:leading-[80px] leading-[40px] mb-[44px]">
-                          Explore Our Tech Collection Perfect Gadget
+                          Explore Our Tech Collection Of Perfect Gadgets
                         </h1>
 
                         <Link to="#" passhref="true">
@@ -156,7 +156,7 @@ export default function Banner({ className }) {
                           VR BOX 3D Glass
                         </p>
                         <h1 className="md:text-[66px] text-[40px]  font-bold text-qblack md:leading-[80px] leading-[40px] mb-[44px]">
-                          Explore Our Tech Collection Perfect Gadget
+                          Explore Our Tech Collection Of Perfect Gadgets
                         </h1>
 
                         <Link to="#" passhref="true">
@@ -226,7 +226,7 @@ export default function Banner({ className }) {
                           VR BOX 3D Glass
                         </p>
                         <h1 className="md:text-[66px] text-[40px]  font-bold text-white md:leading-[80px] leading-[40px] mb-[44px]">
-                          Explore Our Tech Collection Perfect Gadget
+                          Explore Our Tech Collection Of Perfect Gadgets
                         </h1>
 
                         <Link to="#" passhref="true">
