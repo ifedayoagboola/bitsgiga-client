@@ -370,7 +370,8 @@ body {
 /* TODO: ===============RESPONSIVE END */
 
 /* Admin-style Register Page Styles */
-.main-wrapper {
+/* Login/Signup specific styles - only apply to auth pages */
+.login-new .main-wrapper {
   min-height: 100vh;
   background-image: url('/assets/images/login-bg.png');
   background-position: bottom center;
@@ -382,19 +383,19 @@ body {
   padding: 20px;
 }
 
-.account-content {
+.login-new .account-content {
   width: 100%;
   max-width: 1200px;
 }
 
-.login-wrapper {
+.login-new .login-wrapper {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.login-content {
+.login-new .login-content {
   width: 100%;
   padding: 0;
   overflow: hidden;
@@ -418,7 +419,7 @@ body {
   width: 100%;
 }
 
-.login-logo {
+.login-new .login-logo {
   text-align: center;
   margin-bottom: 30px;
   display: flex;
@@ -426,23 +427,23 @@ body {
   align-items: center;
 }
 
-.login-logo img {
+.login-new .login-logo img {
   max-width: 150px;
   height: auto;
 }
 
-.login-userheading {
+.login-new .login-userheading {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.login-userheading {
+.login-new .login-userheading {
   margin: 0 0 24px 0;
   padding: 0;
   text-align: left;
 }
 
-.login-userheading h3 {
+.login-new .login-userheading h3 {
   font-size: 24px;
   font-weight: 600;
   margin: 0 0 10px 0;
@@ -450,7 +451,7 @@ body {
   text-align: left;
 }
 
-.login-userheading h4 {
+.login-new .login-userheading h4 {
   font-size: 14px;
   font-weight: 400;
   color: #092C4C;
@@ -1020,21 +1021,21 @@ body {
 }
 
 @media (max-width: 768px) {
-  .login-wrapper {
+  .login-new .login-wrapper {
     padding: 15px;
     height: auto;
     min-height: 100vh;
   }
   
-  .card-body {
+  .login-new .card-body {
     padding: 20px !important;
   }
   
-  .login-userheading h3 {
+  .login-new .login-userheading h3 {
     font-size: 20px;
   }
   
-  .login-userheading h4 {
+  .login-new .login-userheading h4 {
     font-size: 14px;
   }
   
@@ -1087,19 +1088,19 @@ body {
 }
 
 @media (max-width: 575px) {
-  .login-wrapper {
+  .login-new .login-wrapper {
     padding: 10px;
   }
   
-  .card-body {
+  .login-new .card-body {
     padding: 15px !important;
   }
   
-  .login-userheading h3 {
+  .login-new .login-userheading h3 {
     font-size: 18px;
   }
   
-  .login-userheading h4 {
+  .login-new .login-userheading h4 {
     font-size: 13px;
   }
   
