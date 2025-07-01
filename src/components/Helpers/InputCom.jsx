@@ -9,6 +9,7 @@ export default function InputCom({
   inputClasses,
   labelClasses = "text-qgray text-[13px] font-normal",
 }) {
+
   return (
     <div className="input-com w-full h-full">
       {label && (
