@@ -1,33 +1,36 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import PasswordInput from "../../Helpers/PasswordInput";
 
 export default function Signup() {
   const [checked, setValue] = useState(false);
-  const [passwordVisibility, setPasswordVisibility] = useState({
-    password: false,
-    confirmPassword: false,
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
   });
 
   const rememberMe = () => {
     setValue(!checked);
   };
 
-  const togglePasswordVisibility = (field) => {
-    setPasswordVisibility((prevState) => ({
-      ...prevState,
-      [field]: !prevState[field],
-    }));
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   return (
-    <div className="main-wrapper">
+    <div className="main-wrapper mt-5">
         <div className="account-content">
           <div className="login-wrapper login-new">
             <div className="row w-100">
               <div className="col-lg-6 mx-auto">
                 <div className="login-content user-login">
                   <div className="login-logo">
-                    <img src="/assets/images/logo.png" alt="Bitshub" />
+                    <Link to="/">
+                      <img src="/assets/images/logo.png" alt="Bitshub" />
+                    </Link>
                   </div>
                   <form>
                     <div className="card">
@@ -44,7 +47,9 @@ export default function Signup() {
                           <div className="input-group">
                             <input
                               type="text"
-                              defaultValue=""
+                              name="name"
+                              value={formData.name}
+                              onChange={handleInputChange}
                               className="form-control border-end-0"
                             />
                             <span className="input-group-text border-start-0">
@@ -63,7 +68,9 @@ export default function Signup() {
                           <div className="input-group">
                             <input
                               type="email"
-                              defaultValue=""
+                              name="email"
+                              value={formData.email}
+                              onChange={handleInputChange}
                               className="form-control border-end-0"
                             />
                             <span className="input-group-text border-start-0">
@@ -75,61 +82,20 @@ export default function Signup() {
                           </div>
                         </div>
 
-                        <div className="mb-3">
-                          <label className="form-label">
-                            Password <span className="text-danger"> *</span>
-                          </label>
-                          <div className="pass-group">
-                            <input
-                              type={passwordVisibility.password ? "text" : "password"}
-                              className="pass-input form-control"
-                            />
-                            <span
-                              className="toggle-password"
-                              onClick={() => togglePasswordVisibility("password")}
-                            >
-                              {passwordVisibility.password ? (
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                  <circle cx="12" cy="12" r="3"></circle>
-                                </svg>
-                              ) : (
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
-                                  <line x1="1" y1="1" x2="23" y2="23"></line>
-                                </svg>
-                              )}
-                            </span>
-                          </div>
-                        </div>
-
-                        <div className="mb-3">
-                          <label className="form-label">
-                            Confirm Password <span className="text-danger"> *</span>
-                          </label>
-                          <div className="pass-group">
-                            <input
-                              type={passwordVisibility.confirmPassword ? "text" : "password"}
-                              className="pass-input form-control"
-                            />
-                            <span
-                              className="toggle-password"
-                              onClick={() => togglePasswordVisibility("confirmPassword")}
-                            >
-                              {passwordVisibility.confirmPassword ? (
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                  <circle cx="12" cy="12" r="3"></circle>
-                                </svg>
-                              ) : (
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
-                                  <line x1="1" y1="1" x2="23" y2="23"></line>
-                                </svg>
-                              )}
-                            </span>
-                          </div>
-                        </div>
+                        <PasswordInput
+                          label="Password"
+                          name="password"
+                          value={formData.password}
+                          onChange={handleInputChange}
+                          required
+                        />
+                        <PasswordInput
+                          label="Confirm Password"
+                          name="confirmPassword"
+                          value={formData.confirmPassword}
+                          onChange={handleInputChange}
+                          required
+                        />
 
                         <div className="form-login authentication-check">
                           <div className="row">
