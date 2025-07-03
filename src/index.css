@@ -371,31 +371,25 @@ body {
 
 /* Admin-style Register Page Styles */
 /* Login/Signup specific styles - only apply to auth pages */
-.login-new .main-wrapper {
-  min-height: 100vh;
+.login-wrapper.login-new {
+  overflow: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-image: url('/assets/images/login-bg.png');
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 100% 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
 }
 
-.login-new .account-content {
+.login-wrapper.login-new .account-content {
   width: 100%;
   max-width: 1200px;
 }
 
-.login-new .login-wrapper {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.login-new .login-content {
+.login-wrapper.login-new .login-content {
   width: 100%;
   padding: 0;
   overflow: hidden;
@@ -405,7 +399,7 @@ body {
   margin: 50px 0;
 }
 
-.login-content.user-login {
+.login-wrapper.login-new .login-content.user-login {
   width: 100%;
   padding: 0;
   overflow: hidden;
@@ -415,11 +409,11 @@ body {
   margin: 50px 0;
 }
 
-.login-content.user-login form {
+.login-wrapper.login-new .login-content.user-login form {
   width: 100%;
 }
 
-.login-new .login-logo {
+.login-wrapper.login-new .login-logo {
   text-align: center;
   margin-bottom: 30px;
   display: flex;
@@ -427,23 +421,23 @@ body {
   align-items: center;
 }
 
-.login-new .login-logo img {
+.login-wrapper.login-new .login-logo img {
   max-width: 150px;
   height: auto;
 }
 
-.login-new .login-userheading {
+.login-wrapper.login-new .login-userheading {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.login-new .login-userheading {
+.login-wrapper.login-new .login-userheading {
   margin: 0 0 24px 0;
   padding: 0;
   text-align: left;
 }
 
-.login-new .login-userheading h3 {
+.login-wrapper.login-new .login-userheading h3 {
   font-size: 24px;
   font-weight: 600;
   margin: 0 0 10px 0;
@@ -451,7 +445,7 @@ body {
   text-align: left;
 }
 
-.login-new .login-userheading h4 {
+.login-wrapper.login-new .login-userheading h4 {
   font-size: 14px;
   font-weight: 400;
   color: #092C4C;
@@ -462,7 +456,7 @@ body {
 .card {
   background: #ffffff;
   box-shadow: 0px 4px 60px 0px rgba(190, 190, 190, 0.27);
-  margin: 0;
+  margin: 0 auto;
   /* padding: 40px; */
   border: 1px solid #dee2e6;
   border-radius: 8px;
@@ -846,6 +840,8 @@ body {
   text-align: center;
   color: #666;
   font-size: 14px;
+  margin-top: auto;
+  padding-bottom: 20px;
 }
 
 /* Bootstrap Grid System */
@@ -1038,6 +1034,7 @@ body {
   .card {
     min-width: auto;
     max-width: 600px;
+    margin: 0 auto;
   }
   
   .form-setlogin h4:after,
@@ -1068,6 +1065,7 @@ body {
   .card {
     min-width: auto;
     max-width: 100%;
+    margin: 0 auto;
   }
   
   .form-setlogin h4:after,
@@ -1077,21 +1075,25 @@ body {
 }
 
 @media (max-width: 768px) {
-  .login-new .login-wrapper {
+  .login-wrapper.login-new {
     padding: 15px;
     height: auto;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
-  .login-new .card-body {
+  .login-wrapper.login-new .card-body {
     padding: 20px !important;
   }
   
-  .login-new .login-userheading h3 {
+  .login-wrapper.login-new .login-userheading h3 {
     font-size: 20px;
   }
   
-  .login-new .login-userheading h4 {
+  .login-wrapper.login-new .login-userheading h4 {
     font-size: 14px;
   }
   
@@ -1144,19 +1146,23 @@ body {
 }
 
 @media (max-width: 575px) {
-  .login-new .login-wrapper {
+  .login-wrapper.login-new {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
-  .login-new .card-body {
+  .login-wrapper.login-new .card-body {
     padding: 15px !important;
   }
   
-  .login-new .login-userheading h3 {
+  .login-wrapper.login-new .login-userheading h3 {
     font-size: 18px;
   }
   
-  .login-new .login-userheading h4 {
+  .login-wrapper.login-new .login-userheading h4 {
     font-size: 13px;
   }
   

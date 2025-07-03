@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function SocialLoginButton({
   provider,
@@ -34,4 +35,12 @@ export default function SocialLoginButton({
       </Link>
     </div>
   );
-} 
+}
+
+SocialLoginButton.propTypes = {
+  provider: PropTypes.string.isRequired,
+  iconSrc: PropTypes.string.isRequired,
+  altText: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  className: PropTypes.string,
+}; 
