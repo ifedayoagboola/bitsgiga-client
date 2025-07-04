@@ -369,53 +369,59 @@ body {
 
 /* TODO: ===============RESPONSIVE END */
 
-/* Admin-style Register Page Styles */
 /* Login/Signup specific styles - only apply to auth pages */
+.copyright-text {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  background: transparent;
+  z-index: 10;
+  margin: 0;
+  padding: 10px 0;
+}
+
 .login-wrapper.login-new {
-  overflow: auto;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url('/assets/images/login-bg.png');
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 100% 500px;
+  overflow: hidden;
 }
 
 .login-wrapper.login-new .account-content {
   width: 100%;
-  max-width: 1200px;
+  max-width: 650px;
+  display: block;
+  margin: 0 auto;
 }
 
-.login-wrapper.login-new .login-content {
-  width: 100%;
-  padding: 0;
-  overflow: hidden;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  height: auto;
-  margin: 50px 0;
-}
-
+.login-wrapper.login-new .login-content,
 .login-wrapper.login-new .login-content.user-login {
+  margin: 0;
   width: 100%;
-  padding: 0;
-  overflow: hidden;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  height: auto;
-  margin: 50px 0;
 }
 
-.login-wrapper.login-new .login-content.user-login form {
+.login-content.user-login {
   width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  max-height: calc(100vh - 50px);
+  padding-bottom: 8px;
 }
 
 .login-wrapper.login-new .login-logo {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -427,12 +433,7 @@ body {
 }
 
 .login-wrapper.login-new .login-userheading {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.login-wrapper.login-new .login-userheading {
-  margin: 0 0 24px 0;
+  margin: 0 0 16px 0;
   padding: 0;
   text-align: left;
 }
@@ -440,7 +441,7 @@ body {
 .login-wrapper.login-new .login-userheading h3 {
   font-size: 24px;
   font-weight: 600;
-  margin: 0 0 10px 0;
+  margin: 0 0 6px 0;
   color: #000000;
   text-align: left;
 }
@@ -453,11 +454,11 @@ body {
   text-align: left;
 }
 
+/* Form Styles */
 .card {
   background: #ffffff;
   box-shadow: 0px 4px 60px 0px rgba(190, 190, 190, 0.27);
   margin: 0 auto;
-  /* padding: 40px; */
   border: 1px solid #dee2e6;
   border-radius: 8px;
   min-width: 550px;
@@ -466,36 +467,16 @@ body {
 }
 
 .card-body {
-  padding: 48px !important;
+  padding: 32px !important;
 }
 
 .form-label {
   width: 100%;
   color: #092C4C;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   font-size: 15px;
   font-weight: 400;
   text-align: left;
-}
-
-.text-danger {
-  color: #dc3545 !important;
-}
-
-.text-orange {
-  color: #fd7e14 !important;
-}
-
-.fs-16 {
-  font-size: 16px !important;
-}
-
-.fw-medium {
-  font-weight: 500 !important;
-}
-
-.text-gray-6 {
-  color: #6c757d !important;
 }
 
 .input-group {
@@ -545,7 +526,6 @@ body {
   flex-shrink: 0;
 }
 
-/* SVG Icon styling */
 .input-group-text svg,
 .toggle-password svg {
   width: 14px;
@@ -581,32 +561,25 @@ body {
   color: #FE9F43;
 }
 
+/* Checkbox Styles */
 .custom-checkbox {
-  position: relative;
-  display: block;
-  min-height: 1.5rem;
-  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .checkboxs {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  font-size: 15px;
-  color: #666;
-  padding-left: 22px;
-  line-height: 1;
+  user-select: none;
 }
 
 .authentication-check .checkboxs {
-  padding-left: 18px;
-  line-height: 1;
+  padding-left: 20px;
 }
 
 .authentication-check .checkboxs .checkmarks {
-  border-radius: 5px;
-  top: 0;
-  left: -18px;
+  left: -20px;
 }
 
 .checkboxs input[type="checkbox"] {
@@ -620,12 +593,12 @@ body {
 .checkmarks {
   position: absolute;
   top: 0;
-  left: -22px;
+  left: 0;
   height: 16px;
   width: 16px;
   background-color: #fff;
-  border: 1px solid rgba(145, 158, 171, 0.32);
-  border-radius: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
 }
 
 .checkboxs input:checked ~ .checkmarks {
@@ -646,33 +619,26 @@ body {
 .checkboxs .checkmarks:after {
   left: 5px;
   top: 2px;
-  width: 5px;
+  width: 4px;
   height: 8px;
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
 
-.text-primary {
-  color: #FE9F43 !important;
-  text-decoration: none;
-}
-
-.text-primary:hover {
-  text-decoration: underline;
-}
-
+/* Button Styles */
 .btn-login {
-  width: 100% !important;
-  font-weight: 600 !important;
-  font-size: 14px !important;
-  background: #FE9F43 !important;
-  border: 1px solid #FE9F43 !important;
-  padding: 6px 14px !important;
-  transition: all 0.5s ease !important;
-  margin-top: 5px !important;
-  color: #ffffff !important;
-  border-radius: 5px !important;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  background: #FE9F43;
+  border-color: #FE9F43;
+  padding: 8px;
+  transition: all 0.5s ease;
+  margin-top: 3px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
 }
 
 .btn-login:hover {
@@ -680,8 +646,39 @@ body {
   color: #FE9F43 !important;
 }
 
+/* Text Styles */
+.text-danger {
+  color: #dc3545 !important;
+}
+
+.text-orange {
+  color: #fd7e14 !important;
+}
+
+.text-primary {
+  color: #FE9F43;
+  text-decoration: none;
+}
+
+.text-primary:hover {
+  color: #e68a3a;
+}
+
+.text-gray-6 {
+  color: #6c757d !important;
+}
+
+.fs-16 {
+  font-size: 16px !important;
+}
+
+.fw-medium {
+  font-weight: 500 !important;
+}
+
+/* Form Sections */
 .signinform {
-  margin-bottom: 23px;
+  margin-bottom: 16px;
 }
 
 .signinform h4 {
@@ -725,7 +722,7 @@ body {
   color: #6c757d;
   font-size: 15px;
   font-weight: 400;
-  margin-bottom: 23px;
+  margin-bottom: 16px;
 }
 
 .form-setlogin h4 {
@@ -764,20 +761,21 @@ body {
   margin: auto;
 }
 
+/* Social Login Buttons */
 .br-10 {
   border-radius: 10px !important;
 }
 
 .btn-info {
-  background-color: #17a2b8;
-  border-color: #17a2b8;
-  color: white;
+  background-color: #1877F2 !important;
+  border-color: #1877F2 !important;
+  color: white !important;
 }
 
 .btn-info:hover {
-  background-color: #138496;
-  border-color: #117a8b;
-  color: white;
+  background-color: #166fe5 !important;
+  border-color: #166fe5 !important;
+  color: white !important;
 }
 
 .btn-white {
@@ -805,46 +803,35 @@ body {
 }
 
 .btn-primary {
-  color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
+  color: #fff;
   display: inline-block;
   font-weight: 400;
-  line-height: 1.5;
   text-align: center;
-  text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-  user-select: none;
-  border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
-  border-radius: 0.375rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  text-decoration: none;
 }
 
 .btn-primary:hover {
-  color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
+  color: #fff;
 }
 
 .btn-primary:focus {
-  color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-.copyright-text {
-  text-align: center;
-  color: #666;
-  font-size: 14px;
-  margin-top: auto;
-  padding-bottom: 20px;
-}
-
-/* Bootstrap Grid System */
+/* Utility Classes */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -856,6 +843,7 @@ body {
   flex: 0 0 41.666667%;
   max-width: 41.666667%;
 }
+
 
 .col-lg-6 {
   flex: 0 0 50%;
@@ -870,25 +858,8 @@ body {
   }
 }
 
-/* Ensure the form container is wide enough */
-.login-content.user-login {
-  width: 100%;
-  max-width: 650px;
-  margin: 0 auto;
-}
-
-.mx-auto {
-  margin-right: auto !important;
-  margin-left: auto !important;
-}
-
-.w-100 {
-  width: 100% !important;
-}
-
-/* Additional utility classes */
 .mb-3 {
-  margin-bottom: 15px !important;
+  margin-bottom: 10px !important;
 }
 
 .mt-2 {
@@ -935,49 +906,6 @@ body {
   padding: 15px 53px !important;
 }
 
-.br-10 {
-  border-radius: 10px !important;
-}
-
-/* Social login button colors */
-.btn-info {
-  background-color: #1877F2 !important;
-  border-color: #1877F2 !important;
-  color: white !important;
-}
-
-.btn-info:hover {
-  background-color: #166fe5 !important;
-  border-color: #166fe5 !important;
-  color: white !important;
-}
-
-.btn-dark {
-  background-color: #000000 !important;
-  border-color: #000000 !important;
-  color: white !important;
-}
-
-.btn-dark:hover {
-  background-color: #333333 !important;
-  border-color: #333333 !important;
-  color: white !important;
-}
-
-.btn {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  text-decoration: none;
-}
-
 .border {
   border: 1px solid #dee2e6 !important;
 }
@@ -1011,7 +939,7 @@ body {
   line-height: 1 !important;
 }
 
-/* Responsive adjustments */
+/* Responsive Styles */
 @media (max-width: 1024px) {
   .login-content.user-login {
     width: 100%;
@@ -1226,3 +1154,4 @@ body {
     left: -16px;
   }
 }
+
