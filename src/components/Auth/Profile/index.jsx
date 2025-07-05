@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 import datas from "../../../data/products.json";
 import BreadcrumbCom from "../../BreadcrumbCom";
 import Layout from "../../Partials/Layout";
@@ -22,12 +23,29 @@ import ProfileTab from "./tabs/ProfileTab";
 import ReviewTab from "./tabs/ReviewTab";
 import SupportTab from "./tabs/SupportTab";
 import WishlistTab from "./tabs/WishlistTab";
+import { useDispatch, useSelector } from "react-redux";
+import { logout as logoutAction, selectIsAuthenticated } from "../../../store/slices/authSlice";
 
 export default function Profile() {
   const [switchDashboard, setSwitchDashboard] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const isAuthenticated = useSelector(selectIsAuthenticated);
   const getHashContent = location.hash.split("#");
   const [active, setActive] = useState("dashboard");
+  
+  // Check authentication on component mount
+  useEffect(() => {
+    if (!isAuthenticated) {
+      toast.error('Please login to access your profile');
+      navigate('/login');
+      return;
+    }
+    setIsLoading(false);
+  }, [isAuthenticated, navigate]);
+  
   useEffect(() => {
     setActive(
       getHashContent && getHashContent.length > 1
@@ -35,6 +53,42 @@ export default function Profile() {
         : "dashboard"
     );
   }, [getHashContent]);
+
+  const handleLogout = () => {
+    const confirmed = window.confirm('Are you sure you want to logout?');
+    if (!confirmed) return;
+    // Remove token from localStorage
+    localStorage.removeItem('authToken');
+    // Clear user data from Redux store
+    dispatch(logoutAction());
+    // Show success toast
+    toast.success('Logged out successfully!');
+    // Redirect to home page after a short delay
+    setTimeout(() => {
+      navigate('/');
+    }, 2000);
+  };
+
+  // Show loading spinner while checking authentication
+  if (isLoading) {
+    return (
+      <Layout childrenClasses="pt-0 pb-0">
+        <div className="profile-page-wrapper w-full">
+          <div className="container-x mx-auto">
+            <div className="w-full my-10 flex justify-center items-center min-h-[400px]">
+              <div className="text-center">
+                <div className="spinner-border text-primary" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </div>
+                <p className="mt-3 text-gray-600">Loading profile...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
+
   return (
     <Layout childrenClasses="pt-0 pb-0">
       <div className="profile-page-wrapper w-full">
@@ -177,16 +231,19 @@ export default function Profile() {
                       </Link>
                     </div>
                     <div className="item group">
-                      <Link to="/profile#profile">
+                      <button
+                        onClick={handleLogout}
+                        className="w-full text-left"
+                      >
                         <div className="flex space-x-3 items-center text-qgray hover:text-qblack">
                           <span>
                             <IcoLogout />
                           </span>
-                          <span className=" font-normal text-base">
-                            Logoout
+                          <span className="font-normal text-base">
+                            Logout
                           </span>
                         </div>
-                      </Link>
+                      </button>
                     </div>
                   </div>
                 </div>

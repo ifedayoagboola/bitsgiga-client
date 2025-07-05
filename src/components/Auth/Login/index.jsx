@@ -1,9 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import toast from "react-hot-toast";
 import InputGroup from "../../Helpers/InputGroup";
 import PasswordInput from "../../Helpers/PasswordInput";
-import SocialLoginButton from "../../Helpers/SocialLoginButton";
+// import SocialLoginButton from "../../Helpers/SocialLoginButton";
+import { useLoginMutation } from "../../../store/api";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../../store/slices/authSlice";
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email address").required("Email is required"),
@@ -11,6 +15,45 @@ const LoginSchema = Yup.object().shape({
 });
 
 export default function Login() {
+  const [login, { isLoading }] = useLoginMutation();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleSubmit = async (values, { setSubmitting }) => {
+    try {
+      const result = await login({
+        email: values.email.toLowerCase().trim(),
+        password: values.password,
+      }).unwrap();
+      
+      // Store user data and token in Redux
+      dispatch(setUser({
+        user: result,
+        token: result.accessToken,
+      }));
+
+      // Show success toast
+      toast.success('Login successful! Welcome back!');
+
+      // Redirect to home page after a short delay
+      setTimeout(() => {
+        navigate('/');
+      }, 2000);
+    } catch (err) {
+      console.error('Login failed:', err);
+      let errorMessage = 'Login failed. Please check your credentials and try again.';
+      
+      if (err.data?.message) {
+        errorMessage = err.data.message;
+      }
+      
+      // Show error toast
+      toast.error(errorMessage);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <>
       {/* Main Wrapper */}
@@ -26,10 +69,7 @@ export default function Login() {
                   <Formik
                     initialValues={{ email: "", password: "", rememberMe: false }}
                     validationSchema={LoginSchema}
-                    onSubmit={(values) => {
-                      // handle login
-                      console.log(values);
-                    }}
+                    onSubmit={handleSubmit}
                   >
                 {({ values, handleChange, handleBlur }) => (
                       <Form>
@@ -67,34 +107,36 @@ export default function Login() {
                               required
                             />
                             <ErrorMessage name="password" component="div" className="text-danger mb-2" />
-                            <div className="form-login authentication-check">
-                              <div className="row">
-                                <div className="col-12 d-flex align-items-center justify-content-between">
-                                  <div className="custom-control custom-checkbox">
-                                    <label className="checkboxs ps-4 mb-0 pb-0 line-height-1 fs-16 text-gray-6">
-                                      <Field
-                                        type="checkbox"
-                                        className="form-control"
-                                        name="rememberMe"
-                                      />
-                                      <span className="checkmarks" />
-                                      Remember me
-                                    </label>
-                                  </div>
-                                  <div className="text-end">
-                                    <Link
-                                      className="text-orange fs-16 fw-medium"
-                                      to="/forgot-password"
-                                    >
-                                      Forgot Password?
-                                    </Link>
-                                  </div>
-                                </div>
-                              </div>
+                            <div className="d-flex justify-content-between align-items-center mb-3">
+                              <label className="custom-checkbox d-flex align-items-center mb-0">
+                                <Field
+                                  type="checkbox"
+                                  name="rememberMe"
+                                  className="form-check-input me-2"
+                                />
+                                Remember me
+                              </label>
+                              <Link
+                                className="text-orange fs-16 fw-medium ms-2"
+                                to="/forgot-password"
+                              >
+                                Forgot Password?
+                              </Link>
                             </div>
-                            <div className="form-login">
-                              <button type="submit" className="btn btn-login w-100">
-                                Sign In
+                            <div className="form-login py-2">
+                              <button 
+                                type="submit" 
+                                className="btn btn-login w-100"
+                                disabled={isLoading}
+                              >
+                                {isLoading ? (
+                                  <>
+                                    <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                    Signing In...
+                                  </>
+                                ) : (
+                                  'Sign In'
+                                )}
                               </button>
                             </div>
                             <div className="signinform">
@@ -106,7 +148,7 @@ export default function Login() {
                                 </Link>
                               </h4>
                             </div>
-                            <div className="form-setlogin or-text">
+                            {/* <div className="form-setlogin or-text">
                               <h4>OR</h4>
                             </div>
                             <div className="mt-2">
@@ -127,7 +169,7 @@ export default function Login() {
                                   altText="Apple"
                                 />
                               </div>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                       </Form>

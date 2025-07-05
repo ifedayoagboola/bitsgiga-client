@@ -1,23 +1,85 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import toast from "react-hot-toast";
 import PasswordInput from "../../Helpers/PasswordInput";
+import { useRegisterMutation } from "../../../store/api";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../../store/slices/authSlice";
 
 const SignupSchema = Yup.object().shape({
-  name: Yup.string().required("Name is required"),
+  first_name: Yup.string().required("First name is required"),
+  last_name: Yup.string().required("Last name is required"),
   email: Yup.string().email("Invalid email address").required("Email is required"),
-  password: Yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
+  password: Yup.string().min(8, "Password must be at least 8 characters").max(25, "Password must be at most 25 characters").required("Password is required"),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref('password'), null], 'Passwords must match')
     .required('Confirm Password is required'),
+  phone_number: Yup.string().optional(),
 });
 
 export default function Signup() {
   const [checked, setValue] = useState(false);
+  const [register, { isLoading }] = useRegisterMutation();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const rememberMe = () => {
     setValue(!checked);
+  };
+
+  const handleSubmit = async (values, { setSubmitting, setFieldError }) => {
+    if (!checked) {
+      setFieldError('terms', 'You must agree to the Terms & Privacy');
+      setSubmitting(false);
+      return;
+    }
+
+    try {
+      // Transform form data to match API format
+      const userData = {
+        first_name: values.first_name,
+        last_name: values.last_name,
+        email: values.email.toLowerCase().trim(),
+        password: values.password,
+        phone_number: values.phone_number || undefined,
+      };
+      const result = await register(userData).unwrap();
+      
+      // Store user data and token in Redux
+      dispatch(setUser({
+        user: result,
+        token: result.accessToken,
+      }));
+
+      // Show success toast
+      toast.success('Account created successfully! Welcome to Bitshub!');
+
+      // Redirect to home page after a short delay
+      setTimeout(() => {
+        navigate('/');
+      }, 2000);
+    } catch (err) {
+      console.error('Registration failed:', err);
+      // Handle specific error cases
+      let errorMessage = 'Registration failed. Please try again.';
+      
+      if (err.data?.message) {
+        if (err.data.message.includes('already exists')) {
+          setFieldError('email', 'An account with this email already exists');
+          errorMessage = 'An account with this email already exists';
+        } else {
+          setFieldError('general', err.data.message);
+          errorMessage = err.data.message;
+        }
+      }
+      
+      // Show error toast
+      toast.error(errorMessage);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -31,14 +93,18 @@ export default function Signup() {
                     </Link>
                   </div>
                   <Formik
-                    initialValues={{ name: "", email: "", password: "", confirmPassword: "" }}
-                    validationSchema={SignupSchema}
-                    onSubmit={(values) => {
-                      // handle signup
-                      // console.log(values);
+                    initialValues={{ 
+                      first_name: "", 
+                      last_name: "", 
+                      email: "", 
+                      password: "", 
+                      confirmPassword: "",
+                      phone_number: ""
                     }}
+                    validationSchema={SignupSchema}
+                    onSubmit={handleSubmit}
                   >
-                    {({ values, handleChange, handleBlur }) => (
+                    {({ values, handleChange, handleBlur, isSubmitting, errors, touched }) => (
                       <Form>
                         <div className="card">
                           <div className="card-body p-5">
@@ -46,18 +112,26 @@ export default function Signup() {
                               <h3>Register</h3>
                               <h4>Create New Bitshub Account</h4>
                             </div>
+                            
+                            {/* General error message */}
+                            {errors.general && (
+                              <div className="alert alert-danger" role="alert">
+                                {errors.general}
+                              </div>
+                            )}
+
                             <div className="mb-3">
                               <label className="form-label">
-                                Name <span className="text-danger"> *</span>
+                                First Name <span className="text-danger"> *</span>
                               </label>
                               <div className="input-group">
                                 <Field
                                   type="text"
-                                  name="name"
-                                  value={values.name}
+                                  name="first_name"
+                                  value={values.first_name}
                                   onChange={handleChange}
                                   onBlur={handleBlur}
-                                  className="form-control border-end-0"
+                                  className={`form-control border-end-0 ${errors.first_name && touched.first_name ? 'is-invalid' : ''}`}
                                 />
                                 <span className="input-group-text border-start-0">
                                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -66,8 +140,32 @@ export default function Signup() {
                                   </svg>
                                 </span>
                               </div>
-                              <ErrorMessage name="name" component="div" className="text-danger mb-2" />
+                              <ErrorMessage name="first_name" component="div" className="text-danger mb-2" />
                             </div>
+
+                            <div className="mb-3">
+                              <label className="form-label">
+                                Last Name <span className="text-danger"> *</span>
+                              </label>
+                              <div className="input-group">
+                                <Field
+                                  type="text"
+                                  name="last_name"
+                                  value={values.last_name}
+                                  onChange={handleChange}
+                                  onBlur={handleBlur}
+                                  className={`form-control border-end-0 ${errors.last_name && touched.last_name ? 'is-invalid' : ''}`}
+                                />
+                                <span className="input-group-text border-start-0">
+                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                  </svg>
+                                </span>
+                              </div>
+                              <ErrorMessage name="last_name" component="div" className="text-danger mb-2" />
+                            </div>
+
                             <div className="mb-3">
                               <label className="form-label">
                                 Email <span className="text-danger"> *</span>
@@ -79,7 +177,7 @@ export default function Signup() {
                                   value={values.email}
                                   onChange={handleChange}
                                   onBlur={handleBlur}
-                                  className="form-control border-end-0"
+                                  className={`form-control border-end-0 ${errors.email && touched.email ? 'is-invalid' : ''}`}
                                 />
                                 <span className="input-group-text border-start-0">
                                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -90,6 +188,30 @@ export default function Signup() {
                               </div>
                               <ErrorMessage name="email" component="div" className="text-danger mb-2" />
                             </div>
+
+                            {/* <div className="mb-3">
+                              <label className="form-label">
+                                Phone Number
+                              </label>
+                              <div className="input-group">
+                                <Field
+                                  type="tel"
+                                  name="phone_number"
+                                  value={values.phone_number}
+                                  onChange={handleChange}
+                                  onBlur={handleBlur}
+                                  className="form-control border-end-0"
+                                  placeholder="Optional"
+                                />
+                                <span className="input-group-text border-start-0">
+                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                  </svg>
+                                </span>
+                              </div>
+                              <ErrorMessage name="phone_number" component="div" className="text-danger mb-2" />
+                            </div> */}
+
                             <PasswordInput
                               label="Password"
                               name="password"
@@ -97,8 +219,10 @@ export default function Signup() {
                               onChange={handleChange}
                               onBlur={handleBlur}
                               required
+                              className={errors.password && touched.password ? 'is-invalid' : ''}
                             />
                             <ErrorMessage name="password" component="div" className="text-danger mb-2" />
+                            
                             <PasswordInput
                               label="Confirm Password"
                               name="confirmPassword"
@@ -106,35 +230,43 @@ export default function Signup() {
                               onChange={handleChange}
                               onBlur={handleBlur}
                               required
+                              className={errors.confirmPassword && touched.confirmPassword ? 'is-invalid' : ''}
                             />
                             <ErrorMessage name="confirmPassword" component="div" className="text-danger mb-2" />
-                            <div className="form-login authentication-check">
-                              <div className="row">
-                                <div className="col-sm-8">
-                                  <div className="custom-control custom-checkbox justify-content-start">
-                                    <div className="custom-control custom-checkbox">
-                                      <label className="checkboxs ps-4 mb-0 pb-0 line-height-1">
-                                        <input
-                                          type="checkbox"
-                                          checked={checked}
-                                          onChange={rememberMe}
-                                        />
-                                        <span className="checkmarks" />
-                                        I agree to the{" "}
-                                        <Link to="#" className="text-primary">
-                                          Terms &amp; Privacy
-                                        </Link>
-                                      </label>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+
+                            {/* Aligned Terms & Privacy checkbox */}
+                            <div className="d-flex align-items-center mb-3">
+                              <label className="custom-checkbox d-flex align-items-center mb-0">
+                                <input
+                                  type="checkbox"
+                                  checked={checked}
+                                  onChange={rememberMe}
+                                  className="form-check-input me-2"
+                                />
+                                I agree to the&nbsp;<Link to="#" className="text-primary">Terms &amp; Privacy</Link>
+                              </label>
                             </div>
+                            {errors.terms && (
+                              <div className="text-danger mt-1">{errors.terms}</div>
+                            )}
+                            
                             <div className="form-login py-2">
-                              <button type="submit" className="btn btn-login w-100">
-                                Sign Up
+                              <button 
+                                type="submit" 
+                                className="btn btn-login w-100"
+                                disabled={isSubmitting || isLoading}
+                              >
+                                {isSubmitting || isLoading ? (
+                                  <>
+                                    <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                    Creating Account...
+                                  </>
+                                ) : (
+                                  'Sign Up'
+                                )}
                               </button>
                             </div>
+                            
                             <div className="signinform">
                               <h4>
                                 Already have an account ?{" "}
@@ -143,9 +275,11 @@ export default function Signup() {
                                 </Link>
                               </h4>
                             </div>
-                            <div className="form-setlogin or-text">
+                            
+                            {/* <div className="form-setlogin or-text">
                               <h4>OR</h4>
                             </div>
+                            
                             <div className="mt-2">
                               <div className="d-flex align-items-center justify-content-center flex-wrap">
                                 <div className="text-center me-2 flex-fill">
@@ -185,7 +319,7 @@ export default function Signup() {
                                   </Link>
                                 </div>
                               </div>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                       </Form>

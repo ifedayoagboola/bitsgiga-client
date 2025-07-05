@@ -4,6 +4,18 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontSize: {
+        'xs': ['0.875rem', { lineHeight: '1.25rem' }],
+        'sm': ['1rem', { lineHeight: '1.5rem' }],
+        'base': ['1.125rem', { lineHeight: '1.75rem' }],
+        'lg': ['1.25rem', { lineHeight: '1.75rem' }],
+        'xl': ['1.5rem', { lineHeight: '2rem' }],
+        '2xl': ['1.875rem', { lineHeight: '2.25rem' }],
+        '3xl': ['2.25rem', { lineHeight: '2.5rem' }],
+        '4xl': ['3rem', { lineHeight: '1' }],
+        '5xl': ['3.75rem', { lineHeight: '1' }],
+        '6xl': ['4.5rem', { lineHeight: '1' }],
+      },
       colors: {
         primarygray: "#f8f8f8",
         qblack: "#222222",
