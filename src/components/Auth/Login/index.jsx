@@ -1,9 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import toast from "react-hot-toast";
 import InputGroup from "../../Helpers/InputGroup";
 import PasswordInput from "../../Helpers/PasswordInput";
+import Button from "../../Helpers/Button";
 // import SocialLoginButton from "../../Helpers/SocialLoginButton";
 import { useLoginMutation } from "../../../store/api";
 import { useDispatch } from "react-redux";
@@ -17,6 +18,7 @@ const LoginSchema = Yup.object().shape({
 export default function Login() {
   const [login, { isLoading }] = useLoginMutation();
   const navigate = useNavigate();
+  const location = useLocation();
   const dispatch = useDispatch();
 
   const handleSubmit = async (values, { setSubmitting }) => {
@@ -26,18 +28,29 @@ export default function Login() {
         password: values.password,
       }).unwrap();
       
+
+      
       // Store user data and token in Redux
       dispatch(setUser({
-        user: result,
-        token: result.accessToken,
+        user: result.data,
+        token: result.data.accessToken,
       }));
 
       // Show success toast
       toast.success('Login successful! Welcome back!');
 
-      // Redirect to home page after a short delay
+      // Check if there's a return URL from the location state
+      const returnUrl = location.state?.from || '/';
+      const message = location.state?.message;
+
+      // Show custom message if provided
+      if (message) {
+        toast.success(message);
+      }
+
+      // Redirect to return URL or home page after a short delay
       setTimeout(() => {
-        navigate('/');
+        navigate(returnUrl);
       }, 2000);
     } catch (err) {
       console.error('Login failed:', err);
@@ -124,20 +137,15 @@ export default function Login() {
                               </Link>
                             </div>
                             <div className="form-login py-2">
-                              <button 
+                              <Button 
                                 type="submit" 
-                                className="btn btn-login w-100"
+                                variant="primary"
+                                fullWidth
+                                loading={isLoading}
                                 disabled={isLoading}
                               >
-                                {isLoading ? (
-                                  <>
-                                    <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                                    Signing In...
-                                  </>
-                                ) : (
-                                  'Sign In'
-                                )}
-                              </button>
+                                Sign In
+                              </Button>
                             </div>
                             <div className="signinform">
                               <h4>

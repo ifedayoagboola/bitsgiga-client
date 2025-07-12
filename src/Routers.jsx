@@ -4,7 +4,7 @@ import AllProductPage from "./components/AllProductPage";
 import Login from "./components/Auth/Login/index";
 import Profile from "./components/Auth/Profile";
 import Signup from "./components/Auth/Signup";
-import BecomeSaller from "./components/BecomeSaller";
+import CreateStore from "./components/CreateStore";
 import Blogs from "./components/Blogs";
 import Blog from "./components/Blogs/Blog.jsx";
 import CardPage from "./components/CartPage";
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
   { path: "/login", element: <Login /> },
   { path: "/signup", element: <Signup /> },
   { path: "/profile", element: <Profile /> },
-  { path: "/become-saller", element: <BecomeSaller /> },
+  { path: "/create-store", element: <CreateStore /> },
   { path: "/privacy-policy", element: <PrivacyPolicy /> },
   { path: "/terms-condition", element: <TermsCondition /> },
   { path: "*", element: <FourZeroFour /> },

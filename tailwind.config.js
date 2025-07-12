@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-// import plugin from "tailwindcss/line-clamp";
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -30,6 +29,23 @@ export default {
         "qh4-pink": "#FDB2BB",
         "qh5-bwhite": "#95D7DE",
         "qh3-blue": "#1868D5",
+        // Button colors
+        primary: "#FE9F43",
+        "primary-hover": "#e68a3a",
+        secondary: "#6b7280",
+        "secondary-hover": "#374151",
+        success: "#16a34a",
+        "success-hover": "#15803d",
+        danger: "#dc2626",
+        "danger-hover": "#b91c1c",
+        warning: "#eab308",
+        "warning-hover": "#ca8a04",
+        info: "#2563eb",
+        "info-hover": "#1d4ed8",
+        light: "#f3f4f6",
+        "light-hover": "#e5e7eb",
+        dark: "#1f2937",
+        "dark-hover": "#111827",
       },
       scale: {
         60: "0.6",
@@ -42,5 +58,5 @@ export default {
       borderStyle: ["last"],
     },
   },
-  // plugins: [plugin],
+  // plugins: [],
 };

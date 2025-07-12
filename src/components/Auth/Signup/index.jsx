@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import toast from "react-hot-toast";
 import PasswordInput from "../../Helpers/PasswordInput";
+import InputGroup from "../../Helpers/InputGroup";
+import Button from "../../Helpers/Button";
 import { useRegisterMutation } from "../../../store/api";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../../store/slices/authSlice";
@@ -49,8 +51,8 @@ export default function Signup() {
       
       // Store user data and token in Redux
       dispatch(setUser({
-        user: result,
-        token: result.accessToken,
+        user: result.data,
+        token: result.data.accessToken,
       }));
 
       // Show success toast
@@ -120,74 +122,59 @@ export default function Signup() {
                               </div>
                             )}
 
-                            <div className="mb-3">
-                              <label className="form-label">
-                                First Name <span className="text-danger"> *</span>
-                              </label>
-                              <div className="input-group">
-                                <Field
-                                  type="text"
-                                  name="first_name"
-                                  value={values.first_name}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  className={`form-control border-end-0 ${errors.first_name && touched.first_name ? 'is-invalid' : ''}`}
-                                />
-                                <span className="input-group-text border-start-0">
-                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                  </svg>
-                                </span>
-                              </div>
-                              <ErrorMessage name="first_name" component="div" className="text-danger mb-2" />
-                            </div>
+                            <InputGroup
+                              label="First Name"
+                              type="text"
+                              name="first_name"
+                              value={values.first_name}
+                              onChange={handleChange}
+                              onBlur={handleBlur}
+                              icon={
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                  <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                              }
+                              required
+                              className={errors.first_name && touched.first_name ? 'is-invalid' : ''}
+                            />
+                            <ErrorMessage name="first_name" component="div" className="text-danger mb-2" />
 
-                            <div className="mb-3">
-                              <label className="form-label">
-                                Last Name <span className="text-danger"> *</span>
-                              </label>
-                              <div className="input-group">
-                                <Field
-                                  type="text"
-                                  name="last_name"
-                                  value={values.last_name}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  className={`form-control border-end-0 ${errors.last_name && touched.last_name ? 'is-invalid' : ''}`}
-                                />
-                                <span className="input-group-text border-start-0">
-                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                  </svg>
-                                </span>
-                              </div>
-                              <ErrorMessage name="last_name" component="div" className="text-danger mb-2" />
-                            </div>
+                            <InputGroup
+                              label="Last Name"
+                              type="text"
+                              name="last_name"
+                              value={values.last_name}
+                              onChange={handleChange}
+                              onBlur={handleBlur}
+                              icon={
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                  <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                              }
+                              required
+                              className={errors.last_name && touched.last_name ? 'is-invalid' : ''}
+                            />
+                            <ErrorMessage name="last_name" component="div" className="text-danger mb-2" />
 
-                            <div className="mb-3">
-                              <label className="form-label">
-                                Email <span className="text-danger"> *</span>
-                              </label>
-                              <div className="input-group">
-                                <Field
-                                  type="email"
-                                  name="email"
-                                  value={values.email}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  className={`form-control border-end-0 ${errors.email && touched.email ? 'is-invalid' : ''}`}
-                                />
-                                <span className="input-group-text border-start-0">
-                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                  </svg>
-                                </span>
-                              </div>
-                              <ErrorMessage name="email" component="div" className="text-danger mb-2" />
-                            </div>
+                            <InputGroup
+                              label="Email"
+                              type="email"
+                              name="email"
+                              value={values.email}
+                              onChange={handleChange}
+                              onBlur={handleBlur}
+                              icon={
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                  <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                              }
+                              required
+                              className={errors.email && touched.email ? 'is-invalid' : ''}
+                            />
+                            <ErrorMessage name="email" component="div" className="text-danger mb-2" />
 
                             {/* <div className="mb-3">
                               <label className="form-label">
@@ -251,20 +238,15 @@ export default function Signup() {
                             )}
                             
                             <div className="form-login py-2">
-                              <button 
+                              <Button 
                                 type="submit" 
-                                className="btn btn-login w-100"
+                                variant="primary"
+                                fullWidth
+                                loading={isSubmitting || isLoading}
                                 disabled={isSubmitting || isLoading}
                               >
-                                {isSubmitting || isLoading ? (
-                                  <>
-                                    <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                                    Creating Account...
-                                  </>
-                                ) : (
-                                  'Sign Up'
-                                )}
-                              </button>
+                                Sign Up
+                              </Button>
                             </div>
                             
                             <div className="signinform">

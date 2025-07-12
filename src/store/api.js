@@ -305,7 +305,7 @@ export const api = createApi({
     // ===== STORE ENDPOINTS =====
     getStores: builder.query({
       query: (params = {}) => ({
-        url: '/stores',
+        url: '/store',
         params,
       }),
       providesTags: (result) =>
@@ -318,13 +318,13 @@ export const api = createApi({
     }),
     
     getStore: builder.query({
-      query: (id) => `/stores/${id}`,
+      query: (id) => `/store/${id}`,
       providesTags: (result, error, id) => [{ type: 'Store', id }],
     }),
     
     createStore: builder.mutation({
       query: (storeData) => ({
-        url: '/stores',
+        url: '/store/create',
         method: 'POST',
         body: storeData,
       }),
@@ -333,9 +333,9 @@ export const api = createApi({
     
     updateStore: builder.mutation({
       query: ({ id, ...storeData }) => ({
-        url: `/stores/${id}`,
-        method: 'PUT',
-        body: storeData,
+        url: `/store/update`,
+        method: 'POST',
+        body: { store_id: id, ...storeData },
       }),
       invalidatesTags: (result, error, { id }) => [
         { type: 'Store', id },
@@ -345,8 +345,9 @@ export const api = createApi({
     
     deleteStore: builder.mutation({
       query: (id) => ({
-        url: `/stores/${id}`,
+        url: `/store/delete`,
         method: 'DELETE',
+        params: { store_id: id },
       }),
       invalidatesTags: [{ type: 'Store', id: 'LIST' }],
     }),

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import Facebook from "../../../Helpers/icons/Facebook";
 import Instagram from "../../../Helpers/icons/Instagram";
 import Youtube from "../../../Helpers/icons/Youtube";
@@ -98,9 +99,9 @@ export default function Footer({ type }) {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/become-saller">
+                      <Link to="/create-store">
                         <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
-                          Become a Seller
+                          Become a seller
                         </span>
                       </Link>
                     </li>
@@ -185,3 +186,7 @@ export default function Footer({ type }) {
     </footer>
   );
 }
+
+Footer.propTypes = {
+  type: PropTypes.number,
+};
