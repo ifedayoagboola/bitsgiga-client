@@ -1,4 +1,4 @@
-name: Deploy bitsgiga-frontend
+name: Deploy bitsgiga-client
 
 on:
   push:
@@ -15,6 +15,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Show workspace layout
+        run: |
+          pwd
+          ls -la
+          test -f Dockerfile && echo "Dockerfile OK"
+          test -f nginx.conf && echo "nginx.conf OK"
+
       - name: Set up Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -29,12 +36,12 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
+          file: ./Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/bitsgiga-client:latest
           provenance: false
 
       - name: Deploy on server
-        if: ${{ success() }}
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.SSH_HOST }}
