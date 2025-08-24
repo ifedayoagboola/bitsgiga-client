@@ -15,7 +15,7 @@ export default function FlashSale() {
             <div
               style={{
                 background: `url(${
-                  import.meta.env.VITE_PUBLIC_URL
+                  import.meta.env.VITE_PUBLIC_URL || ''
                 }/assets/images/flash-sale-ads.png) no-repeat`,
                 backgroundSize: "cover",
               }}

@@ -892,7 +892,7 @@ export default function Navbar({ className }) {
                             <img
                               width=""
                               src={`${
-                                import.meta.env.VITE_PUBLIC_URL
+                                import.meta.env.VITE_PUBLIC_URL || ''
                               }/assets/images/mega-menu-thumb.jpg`}
                               alt=""
                               className="w-full h-full object-contain"

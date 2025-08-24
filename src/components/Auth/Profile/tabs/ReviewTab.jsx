@@ -21,7 +21,7 @@ export default function ReviewTab({ className, products }) {
                     <div className="w-1/3 h-full">
                       <img
                         src={`${
-                          import.meta.env.VITE_PUBLIC_URL
+                          import.meta.env.VITE_PUBLIC_URL || ''
                         }/assets/images/${datas.image}`}
                         alt=""
                         className="w-full h-full object-contain"

@@ -53,15 +53,15 @@ export default function Home() {
         </ViewMoreTitle>
         <ProductsAds
           ads={[
-            `${import.meta.env.VITE_PUBLIC_URL}/assets/images/ads-1-1.png`,
-            `${import.meta.env.VITE_PUBLIC_URL}/assets/images/ads-2-2.png`,
+            `${import.meta.env.VITE_PUBLIC_URL || ''}/assets/images/ads-1-1.png`,
+            `${import.meta.env.VITE_PUBLIC_URL || ''}/assets/images/ads-2-2.png`,
           ]}
           sectionHeight="sm:h-[295px] h-full"
           className="products-ads-section mb-[60px]"
         />
         <SectionStyleOne
           categoryBackground={`${
-            import.meta.env.VITE_PUBLIC_URL
+            import.meta.env.VITE_PUBLIC_URL || ''
           }/assets/images/section-category-3.png`}
           products={products.slice(4, products.length)}
           brands={brands}
@@ -71,7 +71,7 @@ export default function Home() {
           className="category-products mb-[60px]"
         />
         <ProductsAds
-          ads={[`${import.meta.env.VITE_PUBLIC_URL}/assets/images/ads-3-3.png`]}
+          ads={[`${import.meta.env.VITE_PUBLIC_URL || ''}/assets/images/ads-3-3.png`]}
           className="products-ads-section mb-[60px]"
         />
         <SectionStyleThree
@@ -82,7 +82,7 @@ export default function Home() {
         />
         {/* <ProductsAds
           sectionHeight="164"
-          ads={[`${import.meta.env.VITE_PUBLIC_URL}assets/images/ads-7.png`]}
+          ads={[`${import.meta.env.VITE_PUBLIC_URL || ''}assets/images/ads-7.png`]}
           className="products-ads-section mb-[60px]"
         /> */}
            <BrandSection

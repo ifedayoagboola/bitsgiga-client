@@ -18,7 +18,7 @@ export default function Middlebar({ className }) {
                   width="152"
                   height="36"
                   src={`${
-                    import.meta.env.VITE_PUBLIC_URL
+                    import.meta.env.VITE_PUBLIC_URL || ''
                   }/assets/images/logo-5.svg`}
                   alt="logo"
                 />

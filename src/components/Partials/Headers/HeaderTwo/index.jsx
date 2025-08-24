@@ -33,7 +33,7 @@ export default function HeaderTwo({ className, drawerAction }) {
                 width="152"
                 height="36"
                 src={`${
-                  import.meta.env.VITE_PUBLIC_URL
+                  import.meta.env.VITE_PUBLIC_URL || ''
                 }/assets/images/logo-2.svg`}
                 alt="logo"
               />

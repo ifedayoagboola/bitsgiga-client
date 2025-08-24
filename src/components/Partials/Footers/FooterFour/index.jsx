@@ -9,7 +9,7 @@ export default function FooterFour() {
       className="footer-section-wrapper"
       style={{
         backgroundImage: `url(${
-          import.meta.env.VITE_PUBLIC_URL
+          import.meta.env.VITE_PUBLIC_URL || ''
         }/assets/images/footer-four.png)`,
       }}
     >
@@ -23,7 +23,7 @@ export default function FooterFour() {
                   width="152"
                   height="36"
                   src={`${
-                    import.meta.env.VITE_PUBLIC_URL
+                    import.meta.env.VITE_PUBLIC_URL || ''
                   }/assets/images/logo-4.svg`}
                   alt="logo"
                 />
@@ -201,7 +201,7 @@ export default function FooterFour() {
                 width="318"
                 height="28"
                 src={`${
-                  import.meta.env.VITE_PUBLIC_URL
+                  import.meta.env.VITE_PUBLIC_URL || ''
                 }/assets/images/payment-getways.png`}
                 alt="payment-getways"
               />

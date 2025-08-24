@@ -137,7 +137,7 @@ export default function CommentBlog() {
                   <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                     <img
                       src={`${
-                        import.meta.env.VITE_PUBLIC_URL
+                        import.meta.env.VITE_PUBLIC_URL || ''
                       }/assets/images/comment-user-1.png`}
                       alt=""
                       className="w-full h-full object-cover"
@@ -170,7 +170,7 @@ export default function CommentBlog() {
                         <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                           <img
                             src={`${
-                              import.meta.env.VITE_PUBLIC_URL
+                              import.meta.env.VITE_PUBLIC_URL || ''
                             }/assets/images/comment-user-2.png`}
                             alt=""
                             className="w-full h-full object-cover"

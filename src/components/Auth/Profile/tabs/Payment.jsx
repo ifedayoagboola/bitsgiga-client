@@ -10,7 +10,7 @@ export default function Payment() {
               <div className="sm:w-[120px] sm:h-[120px] flex items-center justify-center rounded-full sm:bg-[#F2F2F2]">
                 <img
                   src={`${
-                    import.meta.env.VITE_PUBLIC_URL
+                    import.meta.env.VITE_PUBLIC_URL || ''
                   }/assets/images/card-1.svg`}
                   alt="payment"
                 />
@@ -41,7 +41,7 @@ export default function Payment() {
               <div className="sm:w-[120px] sm:h-[120px] flex items-center justify-center rounded-full sm:bg-[#F2F2F2]">
                 <img
                   src={`${
-                    import.meta.env.VITE_PUBLIC_URL
+                    import.meta.env.VITE_PUBLIC_URL || ''
                   }/assets/images/card-2.svg`}
                   alt="payment"
                 />
@@ -72,7 +72,7 @@ export default function Payment() {
               <div className="sm:w-[120px] sm:h-[120px] flex items-center justify-center rounded-full sm:bg-[#F2F2F2]">
                 <img
                   src={`${
-                    import.meta.env.VITE_PUBLIC_URL
+                    import.meta.env.VITE_PUBLIC_URL || ''
                   }/assets/images/card-3.svg`}
                   alt="payment"
                 />
@@ -103,7 +103,7 @@ export default function Payment() {
               <div className="sm:w-[120px] sm:h-[120px] flex items-center justify-center rounded-full sm:bg-[#F2F2F2]">
                 <img
                   src={`${
-                    import.meta.env.VITE_PUBLIC_URL
+                    import.meta.env.VITE_PUBLIC_URL || ''
                   }/assets/images/card-4.svg`}
                   alt="payment"
                 />

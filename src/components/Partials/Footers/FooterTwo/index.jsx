@@ -16,7 +16,7 @@ export default function Footer() {
                   width="152"
                   height="36"
                   src={`${
-                    import.meta.env.VITE_PUBLIC_URL
+                    import.meta.env.VITE_PUBLIC_URL || ''
                   }/assets/images/logo-2.svg`}
                   alt="logo"
                 />
@@ -194,7 +194,7 @@ export default function Footer() {
                 width="318"
                 height="28"
                 src={`${
-                  import.meta.env.VITE_PUBLIC_URL
+                  import.meta.env.VITE_PUBLIC_URL || ''
                 }/assets/images/payment-getways.png`}
                 alt="payment-getways"
               />

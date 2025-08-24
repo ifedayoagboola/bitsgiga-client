@@ -17,7 +17,7 @@ export default function TestCom() {
                 className="product-card-img w-full h-[322px] mt-4"
                 style={{
                   background: `url(${
-                    import.meta.env.VITE_PUBLIC_URL
+                    import.meta.env.VITE_PUBLIC_URL || ''
                   }/assets/images/product-img-2.1.jpg) no-repeat center`,
                 }}
               ></div>

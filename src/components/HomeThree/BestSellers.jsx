@@ -12,7 +12,7 @@ export default function BestSellers({ className }) {
           <div className="w-[170px] h-[170px] rounded-full bg-white flex justify-center items-center overflow-hidden mb-2">
             <img
               src={`${
-                import.meta.env.VITE_PUBLIC_URL
+                import.meta.env.VITE_PUBLIC_URL || ''
               }/assets/images/saller-1.png`}
               alt=""
             />
@@ -29,7 +29,7 @@ export default function BestSellers({ className }) {
           <div className="w-[170px] h-[170px] rounded-full bg-white flex justify-center items-center overflow-hidden mb-2">
             <img
               src={`${
-                import.meta.env.VITE_PUBLIC_URL
+                import.meta.env.VITE_PUBLIC_URL || ''
               }/assets/images/saller-2.png`}
               alt=""
             />
@@ -46,7 +46,7 @@ export default function BestSellers({ className }) {
           <div className="w-[170px] h-[170px] rounded-full bg-white flex justify-center items-center overflow-hidden mb-2">
             <img
               src={`${
-                import.meta.env.VITE_PUBLIC_URL
+                import.meta.env.VITE_PUBLIC_URL || ''
               }/assets/images/saller-3.png`}
               alt=""
             />
@@ -63,7 +63,7 @@ export default function BestSellers({ className }) {
           <div className="w-[170px] h-[170px] rounded-full bg-white flex justify-center items-center overflow-hidden mb-2">
             <img
               src={`${
-                import.meta.env.VITE_PUBLIC_URL
+                import.meta.env.VITE_PUBLIC_URL || ''
               }/assets/images/saller-4.png`}
               alt=""
             />
@@ -80,7 +80,7 @@ export default function BestSellers({ className }) {
           <div className="w-[170px] h-[170px] rounded-full bg-white flex justify-center items-center overflow-hidden mb-2">
             <img
               src={`${
-                import.meta.env.VITE_PUBLIC_URL
+                import.meta.env.VITE_PUBLIC_URL || ''
               }/assets/images/saller-5.png`}
               alt=""
             />
@@ -97,7 +97,7 @@ export default function BestSellers({ className }) {
           <div className="w-[170px] h-[170px] rounded-full bg-white flex justify-center items-center overflow-hidden mb-2">
             <img
               src={`${
-                import.meta.env.VITE_PUBLIC_URL
+                import.meta.env.VITE_PUBLIC_URL || ''
               }/assets/images/saller-6.png`}
               alt=""
             />

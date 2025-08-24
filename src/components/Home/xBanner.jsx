@@ -13,12 +13,12 @@ export default function Banner({ className }) {
                     <source
                       media="(min-width:1025px)"
                       srcSet={`${
-                        import.meta.env.VITE_PUBLIC_URL
+                        import.meta.env.VITE_PUBLIC_URL || ''
                       }/assets/images/banner-1.png`}
                     />
                     <img
                       src={`${
-                        import.meta.env.VITE_PUBLIC_URL
+                        import.meta.env.VITE_PUBLIC_URL || ''
                       }/assets/images/banner-1.2.png`}
                       alt=""
                       className="w-full max-w-full h-auto object-cover"
@@ -34,7 +34,7 @@ export default function Banner({ className }) {
                   <Link to="/single-product">
                     <img
                       src={`${
-                        import.meta.env.VITE_PUBLIC_URL
+                        import.meta.env.VITE_PUBLIC_URL || ''
                       }/assets/images/banner-2.png`}
                       alt=""
                       className="w-full h-full"
@@ -45,7 +45,7 @@ export default function Banner({ className }) {
                   <Link to="/single-product">
                     <img
                       src={`${
-                        import.meta.env.VITE_PUBLIC_URL
+                        import.meta.env.VITE_PUBLIC_URL || ''
                       }/assets/images/banner-3.png`}
                       alt=""
                       className="w-full h-full"

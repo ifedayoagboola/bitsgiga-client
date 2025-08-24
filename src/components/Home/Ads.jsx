@@ -12,7 +12,7 @@ export default function Ads({ handler }) {
           className="md:w-[812px] w-[310px] md:h-[509px] relative z-50 bg-slate-700 md:pl-10 pl-3 py-[108px] flex flex-col justify-between"
           style={{
             background: `url(${
-              import.meta.env.VITE_PUBLIC_URL
+              import.meta.env.VITE_PUBLIC_URL || ''
             }/assets/images/primary-ads.png) no-repeat`,
             backgroundSize: "cover",
           }}
@@ -24,7 +24,7 @@ export default function Ads({ handler }) {
                   width="152"
                   height="36"
                   src={`${
-                    import.meta.env.VITE_PUBLIC_URL
+                    import.meta.env.VITE_PUBLIC_URL || ''
                   }/assets/images/logo.svg`}
                   alt="logo"
                 />

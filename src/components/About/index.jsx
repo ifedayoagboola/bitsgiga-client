@@ -67,7 +67,7 @@ export default function About() {
               <div className="md:w-[570px] w-full md:h-[560px] h-auto rounded overflow-hidden my-5 lg:my-0">
                 <img
                   src={`${
-                    import.meta.env.VITE_PUBLIC_URL
+                    import.meta.env.VITE_PUBLIC_URL || ''
                   }/assets/images/about-banner.png`}
                   alt="about"
                   className="w-full h"
@@ -141,7 +141,7 @@ export default function About() {
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
                         src={`${
-                          import.meta.env.VITE_PUBLIC_URL
+                          import.meta.env.VITE_PUBLIC_URL || ''
                         }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
@@ -180,7 +180,7 @@ export default function About() {
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
                         src={`${
-                          import.meta.env.VITE_PUBLIC_URL
+                          import.meta.env.VITE_PUBLIC_URL || ''
                         }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
@@ -219,7 +219,7 @@ export default function About() {
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
                         src={`${
-                          import.meta.env.VITE_PUBLIC_URL
+                          import.meta.env.VITE_PUBLIC_URL || ''
                         }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
@@ -258,7 +258,7 @@ export default function About() {
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
                         src={`${
-                          import.meta.env.VITE_PUBLIC_URL
+                          import.meta.env.VITE_PUBLIC_URL || ''
                         }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
@@ -297,7 +297,7 @@ export default function About() {
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
                         src={`${
-                          import.meta.env.VITE_PUBLIC_URL
+                          import.meta.env.VITE_PUBLIC_URL || ''
                         }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
@@ -336,7 +336,7 @@ export default function About() {
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
                         src={`${
-                          import.meta.env.VITE_PUBLIC_URL
+                          import.meta.env.VITE_PUBLIC_URL || ''
                         }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
@@ -375,7 +375,7 @@ export default function About() {
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
                         src={`${
-                          import.meta.env.VITE_PUBLIC_URL
+                          import.meta.env.VITE_PUBLIC_URL || ''
                         }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
@@ -414,7 +414,7 @@ export default function About() {
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
                         src={`${
-                          import.meta.env.VITE_PUBLIC_URL
+                          import.meta.env.VITE_PUBLIC_URL || ''
                         }/assets/images/comment-user-1.png`}
                         alt="user"
                       />
@@ -453,7 +453,7 @@ export default function About() {
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                       <img
                         src={`${
-                          import.meta.env.VITE_PUBLIC_URL
+                          import.meta.env.VITE_PUBLIC_URL || ''
                         }/assets/images/comment-user-1.png`}
                         alt="user"
                       />

@@ -55,7 +55,7 @@ export default function ProductView({ className, reportHandler }) {
         <div className="w-full">
           <div className="w-full h-[600px] border border-qgray-border flex justify-center items-center overflow-hidden relative mb-3">
             <img
-              src={`${import.meta.env.VITE_PUBLIC_URL}/assets/images/${src}`}
+              src={`${import.meta.env.VITE_PUBLIC_URL || ''}/assets/images/${src}`}
               alt=""
               className="object-contain"
             />
@@ -73,7 +73,7 @@ export default function ProductView({ className, reportHandler }) {
                   className="w-[110px] h-[110px] p-[15px] border border-qgray-border cursor-pointer"
                 >
                   <img
-                    src={`${import.meta.env.VITE_PUBLIC_URL}/assets/images/${
+                    src={`${import.meta.env.VITE_PUBLIC_URL || ''}/assets/images/${
                       img.src
                     }`}
                     alt=""

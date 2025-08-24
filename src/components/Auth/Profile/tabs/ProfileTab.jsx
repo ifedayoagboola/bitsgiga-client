@@ -127,7 +127,7 @@ export default function ProfileTab() {
                     src={
                       profileImg ||
                       `${
-                        import.meta.env.VITE_PUBLIC_URL
+                        import.meta.env.VITE_PUBLIC_URL || ''
                       }/assets/images/edit-profileimg.jpg`
                     }
                     alt=""

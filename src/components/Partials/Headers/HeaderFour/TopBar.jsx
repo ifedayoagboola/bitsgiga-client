@@ -43,7 +43,7 @@ export default function TopBar({ className }) {
                   <div>
                     <img
                       src={`${
-                        import.meta.env.VITE_PUBLIC_URL
+                        import.meta.env.VITE_PUBLIC_URL || ''
                       }/assets/images/country-logo-16x16.png`}
                       width="16"
                       height="16"
