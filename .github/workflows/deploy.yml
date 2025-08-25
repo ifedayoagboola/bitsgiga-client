@@ -1,0 +1,54 @@
+name: Deploy bitsgiga-client
+
+on:
+  push:
+    branches: [ main ]
+    # Optional: only run when client files change
+    # paths:
+    #   - '**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy over SSH (build on server)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script_stop: true
+          script: |
+            set -euo pipefail
+            cd "${{ secrets.SERVER_PATH }}"
+            # fetch latest code
+            git fetch --all --prune
+            git reset --hard origin/main
+
+            # build & restart container
+            docker compose up -d --build --remove-orphans
+
+            # light cleanup
+            docker image prune -f
+
+      # Optional: quick health check via Cloudflare edge
+      - name: Smoke test
+        run: |
+          code=$(curl -sS -o /dev/null -w "%{http_code}" https://bitsgiga.com)
+          echo "HTTP $code"
+          [ "$code" -ge 200 ] && [ "$code" -lt 400 ]
+
+      # Optional: purge CF cache so new HTML/assets are served immediately
+      # (Usually not needed if assets are fingerprinted, but handy for HTML changes)
+      - name: Purge Cloudflare cache
+        if: success() && env.DO_CF_PURGE == 'true'
+        env:
+          DO_CF_PURGE: "false"                 # flip to true when you want purges by default
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CF_ZONE_ID }}/purge_cache" \
+             -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
+             -H "Content-Type: application/json" \
+             --data '{"purge_everything":true}'
