@@ -23,9 +23,11 @@ jobs:
           git reset --hard origin/main
           docker compose up -d --build --remove-orphans
           docker image prune -f
-
-      - name: Smoke test (edge)
+          
+      - name: Smoke test (edge via containerized curl)
         run: |
-          code=$(curl -sS -o /dev/null -w "%{http_code}" https://bitsgiga.com || echo 0)
+          code=$(docker run --rm --dns=1.1.1.1 curlimages/curl:8.8.0 \
+          -sS -o /dev/null -w "%{http_code}" https://bitsgiga.com || echo 0)
           echo "HTTP $code"
           test "$code" -ge 200 -a "$code" -lt 500
+
