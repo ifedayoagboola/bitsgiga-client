@@ -11,7 +11,7 @@ concurrency:
 jobs:
   deploy:
     # if you added a custom label when registering the runner, include it here
-    runs-on: [self-hosted, bitsgiga]
+    runs-on: self-hosted
     steps:
       - name: Deploy from repo on server
         run: |
