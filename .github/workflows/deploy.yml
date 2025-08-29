@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   build-and-push:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64, prod]
     steps:
       - uses: actions/checkout@v4
       - uses: docker/setup-buildx-action@v3
@@ -47,7 +47,7 @@ jobs:
 
   deploy:
     needs: build-and-push
-    runs-on: ubuntu-latest  # <- labels you gave your server runner
+    runs-on: [self-hosted, linux, x64, prod]   # <- labels you gave your server runner
     steps:
       - name: Pull & restart client on server
         run: |
