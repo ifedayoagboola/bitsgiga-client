@@ -19,8 +19,6 @@ jobs:
         service:
           - name: bitsgiga-client
             context: prod/bitsgiga-client
-          - name: bitsgiga-api
-            context: prod/bitshub-server
 
     steps:
       - uses: actions/checkout@v4
@@ -63,7 +61,7 @@ jobs:
             set -euo pipefail
             cd /srv/projects/bitsgiga/prod
             # pull newest images tagged :main and recreate only changed containers
-            docker compose pull bitsgiga-client bitsgiga-api
-            docker compose up -d bitsgiga-client bitsgiga-api
+            docker compose pull bitsgiga-client
+            docker compose up -d bitsgiga-client
             # prune old image layers (optional)
             docker image prune -f --filter "until=240h" || true
