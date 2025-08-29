@@ -78,7 +78,7 @@ export default function About() {
                   What is e-commerce business?
                 </h1>
                 <p className="text-[15px] text-qgraytwo leading-7 mb-2.5">
-                  Just making a tiny change to test deployment.
+                  Just making another very tiny change to test deployment.
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
