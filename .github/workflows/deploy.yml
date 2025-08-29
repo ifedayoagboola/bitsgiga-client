@@ -39,6 +39,9 @@ jobs:
           tags: |
             ghcr.io/${{ env.OWNER }}/bitsgiga-client:main
             ghcr.io/${{ env.OWNER }}/bitsgiga-client:${{ github.sha }}
+          build-args: |
+            VITE_PUBLIC_URL=${{ vars.VITE_PUBLIC_URL }}
+            VITE_API_URL=${{ vars.VITE_API_URL }}
           cache-from: type=registry,ref=ghcr.io/${{ env.OWNER }}/bitsgiga-client:buildcache
           cache-to: type=registry,ref=ghcr.io/${{ env.OWNER }}/bitsgiga-client:buildcache,mode=max
 

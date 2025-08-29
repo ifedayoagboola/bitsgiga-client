@@ -4,15 +4,13 @@
 
     ARG VITE_PUBLIC_URL
     ARG VITE_API_URL
-    ARG NODE_ENV=production
     
     # Set environment variables for build
     ENV VITE_PUBLIC_URL=$VITE_PUBLIC_URL
     ENV VITE_API_URL=$VITE_API_URL
-    ENV NODE_ENV=$NODE_ENV
 
     COPY package*.json ./
-    RUN npm ci
+    RUN npm ci --include=dev
     COPY . .
     RUN npm run build
     
