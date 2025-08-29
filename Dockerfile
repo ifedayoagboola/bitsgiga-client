@@ -18,8 +18,13 @@
     FROM nginx:1.27-alpine
     # Ensure curl for healthcheck
     RUN apk add --no-cache curl
-    # Copy server block (consider renaming your file to default.conf to avoid confusion)
-    COPY nginx.conf /etc/nginx/conf.d/nginx.conf
+    
+    # Remove the stock site to avoid conflicts
+    RUN rm -f /etc/nginx/conf.d/default.conf
+    
+    # Copy your SPA server block in its place
+    COPY nginx.conf /etc/nginx/conf.d/default.conf
+    
     COPY --from=build /app/dist /usr/share/nginx/html
     EXPOSE 80
     HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
