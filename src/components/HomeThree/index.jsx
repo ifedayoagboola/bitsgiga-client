@@ -33,7 +33,7 @@ export default function HomeThree() {
           className="new-products mb-[60px]"
         />
         <ProductsAds
-          ads={[`${import.meta.env.VITE_PUBLIC_URL || ''}/assets/images/bannera-3.png`]}
+          ads={["/assets/images/bannera-3.png"]}
           className="products-ads-section mb-[60px]"
         />
 
@@ -59,10 +59,10 @@ export default function HomeThree() {
         </ViewMoreTitle>
 
         <ProductsAds
-          ads={[
-            `${import.meta.env.VITE_PUBLIC_URL || ''}/assets/images/bannera-1.png`,
-            `${import.meta.env.VITE_PUBLIC_URL || ''}/assets/images/bannera-2.png`,
-          ]}
+                  ads={[
+          "/assets/images/bannera-1.png",
+          "/assets/images/bannera-2.png",
+        ]}
           sectionHeight="sm:h-[295px] h-full"
           className="products-ads-section mb-[60px]"
         />

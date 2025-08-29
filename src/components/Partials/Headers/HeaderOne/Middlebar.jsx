@@ -18,7 +18,7 @@ export default function Middlebar({ className, type }) {
                   <img
                     width="152"
                     height="36"
-                    src={`${import.meta.env.VITE_PUBLIC_URL || ''}/assets/images/logo-3.svg`}
+                    src="/assets/images/logo-3.svg"
                     alt="logo"
                   />
                 </Link>
@@ -27,7 +27,7 @@ export default function Middlebar({ className, type }) {
                   <img
                     width="152"
                     height="36"
-                    src={`${import.meta.env.VITE_PUBLIC_URL || ''}/assets/images/logo-4.svg`}
+                    src="/assets/images/logo-4.svg"
                     alt="logo"
                   />
                 </Link>
@@ -36,7 +36,7 @@ export default function Middlebar({ className, type }) {
                   <img
                     width="152"
                     height="36"
-                    src={`${import.meta.env.VITE_PUBLIC_URL || ''}/assets/images/logo-dark1.jpeg`}
+                    src="/assets/images/logo-dark1.jpeg"
                     alt="logo"
                   />
                 </Link>
