@@ -33,10 +33,18 @@ jobs:
           username: ${{ secrets.GHCR_USERNAME }}
           password: ${{ secrets.GHCR_TOKEN }}
 
+      - name: Show repo layout
+        run: |
+          pwd
+          ls -la
+          echo "----"
+          find . -maxdepth 3 -type f -name 'Dockerfile' -print
+
       - name: Build & Push ${{ matrix.service.name }}
         uses: docker/build-push-action@v6
         with:
           context: ${{ matrix.service.context }}
+          file: ./Dockerfile 
           push: true
           tags: |
             ghcr.io/${{ secrets.GHCR_USERNAME }}/${{ matrix.service.name }}:main
