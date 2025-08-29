@@ -30,7 +30,7 @@ jobs:
       - name: Lowercase owner
         run: echo "OWNER=${GITHUB_REPOSITORY_OWNER@L}" >> $GITHUB_ENV
 
-      - name: Build & Push bitsgiga-client
+      - name: Build & Push bitsgiga-client-dev
         uses: docker/build-push-action@v6
         with:
           context: .
@@ -55,6 +55,6 @@ jobs:
           cd /srv/projects/bitsgiga/dev
           OWNER=$(echo "${GITHUB_REPOSITORY_OWNER}" | tr '[:upper:]' '[:lower:]')
           echo "${{ secrets.GHCR_READ_TOKEN }}" | docker login ghcr.io -u "$OWNER" --password-stdin
-          docker compose pull bitsgiga-client
-          docker compose up -d bitsgiga-client
+          docker compose pull bitsgiga-client-dev
+          docker compose up -d bitsgiga-client-dev
           docker image prune -f --filter "until=240h" || true
