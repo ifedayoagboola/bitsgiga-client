@@ -2,12 +2,12 @@
   FROM node:20-alpine AS build
   WORKDIR /app
   
-  ARG VITE_PUBLIC_URL
-  ARG VITE_API_URL
+  ARG DEV_PUBLIC_URL
+  ARG DEV_API_URL
   
   # Set environment variables for build
-  ENV VITE_PUBLIC_URL=$VITE_PUBLIC_URL
-  ENV VITE_API_URL=$VITE_API_URL
+  ENV VITE_PUBLIC_URL=$DEV_PUBLIC_URL
+  ENV VITE_API_URL=$DEV_API_URL
   
   COPY package*.json ./
   RUN npm ci --include=dev

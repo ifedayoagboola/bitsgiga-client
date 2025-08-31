@@ -1,8 +1,8 @@
-name: Build & Deploy to main
+name: Build & Deploy to develop
 
 on:
   push:
-    branches: [ main ]
+    branches: [ develop ]
 
 permissions:
   contents: read
@@ -38,11 +38,11 @@ jobs:
           push: true
           no-cache: true
           tags: |
-            ghcr.io/${{ env.OWNER }}/bitsgiga-client:main
+            ghcr.io/${{ env.OWNER }}/bitsgiga-client:develop
             ghcr.io/${{ env.OWNER }}/bitsgiga-client:${{ github.sha }}
           build-args: |
-            VITE_PUBLIC_URL=${{ vars.VITE_PUBLIC_URL }}
-            VITE_API_URL=${{ vars.VITE_API_URL }}
+            VITE_PUBLIC_URL=${{ vars.DEV_PUBLIC_URL }}
+            VITE_API_URL=${{ vars.DEV_API_URL }}
           cache-from: type=registry,ref=ghcr.io/${{ env.OWNER }}/bitsgiga-client:buildcache
           cache-to: type=registry,ref=ghcr.io/${{ env.OWNER }}/bitsgiga-client:buildcache,mode=max
 
@@ -53,9 +53,9 @@ jobs:
       - name: Pull & restart client on server
         run: |
           set -euo pipefail
-          cd /srv/projects/bitsgiga/prod
+          cd /srv/projects/bitsgiga/dev
           OWNER=$(echo "${GITHUB_REPOSITORY_OWNER}" | tr '[:upper:]' '[:lower:]')
           echo "${{ secrets.GHCR_READ_TOKEN }}" | docker login ghcr.io -u "$OWNER" --password-stdin
-          docker compose pull bitsgiga-client
-          docker compose up -d bitsgiga-client
+          docker compose pull bitsgiga-client-dev
+          docker compose up -d bitsgiga-client-dev
           docker image prune -f --filter "until=240h" || true
