@@ -19,9 +19,6 @@
   # Ensure curl for healthcheck
   RUN apk add --no-cache curl
   
-  # Remove the stock site to avoid conflicts
-  RUN rm -f /etc/nginx/conf.d/default.conf
-  
   # Copy your SPA server block in its place
   COPY nginx/default.conf /etc/nginx/conf.d/default.conf
   
