@@ -1,4 +1,4 @@
-name: Build & Deploy to Prod
+name: Build & Deploy to main
 
 on:
   push:
@@ -36,6 +36,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
+          no-cache: true
           tags: |
             ghcr.io/${{ env.OWNER }}/bitsgiga-client:main
             ghcr.io/${{ env.OWNER }}/bitsgiga-client:${{ github.sha }}
